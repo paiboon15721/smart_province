@@ -1,0 +1,7 @@
+body {
+	font-family: Arial, Helvetica;
+	font-size: 12px;
+	width: 1000px;
+	margin: 0 auto;
+	background:#A94511 url(background.png) repeat-x fixed;
+}
