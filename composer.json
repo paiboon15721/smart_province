@@ -6,7 +6,8 @@
 	"require": {
 	   "phpunit/phpunit": "3.7.*",
 		"laravel/framework": "4.0.*",
-		"chumper/datatable": "dev-master"
+		"way/phpunit-wrappers": "dev-master"
+		//"chumper/datatable": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

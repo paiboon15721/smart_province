@@ -29,7 +29,7 @@ class HomeController extends BaseController {
 
     public function contactUs() {
         Session::put('thisPage', 'contactUs');
-        return View::make('content.contactUs')
+       return View::make('content.contactUs')
                         ->with('thisPage', 'contactUs');
     }
 
