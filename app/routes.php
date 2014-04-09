@@ -76,6 +76,7 @@ Route::get('problemManagement', array('before' => 'catmId', 'uses' => 'ProblemCo
 Route::get('problemStable', array('before' => 'catmId', 'uses' => 'ProblemController@displayProblemStable'));
 Route::get('problemFarmer', array('before' => 'catmId', 'uses' => 'ProblemController@displayProblemFarmer'));
 Route::get('problemSocialPerformance', array('before' => 'catmId', 'uses' => 'ProblemController@displayProblemSocialPerformance'));
+Route::get('problemTable', array('before' => 'catmId', 'uses' => 'ProblemController@displayDatatableProblem'));
 
 //otop
 Route::get('otop', array('before' => 'catmId', 'uses' => 'OtopController@displayOtop'));

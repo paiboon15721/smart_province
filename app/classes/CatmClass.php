@@ -25,5 +25,4 @@ class CatmClass {
         return $this->catmNameTh;
     }
 
-    tesr
 }
