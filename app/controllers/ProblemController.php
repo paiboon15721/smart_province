@@ -58,4 +58,8 @@ class ProblemController extends BaseController {
                         ->with('listOfData', $this->problem->getProblemSocialPerformanceDataForDisplay());
     }
 
+    public function displayDatatableProblem() {
+        return View::make('layouts.datatable');
+    }
+
 }
