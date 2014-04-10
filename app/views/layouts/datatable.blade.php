@@ -27,7 +27,7 @@
             "sToolTip": "",
             "fnMouseover": null,
             "fnMouseout": null,
-            "fnClick": function() {
+            "fnClick": function(nButton, oConfig) {
                 window.location = "";
             },
             "fnSelect": null,
