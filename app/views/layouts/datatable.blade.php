@@ -115,7 +115,6 @@
             "sScrollXInner": "150%",
             "bScrollCollapse": true,
             "bProcessing": true,
-            "bServerSide": true,
             "iDisplayLength": 10,
             "sAjaxSource": "{{$datasourceUrl}}"
         });
