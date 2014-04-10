@@ -59,7 +59,8 @@ class ProblemController extends BaseController {
     }
 
     public function displayDatatableProblem() {
-        return View::make('layouts.datatable');
+        return View::make('layouts.datatable')
+                        ->with('datasourceUrl', URL::to('datasourceProblem'));
     }
 
 }

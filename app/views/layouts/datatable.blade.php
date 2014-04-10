@@ -42,7 +42,7 @@
             "fnMouseout": null,
             "fnClick": function(nButton, oConfig) {
                 var oTT = TableTools.fnGetInstance('datatable');
-                if (oTT.fnGetSelectedData() === "") {
+                if (oTT.fnGetSelectedData() == "") {
                     alert("กรุณาเลือกรายการที่ต้องการแก้ไข");
                 } else {
                     var aData = oTT.fnGetSelectedData()[0][0];
@@ -61,7 +61,7 @@
             "fnMouseout": null,
             "fnClick": function(nButton, oConfig) {
                 var oTT = TableTools.fnGetInstance('datatable');
-                if (oTT.fnGetSelectedData() === "") {
+                if (oTT.fnGetSelectedData() == "") {
                     alert("กรุณาเลือกรายการที่ต้องการลบ");
                 } else {
                     if (confirm('คุณแน่ใจที่จะลบข้อมูลนี้?')) {
@@ -109,21 +109,15 @@
                 ]
             },
             "bJQueryUI": true,
-            "aoColumns": [
-                {"bVisible": false},
-                {"bVisible": false},
-                null,
-                null
-            ],
             "sPaginationType": "full_numbers",
             "sScrollY": 540,
             "sScrollX": "100%",
-            "sScrollXInner": "100%",
+            "sScrollXInner": "150%",
             "bScrollCollapse": true,
             "bProcessing": true,
             "bServerSide": true,
             "iDisplayLength": 10,
-            "sAjaxSource": ""
+            "sAjaxSource": "{{$datasourceUrl}}"
         });
     });
 

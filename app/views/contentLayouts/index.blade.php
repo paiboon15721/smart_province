@@ -1,21 +1,21 @@
 @extends('layouts.main')
 @section('title')
 @yield('subTitle')
- - หมู่บ้าน{{Session::get('catmNameTh')}}
+- หมู่บ้าน{{Session::get('catmNameTh')}}
 @stop
 @section('description')
 @yield('subDescription')
- - หมู่บ้าน{{Session::get('catmNameTh')}}
+- หมู่บ้าน{{Session::get('catmNameTh')}}
 @stop
 @section('keywords')
 @yield('subKeywords')
- - หมู่บ้าน{{Session::get('catmNameTh')}}
+- หมู่บ้าน{{Session::get('catmNameTh')}}
 @stop
 
 @section('script&css')
 {{HTML::style('css/layouts/layouts.main.css')}}
 {{HTML::style('css/uiToTop/ui.totop.css')}}
-{{HTML::script('js/jquery-1.10.2.min.js')}}
+{{HTML::script('js/jquery-1.7.2.min.js')}}
 {{HTML::script('js/jquery.ui.totop.min.js')}}
 @yield('subScript&css')
 @stop
@@ -27,21 +27,21 @@
 @section('menu')
 <?php $thisPage = Session::get('thisPage'); ?>
 <li>{{HTML::link('/', 'กลับไปหน้าเมนู')}}</li>
-<li <?php echo ($thisPage == 'main') ? 'class="active"' : ''?>>{{HTML::link('main', 'หน้าหลัก')}}</li>
-<li <?php echo ($thisPage == 'villageDirectors') ? 'class="active"' : ''?>>{{HTML::link('villageDirectors', 'ทำเนียบผู้บริหารหมู่บ้าน')}}</li>
-<li <?php echo ($thisPage == 'villageGeneralInformation') ? 'class="active"' : ''?>>{{HTML::link('villageGeneralInformation', 'ข้อมูลทั่วไปของหมู่บ้าน')}}</li>
-<li <?php echo ($thisPage == 'villageInformationSystem') ? 'class="active"' : ''?>>{{HTML::link('villageInformationSystem', 'ระบบข้อมูลหมู่บ้าน')}}</li>
-<li <?php echo ($thisPage == 'servicesSystem') ? 'class="active"' : ''?>>{{HTML::link('servicesSystem', 'ระบบงานบริการด้านต่างๆ')}}</li>
-<li <?php echo ($thisPage == 'generalSystem') ? 'class="active"' : ''?>>{{HTML::link('generalSystem', 'ระบบงานทั่วไป')}}</li>
-<li <?php echo ($thisPage == 'recordingSystem') ? 'class="active"' : ''?>>{{HTML::link('recordingSystem', 'ระบบการบันทึกเพื่อการบริหาร')}}</li>
-<li <?php echo ($thisPage == 'contactUs') ? 'class="active"' : ''?>>{{HTML::link('contactUs', 'ติดต่อเรา')}}</li>
-<li <?php echo ($thisPage == 'map') ? 'class="active"' : ''?>>{{HTML::link('map', 'แผนที่')}}</li>
+<li <?php echo ($thisPage == 'main') ? 'class="active"' : '' ?>>{{HTML::link('main', 'หน้าหลัก')}}</li>
+<li <?php echo ($thisPage == 'villageDirectors') ? 'class="active"' : '' ?>>{{HTML::link('villageDirectors', 'ทำเนียบผู้บริหารหมู่บ้าน')}}</li>
+<li <?php echo ($thisPage == 'villageGeneralInformation') ? 'class="active"' : '' ?>>{{HTML::link('villageGeneralInformation', 'ข้อมูลทั่วไปของหมู่บ้าน')}}</li>
+<li <?php echo ($thisPage == 'villageInformationSystem') ? 'class="active"' : '' ?>>{{HTML::link('villageInformationSystem', 'ระบบข้อมูลหมู่บ้าน')}}</li>
+<li <?php echo ($thisPage == 'servicesSystem') ? 'class="active"' : '' ?>>{{HTML::link('servicesSystem', 'ระบบงานบริการด้านต่างๆ')}}</li>
+<li <?php echo ($thisPage == 'generalSystem') ? 'class="active"' : '' ?>>{{HTML::link('generalSystem', 'ระบบงานทั่วไป')}}</li>
+<li <?php echo ($thisPage == 'recordingSystem') ? 'class="active"' : '' ?>>{{HTML::link('recordingSystem', 'ระบบการบันทึกเพื่อการบริหาร')}}</li>
+<li <?php echo ($thisPage == 'contactUs') ? 'class="active"' : '' ?>>{{HTML::link('contactUs', 'ติดต่อเรา')}}</li>
+<li <?php echo ($thisPage == 'map') ? 'class="active"' : '' ?>>{{HTML::link('map', 'แผนที่')}}</li>
 @stop
 
 @section('login')
 <img src="{{asset('images/main/card.gif')}}" style="width: 168px;height:150px;"/>
-<input id="btnReadCard" name="btnReadCard" type="button" value="อ่านบัตร" style="width:100px; height: 30px; float: none;" onclick="openLoginPage();" />	
-<br />					
+<input id="btnReadCard" name="btnReadCard" type="button" value="อ่านบัตร" style="width:100px; height: 30px; float: none;" onclick="openLoginPage();" />
+<br />
 @stop
 
 @section('message')

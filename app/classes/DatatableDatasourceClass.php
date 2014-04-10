@@ -103,17 +103,17 @@ class DatatableDatasourceClass {
         $output = array(
             //"sEcho" => intval($_GET['sEcho']),
             "iTotalRecords" => $iTotal, "iTotalDisplayRecords" => $iFilteredTotal, "aaData" => array());
-        print_r($rResult);
-        exit;
-        while ($aRow = mysql_fetch_array($rResult)) {
+
+        //while ($aRow = mysql_fetch_array($rResult)) {
+        foreach ($rResult as $aRow) {
             $row = array();
             for ($i = 0; $i < count($aColumns); $i++) {
                 if ($aColumns[$i] == "version") {
                     /* Special output formatting for 'version' column */
-                    $row[] = ($aRow[$aColumns[$i]] == "0") ? '-' : $aRow[$aColumns[$i]];
+                    $row[] = ($aRow->$aColumns[$i] == "0") ? '-' : $aRow->$aColumns[$i];
                 } else if ($aColumns[$i] != ' ') {
                     /* General output */
-                    $row[] = $aRow[$aColumns[$i]];
+                    $row[] = $aRow->$aColumns[$i];
                 }
             }
             $output['aaData'][] = $row;
