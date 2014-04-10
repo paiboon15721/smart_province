@@ -5,7 +5,6 @@ class GroupMemberClass {
     private $groupId;
     private $fieldForDisplay = array();
     private static $EX_HEADMAN_GROUP_ID = 1;
-    private static $EX_HEADMAN_TITLE = 'ผู้ใหญ่บ้าน/ผู้ช่วยผู้ใหญ่บ้าน';
     private static $EX_HEADMAN_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'position_name', 'images');
     private static $EX_HEADMAN_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -15,7 +14,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '150px', 'text' => 'รูปภาพ')
     );
     private static $EX_SAO_GROUP_ID = 2;
-    private static $EX_SAO_TITLE = 'สมาชิกสภาท้องถิ่น (เทศบาล/อบต.) ประจำหมู่บ้าน';
     private static $EX_SAO_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address');
     private static $EX_SAO_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -24,7 +22,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '150px', 'text' => 'ที่อยู่')
     );
     private static $EX_VILLAGE_COMMITTEE_GROUP_ID = 3;
-    private static $EX_VILLAGE_COMMITTEE_TITLE = 'คณะกรรมการหมู่บ้าน';
     private static $EX_VILLAGE_COMMITTEE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'position_name');
     private static $EX_VILLAGE_COMMITTEE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -33,7 +30,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '150px', 'text' => 'ตำแหน่ง')
     );
     private static $EX_FUND_VILLAGE_COMMITTEE_GROUP_ID = 4;
-    private static $EX_FUND_VILLAGE_COMMITTEE_TITLE = 'คณะกรรมการกองทุนหมู่บ้านและชุมชนเมือง (กทบ.)';
     private static $EX_FUND_VILLAGE_COMMITTEE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'position_name');
     private static $EX_FUND_VILLAGE_COMMITTEE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -42,7 +38,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '150px', 'text' => 'ตำแหน่ง')
     );
     private static $EX_PROJECT_VILLAGE_COMMITTEE_GROUP_ID = 5;
-    private static $EX_PROJECT_VILLAGE_COMMITTEE_TITLE = 'คณะกรรมการโครงการหมู่บ้านและชุมชนเมือง (SML)';
     private static $EX_PROJECT_VILLAGE_COMMITTEE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'position_name');
     private static $EX_PROJECT_VILLAGE_COMMITTEE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -51,7 +46,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '150px', 'text' => 'ตำแหน่ง')
     );
     private static $EX_FUND_WOMEN_DELEGATE_GROUP_ID = 6;
-    private static $EX_FUND_WOMEN_DELEGATE_TITLE = 'ผู้แทนกองทุนพัฒนาบทบาทสตรีประจำหมู่บ้าน';
     private static $EX_FUND_WOMEN_DELEGATE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname');
     private static $EX_FUND_WOMEN_DELEGATE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -59,7 +53,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '150px', 'text' => 'ชื่อ-นามสกุล')
     );
     private static $EX_PROJECT_POOR_COMMITTEE_GROUP_ID = 8;
-    private static $EX_PROJECT_POOR_COMMITTEE_TITLE = 'คณะกรรมการโครงการแก้ไขปัญหาความยากจน (กข.คจ.)';
     private static $EX_PROJECT_POOR_COMMITTEE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'position_name');
     private static $EX_PROJECT_POOR_COMMITTEE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -68,7 +61,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '150px', 'text' => 'ตำแหน่ง')
     );
     private static $EX_FUND_QUEEN_GROUP_ID = 9;
-    private static $EX_FUND_QUEEN_TITLE = 'คณะกรรมการกองทุนแม่ของแผ่นดิน';
     private static $EX_FUND_QUEEN_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'position_name');
     private static $EX_FUND_QUEEN_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -77,7 +69,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '150px', 'text' => 'ตำแหน่ง')
     );
     private static $EX_SAVINGS_MENUFACTURING_COMMITTEE_GROUP_ID = 10;
-    private static $EX_SAVINGS_MENUFACTURING_COMMITTEE_TITLE = 'คณะกรรมการกลุ่มออมทรัพย์เพื่อการผลิต';
     private static $EX_SAVINGS_MENUFACTURING_COMMITTEE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'position_name');
     private static $EX_SAVINGS_MENUFACTURING_COMMITTEE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -86,7 +77,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '150px', 'text' => 'ตำแหน่ง')
     );
     private static $ORGA_PUBLIC_HEALTH_UNDERTAKE_GROUP_ID = 12;
-    private static $ORGA_PUBLIC_HEALTH_UNDERTAKE_TITLE = 'อาสาสมัครสาธารณสุขประจำหมู่บ้าน (อสม.)';
     private static $ORGA_PUBLIC_HEALTH_UNDERTAKE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address', 'member_phone1');
     private static $ORGA_PUBLIC_HEALTH_UNDERTAKE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -96,7 +86,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '100px', 'text' => 'หมายเลขโทรศัพท์')
     );
     private static $ORGA_SECURITY_UNDERTAKE_GROUP_ID = 13;
-    private static $ORGA_SECURITY_UNDERTAKE_TITLE = 'อาสาสมัครป้องกันภัยฝ่ายพลเรือน (อปพร.)';
     private static $ORGA_SECURITY_UNDERTAKE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address', 'member_phone1');
     private static $ORGA_SECURITY_UNDERTAKE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -106,7 +95,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '100px', 'text' => 'หมายเลขโทรศัพท์')
     );
     private static $ORGA_DEV_COMMUNITY_UNDERTAKE_GROUP_ID = 14;
-    private static $ORGA_DEV_COMMUNITY_UNDERTAKE_TITLE = 'อาสาพัฒนาชุมชนประจำหมู่บ้าน (อช.)';
     private static $ORGA_DEV_COMMUNITY_UNDERTAKE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address', 'member_phone1');
     private static $ORGA_DEV_COMMUNITY_UNDERTAKE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -116,7 +104,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '100px', 'text' => 'หมายเลขโทรศัพท์')
     );
     private static $ORGA_LIVESTOCK_UNDERTAKE_GROUP_ID = 15;
-    private static $ORGA_LIVESTOCK_UNDERTAKE_TITLE = 'อาสาปศุสัตว์ (อศ.)';
     private static $ORGA_LIVESTOCK_UNDERTAKE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address', 'member_phone1');
     private static $ORGA_LIVESTOCK_UNDERTAKE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -126,7 +113,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '100px', 'text' => 'หมายเลขโทรศัพท์')
     );
     private static $ORGA_25_PINEAPPLE_GROUP_ID = 16;
-    private static $ORGA_25_PINEAPPLE_TITLE = '25 ตาสับปะรด';
     private static $ORGA_25_PINEAPPLE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address', 'member_phone1');
     private static $ORGA_25_PINEAPPLE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -136,7 +122,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '100px', 'text' => 'หมายเลขโทรศัพท์')
     );
     private static $ORGA_RED_CROSS_UNDERTAKE_GROUP_ID = 17;
-    private static $ORGA_RED_CROSS_UNDERTAKE_TITLE = 'อาสากาชาด';
     private static $ORGA_RED_CROSS_UNDERTAKE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address', 'member_phone1');
     private static $ORGA_RED_CROSS_UNDERTAKE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -146,7 +131,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '100px', 'text' => 'หมายเลขโทรศัพท์')
     );
     private static $ORGA_MEDIATE_CIVIL_DELEGATE_GROUP_ID = 18;
-    private static $ORGA_MEDIATE_CIVIL_DELEGATE_TITLE = 'ผู้แทนผู้ไกล่เกลี่ยและประนอมข้อพิพาททางแพ่ง';
     private static $ORGA_MEDIATE_CIVIL_DELEGATE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address', 'member_phone1');
     private static $ORGA_MEDIATE_CIVIL_DELEGATE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -156,7 +140,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '100px', 'text' => 'หมายเลขโทรศัพท์')
     );
     private static $ORGA_FARMER_GROUP_ID = 19;
-    private static $ORGA_FARMER_TITLE = 'อาสาสมัครเกษตร (อกม.)';
     private static $ORGA_FARMER_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address', 'member_phone1');
     private static $ORGA_FARMER_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -166,7 +149,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '100px', 'text' => 'หมายเลขโทรศัพท์')
     );
     private static $ORGA_SOIL_DOCTER_GROUP_ID = 20;
-    private static $ORGA_SOIL_DOCTER_TITLE = 'หมอดินอาสา';
     private static $ORGA_SOIL_DOCTER_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address', 'member_phone1');
     private static $ORGA_SOIL_DOCTER_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -176,7 +158,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '100px', 'text' => 'หมายเลขโทรศัพท์')
     );
     private static $OLDER_OLDER_GROUP_ID = 22;
-    private static $OLDER_OLDER_TITLE = 'ผู้สูงอายุ';
     private static $OLDER_OLDER_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address', 'member_phone1', 'problem');
     private static $OLDER_OLDER_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -187,7 +168,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '150px', 'text' => 'สภาพปัญหา')
     );
     private static $OLDER_DISABLED_GROUP_ID = 23;
-    private static $OLDER_DISABLED_TITLE = 'ผู้พิการ';
     private static $OLDER_DISABLED_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address', 'member_phone1', 'problem');
     private static $OLDER_DISABLED_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -198,7 +178,6 @@ class GroupMemberClass {
         array('class' => 'center', 'width' => '150px', 'text' => 'สภาพปัญหา')
     );
     private static $OLDER_MISERABLE_GROUP_ID = 24;
-    private static $OLDER_MISERABLE_TITLE = 'ผู้ยากไร้';
     private static $OLDER_MISERABLE_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'member_address', 'member_phone1', 'problem');
     private static $OLDER_MISERABLE_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
@@ -224,8 +203,14 @@ class GroupMemberClass {
                         ->get();
     }
 
+    private function getTitleForDisplay($groupId) {
+        return Groups::select('group_name')
+                        ->where('group_id', '=', $groupId)
+                        ->first()['group_name'];
+    }
+
     public function getExHeadmanTitleForDisplay() {
-        return self::$EX_HEADMAN_TITLE;
+        return $this->getTitleForDisplay(self::$EX_HEADMAN_GROUP_ID);
     }
 
     public function getExHeadmanHeaderForDisplay() {
@@ -239,7 +224,7 @@ class GroupMemberClass {
     }
 
     public function getExSAOTitleForDisplay() {
-        return self::$EX_SAO_TITLE;
+        return $this->getTitleForDisplay(self::$EX_SAO_GROUP_ID);
     }
 
     public function getExSAOHeaderForDisplay() {
@@ -253,7 +238,7 @@ class GroupMemberClass {
     }
 
     public function getExVillageCommitteeTitleForDisplay() {
-        return self::$EX_VILLAGE_COMMITTEE_TITLE;
+        return $this->getTitleForDisplay(self::$EX_VILLAGE_COMMITTEE_GROUP_ID);
     }
 
     public function getExVillageCommitteeHeaderForDisplay() {
@@ -267,7 +252,7 @@ class GroupMemberClass {
     }
 
     public function getExFundVillageCommitteeTitleForDisplay() {
-        return self::$EX_FUND_VILLAGE_COMMITTEE_TITLE;
+        return $this->getTitleForDisplay(self::$EX_FUND_VILLAGE_COMMITTEE_GROUP_ID);
     }
 
     public function getExFundVillageCommitteeHeaderForDisplay() {
@@ -281,7 +266,7 @@ class GroupMemberClass {
     }
 
     public function getExProjectVillageCommitteeTitleForDisplay() {
-        return self::$EX_PROJECT_VILLAGE_COMMITTEE_TITLE;
+        return $this->getTitleForDisplay(self::$EX_PROJECT_VILLAGE_COMMITTEE_GROUP_ID);
     }
 
     public function getExProjectVillageCommitteeHeaderForDisplay() {
@@ -295,7 +280,7 @@ class GroupMemberClass {
     }
 
     public function getExFundWomenDelegateTitleForDisplay() {
-        return self::$EX_FUND_WOMEN_DELEGATE_TITLE;
+        return $this->getTitleForDisplay(self::$EX_FUND_WOMEN_DELEGATE_GROUP_ID);
     }
 
     public function getExFundWomenDelegateHeaderForDisplay() {
@@ -309,7 +294,7 @@ class GroupMemberClass {
     }
 
     public function getExProjectPoorCommitteeTitleForDisplay() {
-        return self::$EX_PROJECT_POOR_COMMITTEE_TITLE;
+        return $this->getTitleForDisplay(self::$EX_PROJECT_POOR_COMMITTEE_GROUP_ID);
     }
 
     public function getExProjectPoorCommitteeHeaderForDisplay() {
@@ -323,7 +308,7 @@ class GroupMemberClass {
     }
 
     public function getExFundQueenTitleForDisplay() {
-        return self::$EX_FUND_QUEEN_TITLE;
+        return $this->getTitleForDisplay(self::$EX_FUND_QUEEN_GROUP_ID);
     }
 
     public function getExFundQueenHeaderForDisplay() {
@@ -337,7 +322,7 @@ class GroupMemberClass {
     }
 
     public function getExSavingsMenufacturingCommitteeTitleForDisplay() {
-        return self::$EX_SAVINGS_MENUFACTURING_COMMITTEE_TITLE;
+        return $this->getTitleForDisplay(self::$EX_SAVINGS_MENUFACTURING_COMMITTEE_GROUP_ID);
     }
 
     public function getExSavingsMenufacturingCommitteeHeaderForDisplay() {
@@ -351,7 +336,7 @@ class GroupMemberClass {
     }
 
     public function getOrgaPublicHealthUndertakeTitleForDisplay() {
-        return self::$ORGA_PUBLIC_HEALTH_UNDERTAKE_TITLE;
+        return $this->getTitleForDisplay(self::$ORGA_PUBLIC_HEALTH_UNDERTAKE_GROUP_ID);
     }
 
     public function getOrgaPublicHealthUndertakeHeaderForDisplay() {
@@ -365,7 +350,7 @@ class GroupMemberClass {
     }
 
     public function getOrgaSecurityUndertakeTitleForDisplay() {
-        return self::$ORGA_SECURITY_UNDERTAKE_TITLE;
+        return $this->getTitleForDisplay(self::$ORGA_SECURITY_UNDERTAKE_GROUP_ID);
     }
 
     public function getOrgaSecurityUndertakeHeaderForDisplay() {
@@ -379,7 +364,7 @@ class GroupMemberClass {
     }
 
     public function getOrgaDevCommunityUndertakeTitleForDisplay() {
-        return self::$ORGA_DEV_COMMUNITY_UNDERTAKE_TITLE;
+        return $this->getTitleForDisplay(self::$ORGA_DEV_COMMUNITY_UNDERTAKE_GROUP_ID);
     }
 
     public function getOrgaDevCommunityUndertakeHeaderForDisplay() {
@@ -393,7 +378,7 @@ class GroupMemberClass {
     }
 
     public function getOrgaLivestockUndertakeTitleForDisplay() {
-        return self::$ORGA_LIVESTOCK_UNDERTAKE_TITLE;
+        return $this->getTitleForDisplay(self::$ORGA_LIVESTOCK_UNDERTAKE_GROUP_ID);
     }
 
     public function getOrgaLivestockUndertakeHeaderForDisplay() {
@@ -407,7 +392,7 @@ class GroupMemberClass {
     }
 
     public function getOrga25PineappleTitleForDisplay() {
-        return self::$ORGA_25_PINEAPPLE_TITLE;
+        return $this->getTitleForDisplay(self::$ORGA_25_PINEAPPLE_GROUP_ID);
     }
 
     public function getOrga25PineappleHeaderForDisplay() {
@@ -421,7 +406,7 @@ class GroupMemberClass {
     }
 
     public function getOrgaRedCrossUndertakeTitleForDisplay() {
-        return self::$ORGA_RED_CROSS_UNDERTAKE_TITLE;
+        return $this->getTitleForDisplay(self::$ORGA_RED_CROSS_UNDERTAKE_GROUP_ID);
     }
 
     public function getOrgaRedCrossUndertakeHeaderForDisplay() {
@@ -435,7 +420,7 @@ class GroupMemberClass {
     }
 
     public function getOrgaMediateCivilDelegateTitleForDisplay() {
-        return self::$ORGA_MEDIATE_CIVIL_DELEGATE_TITLE;
+        return $this->getTitleForDisplay(self::$ORGA_MEDIATE_CIVIL_DELEGATE_GROUP_ID);
     }
 
     public function getOrgaMediateCivilDelegateHeaderForDisplay() {
@@ -449,7 +434,7 @@ class GroupMemberClass {
     }
 
     public function getOrgaFarmerTitleForDisplay() {
-        return self::$ORGA_FARMER_TITLE;
+        return $this->getTitleForDisplay(self::$ORGA_FARMER_GROUP_ID);
     }
 
     public function getOrgaFarmerHeaderForDisplay() {
@@ -463,7 +448,7 @@ class GroupMemberClass {
     }
 
     public function getOrgaSoilDocterTitleForDisplay() {
-        return self::$ORGA_SOIL_DOCTER_TITLE;
+        return $this->getTitleForDisplay(self::$ORGA_SOIL_DOCTER_GROUP_ID);
     }
 
     public function getOrgaSoilDocterHeaderForDisplay() {
@@ -477,7 +462,7 @@ class GroupMemberClass {
     }
 
     public function getOlderOlderTitleForDisplay() {
-        return self::$OLDER_OLDER_TITLE;
+        return $this->getTitleForDisplay(self::$OLDER_OLDER_GROUP_ID);
     }
 
     public function getOlderOlderHeaderForDisplay() {
@@ -491,7 +476,7 @@ class GroupMemberClass {
     }
 
     public function getOlderDisabledTitleForDisplay() {
-        return self::$OLDER_DISABLED_TITLE;
+        return $this->getTitleForDisplay(self::$OLDER_DISABLED_GROUP_ID);
     }
 
     public function getOlderDisabledHeaderForDisplay() {
@@ -505,7 +490,7 @@ class GroupMemberClass {
     }
 
     public function getOlderMiserableTitleForDisplay() {
-        return self::$OLDER_MISERABLE_TITLE;
+        return $this->getTitleForDisplay(self::$OLDER_MISERABLE_GROUP_ID);
     }
 
     public function getOlderMiserableHeaderForDisplay() {

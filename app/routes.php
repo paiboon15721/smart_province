@@ -28,7 +28,6 @@ Route::get('map', array('before' => 'catmId', 'uses' => 'HomeController@map'));
 
 
 //menu setting
-Route::get('getDatatables/menuSetting', array('as' => 'getDatatables.menuSetting', 'uses' => 'MenuSettingController@getDatatables'));
 Route::get('menuSetting/{id}', array('before' => 'catmId', 'uses' => 'MenuSettingController@index'));
 Route::get('menuSetting/{parentMenuIdForBack}/insert/{id}', array('before' => 'catmId', 'uses' => 'MenuSettingController@insertGet'));
 Route::post('menuSetting/{parentMenuIdForBack}/insert', array('before' => 'catmId', 'uses' => 'MenuSettingController@insertPost'));
@@ -77,6 +76,12 @@ Route::get('problemStable', array('before' => 'catmId', 'uses' => 'ProblemContro
 Route::get('problemFarmer', array('before' => 'catmId', 'uses' => 'ProblemController@displayProblemFarmer'));
 Route::get('problemSocialPerformance', array('before' => 'catmId', 'uses' => 'ProblemController@displayProblemSocialPerformance'));
 Route::get('problemTable', array('before' => 'catmId', 'uses' => 'ProblemController@displayDatatableProblem'));
+Route::get('problemTable/insert', array('before' => 'catmId', 'uses' => 'ProblemController@insertGet'));
+Route::post('problemTable/insert', array('before' => 'catmId', 'uses' => 'ProblemController@insertPost'));
+Route::get('problemTable/update/{id}', array('before' => 'catmId', 'uses' => 'ProblemController@updateGet'));
+Route::post('problemTable/update/{id}', array('before' => 'catmId', 'uses' => 'ProblemController@updatePost'));
+Route::get('problemTable/delete/{id}', array('before' => 'catmId', 'uses' => 'ProblemController@deleteGet'));
+
 Route::get('datasourceProblem', array('before' => 'catmId', 'uses' => 'DatatableDatasourceController@datasourceProblem'));
 
 //otop

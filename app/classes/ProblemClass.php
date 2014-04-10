@@ -4,8 +4,8 @@ class ProblemClass {
 
     private $problemId;
     private $fieldForDisplay = array();
+    private static $MENU_ID = 33;
     private static $PROBLEM_ECONOMY_PROBLEM_ID = 1;
-    private static $PROBLEM_ECONOMY_TITLE = 'ปัญหาด้านเศรษฐกิจ';
     private static $PROBLEM_ECONOMY_FIELD = array('problem_desc', 'cause', 'howto');
     private static $PROBLEM_ECONOMY_HEADER = array(
         array('class' => 'center', 'width' => '70px', 'text' => 'ลำดับที่'),
@@ -14,7 +14,6 @@ class ProblemClass {
         array('class' => 'center', 'width' => '300px', 'text' => 'แนวทางการแก้ไขปัญหา')
     );
     private static $PROBLEM_SOCIAL_PROBLEM_ID = 2;
-    private static $PROBLEM_SOCIAL_TITLE = 'ปัญหาด้านสังคม';
     private static $PROBLEM_SOCIAL_FIELD = array('problem_desc', 'cause', 'howto');
     private static $PROBLEM_SOCIAL_HEADER = array(
         array('class' => 'center', 'width' => '70px', 'text' => 'ลำดับที่'),
@@ -23,7 +22,6 @@ class ProblemClass {
         array('class' => 'center', 'width' => '300px', 'text' => 'แนวทางการแก้ไขปัญหา')
     );
     private static $PROBLEM_ENVIRONMENT_PROBLEM_ID = 3;
-    private static $PROBLEM_ENVIRONMENT_TITLE = 'ปัญหาด้านทรัพยากรธรรมชาติและสิ่งแวดล้อม';
     private static $PROBLEM_ENVIRONMENT_FIELD = array('problem_desc', 'cause', 'howto');
     private static $PROBLEM_ENVIRONMENT_HEADER = array(
         array('class' => 'center', 'width' => '70px', 'text' => 'ลำดับที่'),
@@ -32,7 +30,6 @@ class ProblemClass {
         array('class' => 'center', 'width' => '300px', 'text' => 'แนวทางการแก้ไขปัญหา')
     );
     private static $PROBLEM_MANAGEMENT_PROBLEM_ID = 4;
-    private static $PROBLEM_MANAGEMENT_TITLE = 'ปัญหาด้านการบริหารจัดการ';
     private static $PROBLEM_MANAGEMENT_FIELD = array('problem_desc', 'cause', 'howto');
     private static $PROBLEM_MANAGEMENT_HEADER = array(
         array('class' => 'center', 'width' => '70px', 'text' => 'ลำดับที่'),
@@ -41,7 +38,6 @@ class ProblemClass {
         array('class' => 'center', 'width' => '300px', 'text' => 'แนวทางการแก้ไขปัญหา')
     );
     private static $PROBLEM_STABLE_PROBLEM_ID = 5;
-    private static $PROBLEM_STABLE_TITLE = 'ปัญหาด้านความมั่นคง';
     private static $PROBLEM_STABLE_FIELD = array('problem_desc', 'cause', 'howto');
     private static $PROBLEM_STABLE_HEADER = array(
         array('class' => 'center', 'width' => '70px', 'text' => 'ลำดับที่'),
@@ -50,7 +46,6 @@ class ProblemClass {
         array('class' => 'center', 'width' => '300px', 'text' => 'แนวทางการแก้ไขปัญหา')
     );
     private static $PROBLEM_FARMER_PROBLEM_ID = 6;
-    private static $PROBLEM_FARMER_TITLE = 'ปัญหาด้านการเกษตร';
     private static $PROBLEM_FARMER_FIELD = array('problem_desc', 'cause', 'howto');
     private static $PROBLEM_FARMER_HEADER = array(
         array('class' => 'center', 'width' => '70px', 'text' => 'ลำดับที่'),
@@ -59,7 +54,6 @@ class ProblemClass {
         array('class' => 'center', 'width' => '300px', 'text' => 'แนวทางการแก้ไขปัญหา')
     );
     private static $PROBLEM_SOCIAL_PERFORMANCE_PROBLEM_ID = 7;
-    private static $PROBLEM_SOCIAL_PERFORMANCE_TITLE = 'ปัญหาด้านการเรียนรู้และพัฒนาศักยภาพชุมชน';
     private static $PROBLEM_SOCIAL_PERFORMANCE_FIELD = array('problem_desc', 'cause', 'howto');
     private static $PROBLEM_SOCIAL_PERFORMANCE_HEADER = array(
         array('class' => 'center', 'width' => '70px', 'text' => 'ลำดับที่'),
@@ -68,6 +62,12 @@ class ProblemClass {
         array('class' => 'center', 'width' => '300px', 'text' => 'แนวทางการแก้ไขปัญหา')
     );
 
+    public function getMenuNameForDisplay() {
+        return MenuSetting::select('menu_name_th')
+                        ->where('menu_id', '=', self::$MENU_ID)
+                        ->first()['menu_name_th'];
+    }
+
     private function getDataForDisplay() {
         return Problem::select($this->fieldForDisplay)
                         ->where('problem_id', '=', $this->problemId)
@@ -75,8 +75,14 @@ class ProblemClass {
                         ->get();
     }
 
+    private function getTitleForDisplay($problemId) {
+        return ProblemDic::select('problem_name')
+                        ->where('problem_dic_id', '=', $problemId)
+                        ->first()['problem_name'];
+    }
+
     public function getProblemEconomyTitleForDisplay() {
-        return self::$PROBLEM_ECONOMY_TITLE;
+        return $this->getTitleForDisplay(self::$PROBLEM_ECONOMY_PROBLEM_ID);
     }
 
     public function getProblemEconomyHeaderForDisplay() {
@@ -90,7 +96,7 @@ class ProblemClass {
     }
 
     public function getProblemSocialTitleForDisplay() {
-        return self::$PROBLEM_SOCIAL_TITLE;
+        return $this->getTitleForDisplay(self::$PROBLEM_SOCIAL_PROBLEM_ID);
     }
 
     public function getProblemSocialHeaderForDisplay() {
@@ -104,7 +110,7 @@ class ProblemClass {
     }
 
     public function getProblemEnvironmentTitleForDisplay() {
-        return self::$PROBLEM_ENVIRONMENT_TITLE;
+        return $this->getTitleForDisplay(self::$PROBLEM_ENVIRONMENT_PROBLEM_ID);
     }
 
     public function getProblemEnvironmentHeaderForDisplay() {
@@ -118,7 +124,7 @@ class ProblemClass {
     }
 
     public function getProblemManagementTitleForDisplay() {
-        return self::$PROBLEM_MANAGEMENT_TITLE;
+        return $this->getTitleForDisplay(self::$PROBLEM_MANAGEMENT_PROBLEM_ID);
     }
 
     public function getProblemManagementHeaderForDisplay() {
@@ -132,7 +138,7 @@ class ProblemClass {
     }
 
     public function getProblemStableTitleForDisplay() {
-        return self::$PROBLEM_STABLE_TITLE;
+        return $this->getTitleForDisplay(self::$PROBLEM_STABLE_PROBLEM_ID);
     }
 
     public function getProblemStableHeaderForDisplay() {
@@ -146,7 +152,7 @@ class ProblemClass {
     }
 
     public function getProblemFarmerTitleForDisplay() {
-        return self::$PROBLEM_FARMER_TITLE;
+        return $this->getTitleForDisplay(self::$PROBLEM_FARMER_PROBLEM_ID);
     }
 
     public function getProblemFarmerHeaderForDisplay() {
@@ -160,7 +166,7 @@ class ProblemClass {
     }
 
     public function getProblemSocialPerformanceTitleForDisplay() {
-        return self::$PROBLEM_SOCIAL_PERFORMANCE_TITLE;
+        return $this->getTitleForDisplay(self::$PROBLEM_SOCIAL_PERFORMANCE_PROBLEM_ID);
     }
 
     public function getProblemSocialPerformanceHeaderForDisplay() {

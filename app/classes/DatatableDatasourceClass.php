@@ -7,10 +7,10 @@ class DatatableDatasourceClass {
         $sIndexColumn = "catm";
         $sTable = "tab_problem INNER JOIN tab_problem_dic ON tab_problem.problem_id = tab_problem_dic.problem_dic_id";
         $sWhere = "WHERE catm = " . Session::get('catmId');
-        $this->datatable_show($aColumns, $sIndexColumn, $sTable, $sWhere);
+        $this->generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere);
     }
 
-    private function datatable_show($aColumns, $sIndexColumn, $sTable, $sWhere = "") {
+    private function generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere = "") {
         /*
          * Paging
          */

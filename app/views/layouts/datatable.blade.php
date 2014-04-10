@@ -26,8 +26,8 @@
             "sToolTip": "",
             "fnMouseover": null,
             "fnMouseout": null,
-            "fnClick": function(nButton, oConfig) {
-                window.location = "";
+            "fnClick": function() {
+                window.location = "{{$insertUrl}}";
             },
             "fnSelect": null,
             "fnComplete": null,
@@ -39,13 +39,13 @@
             "sToolTip": "",
             "fnMouseover": null,
             "fnMouseout": null,
-            "fnClick": function(nButton, oConfig) {
+            "fnClick": function() {
                 var oTT = TableTools.fnGetInstance('datatable');
                 if (oTT.fnGetSelectedData() == "") {
                     alert("กรุณาเลือกรายการที่ต้องการแก้ไข");
                 } else {
                     var aData = oTT.fnGetSelectedData()[0][0];
-                    window.location = "_form/" + aData;
+                    window.location = "{{$updateUrl}}" + aData;
                 }
             },
             "fnSelect": null,
@@ -58,14 +58,14 @@
             "sToolTip": "",
             "fnMouseover": null,
             "fnMouseout": null,
-            "fnClick": function(nButton, oConfig) {
+            "fnClick": function() {
                 var oTT = TableTools.fnGetInstance('datatable');
                 if (oTT.fnGetSelectedData() == "") {
                     alert("กรุณาเลือกรายการที่ต้องการลบ");
                 } else {
                     if (confirm('คุณแน่ใจที่จะลบข้อมูลนี้?')) {
                         var aData = oTT.fnGetSelectedData()[0][0];
-                        window.location = "_form/" + aData;
+                        window.location = "{{$deleteUrl}}" + aData;
                     }
                 }
             },
@@ -114,6 +114,7 @@
             "sScrollXInner": "150%",
             "bScrollCollapse": true,
             "bProcessing": true,
+            "bServerSide": false,
             "iDisplayLength": 10,
             "sAjaxSource": "{{$datasourceUrl}}"
         });
@@ -130,9 +131,9 @@
                 <th width="30" field="problem_running_id">id</th>
                 <th width="100" field="catm">รหัสหมู่บ้าน</th>
                 <th width="30" field="problem_id">รหัสปัญหา</th>
-                <th width="150" field="problem_name">ปัญหา</th>
+                <th width="250" field="problem_name">ปัญหา</th>
                 <th width="100" field="problem_desc">สภาพปัญหา</th>
-                <th width="50" field="cause">สาเหตุ</th>
+                <th width="150" field="cause">สาเหตุ</th>
                 <th width="100" field="howto">ทางแก้</th>
                 <th width="40" field="begin_date">วันเกิด</th>
                 <th width="40" field="end_date">วันแก้</th>

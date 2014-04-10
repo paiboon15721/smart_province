@@ -58,9 +58,19 @@ class ProblemController extends BaseController {
                         ->with('listOfData', $this->problem->getProblemSocialPerformanceDataForDisplay());
     }
 
+    public function insertGet() {
+        return View::make('problem.insert')
+                        ->with('actionType', 'บันทึก')
+                        ->with('menuName', $this->problem->getMenuNameForDisplay())
+                        ->with('backUrl', URL::to('problemTable'));
+    }
+
     public function displayDatatableProblem() {
         return View::make('layouts.datatable')
-                        ->with('datasourceUrl', URL::to('datasourceProblem'));
+                        ->with('datasourceUrl', URL::to('datasourceProblem'))
+                        ->with('insertUrl', URL::to('problemTable/insert'))
+                        ->with('updateUrl', URL::to('problemTable/update'))
+                        ->with('deleteUrl', URL::to('problemTable/delete'));
     }
 
 }
