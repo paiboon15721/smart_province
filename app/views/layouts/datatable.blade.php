@@ -14,7 +14,6 @@
 {{HTML::style('css/dataTables/jquery-ui-1.8.14.custom.css')}}
 {{HTML::style('css/dataTables/demo_table_jui.css')}}
 {{HTML::style('css/dataTables/TableTools_JUI.css')}}
-{{HTML::style('css/dataTables/style_information.css')}}
 {{HTML::script('js/dataTables/jquery.dataTables.min.js')}}
 {{HTML::script('js/dataTables/TableTools.js')}}
 {{HTML::script('js/dataTables/ZeroClipboard.js')}}
@@ -125,7 +124,7 @@
 
 @section('subContent')
 <div id="welcome" class="post">
-    <table cellspacing="0" cellpadding="0" border="0"  id="datatable">
+    <table cellspacing="0" cellpadding="0" border="0"  id="datatable" class="display">
         <thead>
             <tr>
                 <th width="30" field="problem_running_id">id</th>

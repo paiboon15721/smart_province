@@ -16,7 +16,7 @@
 {{HTML::style('css/layouts/layouts.main.css')}}
 {{HTML::style('css/uiToTop/ui.totop.css')}}
 {{HTML::script('js/jquery-1.7.2.min.js')}}
-{{HTML::script('js/jquery.ui.totop.min.js')}}
+{{HTML::script('js/uiToTop/jquery.ui.totop.min.js')}}
 @yield('subScript&css')
 @stop
 
