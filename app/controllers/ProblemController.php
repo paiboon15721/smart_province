@@ -4,9 +4,11 @@ class ProblemController extends BaseController {
 
     protected $layout = 'layouts.tablecloth';
     private $problem;
+    private $problemDic;
 
     function __construct() {
         $this->problem = new ProblemClass();
+        $this->problemDic = new ProblemDicClass();
     }
 
     public function displayProblemEconomy() {
@@ -62,6 +64,7 @@ class ProblemController extends BaseController {
         return View::make('problem.insert')
                         ->with('actionType', 'บันทึก')
                         ->with('menuName', $this->problem->getMenuNameForDisplay())
+                        ->with('problemDic', $this->problemDic->getProblemDicForCombobox())
                         ->with('backUrl', URL::to('problemTable'));
     }
 

@@ -37,7 +37,7 @@
             </div>
             <div>
                 {{HTML::decode(Form::label('problem_dic_id', "ด้านของปัญหา"))}}
-                {{Form::select('problem_dic_id', array('L' => 'Large', 'M' => 'Medium', 'S' => 'Small'))}}
+                {{Form::select('problem_dic_id', $problemDic)}}
             </div>
             <div>
                 {{HTML::decode(Form::label('problem_desc', "<span class='required'>* </span> สภาพปัญหา"))}}
