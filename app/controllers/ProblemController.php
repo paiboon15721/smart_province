@@ -68,9 +68,67 @@ class ProblemController extends BaseController {
                         ->with('backUrl', URL::to('problemTable'));
     }
 
+    public function insertPost() {
+        $this->problem->setProblemId(Input::get('problemId'));
+        $this->problem->setProblemDesc(Input::get('problemDesc'));
+        $this->problem->setCause(Input::get('cause'));
+        $this->problem->setHowTo(Input::get('howTo'));
+        $this->problem->setBeginDate(Input::get('beginDate'));
+        $this->problem->setEndDate(Input::get('endDate'));
+        $this->problem->setStatus(Input::get('status'));
+        $v = $this->problem->validate();
+        if ($v->fails()) {
+            return Redirect::to('problemTable/insert')
+                            ->withErrors($v)
+                            ->withInput();
+        }
+        $this->problem->insertToDatabase();
+        return Redirect::to('problemTable/insert')
+                        ->with('insertSuccess', true);
+    }
+
+    public function updateGet($problemRunningId) {
+        $this->problem->setProblemRunningId($problemRunningId);
+        $problem = $this->problem->getProblem();
+        return View::make('problem.update')
+                        ->with('actionType', 'แก้ไข')
+                        ->with('menuName', $this->problem->getMenuNameForDisplay())
+                        ->with('problemDic', $this->problemDic->getProblemDicForCombobox())
+                        ->with('problem', $problem)
+                        ->with('backUrl', URL::to('problemTable'));
+    }
+
+    public function updatePost($problemRunningId) {
+        $this->problem->setProblemRunningId($problemRunningId);
+        $this->problem->setProblemId(Input::get('problemId'));
+        $this->problem->setProblemDesc(Input::get('problemDesc'));
+        $this->problem->setCause(Input::get('cause'));
+        $this->problem->setHowTo(Input::get('howTo'));
+        $this->problem->setBeginDate(Input::get('beginDate'));
+        $this->problem->setEndDate(Input::get('endDate'));
+        $this->problem->setStatus(Input::get('status'));
+        $v = $this->problem->validate();
+        if ($v->fails()) {
+            return Redirect::to('problemTable/update/' . $problemRunningId)
+                            ->withErrors($v)
+                            ->withInput();
+        }
+        $this->problem->updateToDatabase();
+        return Redirect::to('problemTable/update/' . $problemRunningId)
+                        ->with('updateSuccess', true);
+    }
+
+    public function deleteGet($problemRunningId) {
+        $this->problem->setProblemRunningId($problemRunningId);
+        $this->problem->deleteToDatabase($problemRunningId);
+        return Redirect::to('problemTable')
+                        ->with('deleteSuccess', true);
+    }
+
     public function displayDatatableProblem() {
-        return View::make('layouts.datatable')
+        return View::make('problem.index')
                         ->with('datasourceUrl', URL::to('datasourceProblem'))
+                        ->with('menuName', $this->problem->getMenuNameForDisplay())
                         ->with('insertUrl', URL::to('problemTable/insert'))
                         ->with('updateUrl', URL::to('problemTable/update'))
                         ->with('deleteUrl', URL::to('problemTable/delete'));

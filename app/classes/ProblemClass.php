@@ -2,7 +2,59 @@
 
 class ProblemClass {
 
+    private $problemRunningId;
     private $problemId;
+    private $problemDesc;
+    private $cause;
+    private $howTo;
+    private $beginDate;
+    private $endDate;
+    private $status;
+    private $rules = array(
+        'problemDesc' => 'required',
+        'status' => 'required'
+    );
+
+    public function validate() {
+        $validationData = array(
+            'problemDesc' => $this->problemDesc,
+            'status' => $this->status
+        );
+        return Validator::make($validationData, $this->rules);
+    }
+
+    public function setProblemRunningId($value) {
+        $this->problemRunningId = $value;
+    }
+
+    public function setProblemId($value) {
+        $this->problemId = $value;
+    }
+
+    public function setProblemDesc($value) {
+        $this->problemDesc = $value;
+    }
+
+    public function setCause($value) {
+        $this->cause = $value;
+    }
+
+    public function setHowTo($value) {
+        $this->howTo = $value;
+    }
+
+    public function setBeginDate($value) {
+        $this->beginDate = $value;
+    }
+
+    public function setEndDate($value) {
+        $this->endDate = $value;
+    }
+
+    public function setStatus($value) {
+        $this->status = $value;
+    }
+
     private $fieldForDisplay = array();
     private static $MENU_ID = 33;
     private static $PROBLEM_ECONOMY_PROBLEM_ID = 1;
@@ -177,6 +229,40 @@ class ProblemClass {
         $this->problemId = self::$PROBLEM_SOCIAL_PERFORMANCE_PROBLEM_ID;
         $this->fieldForDisplay = self::$PROBLEM_SOCIAL_PERFORMANCE_FIELD;
         return $this->getDataForDisplay();
+    }
+
+    public function getProblem() {
+        return Problem::find($this->problemRunningId);
+    }
+
+    public function insertToDatabase() {
+        $problem = new Problem;
+        $problem->catm = Session::get('catmId');
+        $problem->problem_id = $this->problemId;
+        $problem->problem_desc = $this->problemDesc;
+        $problem->cause = $this->cause;
+        $problem->howto = $this->howTo;
+        $problem->begin_date = $this->beginDate;
+        $problem->end_date = $this->endDate;
+        $problem->status = $this->status;
+        $problem->save();
+    }
+
+    public function updateToDatabase() {
+        $problem = Problem::find($this->problemRunningId);
+        $problem->problem_id = $this->problemId;
+        $problem->problem_desc = $this->problemDesc;
+        $problem->cause = $this->cause;
+        $problem->howto = $this->howTo;
+        $problem->begin_date = $this->beginDate;
+        $problem->end_date = $this->endDate;
+        $problem->status = $this->status;
+        $problem->save();
+    }
+
+    public function deleteToDatabase() {
+        $problem = Problem::find($this->problemRunningId);
+        $problem->delete();
     }
 
 }
