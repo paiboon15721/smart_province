@@ -64,7 +64,7 @@ class ProblemController extends BaseController {
         return View::make('problem.insert')
                         ->with('actionType', 'บันทึก')
                         ->with('menuName', $this->problem->getMenuNameForDisplay())
-                        ->with('problemDic', $this->problemDic->getProblemDicForCombobox())
+                        ->with('problemDicList', $this->problemDic->getProblemDicList())
                         ->with('backUrl', URL::to('problemTable'));
     }
 
@@ -93,7 +93,7 @@ class ProblemController extends BaseController {
         return View::make('problem.update')
                         ->with('actionType', 'แก้ไข')
                         ->with('menuName', $this->problem->getMenuNameForDisplay())
-                        ->with('problemDic', $this->problemDic->getProblemDicForCombobox())
+                        ->with('problemDicList', $this->problemDic->getProblemDicList())
                         ->with('problem', $problem)
                         ->with('backUrl', URL::to('problemTable'));
     }
@@ -120,18 +120,16 @@ class ProblemController extends BaseController {
 
     public function deleteGet($problemRunningId) {
         $this->problem->setProblemRunningId($problemRunningId);
-        $this->problem->deleteToDatabase($problemRunningId);
+        $this->problem->deleteToDatabase();
         return Redirect::to('problemTable')
                         ->with('deleteSuccess', true);
     }
 
-    public function displayDatatableProblem() {
+    public function displayDatatable() {
         return View::make('problem.index')
                         ->with('datasourceUrl', URL::to('datasourceProblem'))
                         ->with('menuName', $this->problem->getMenuNameForDisplay())
-                        ->with('insertUrl', URL::to('problemTable/insert'))
-                        ->with('updateUrl', URL::to('problemTable/update'))
-                        ->with('deleteUrl', URL::to('problemTable/delete'));
+                        ->with('url', 'problemTable');
     }
 
 }

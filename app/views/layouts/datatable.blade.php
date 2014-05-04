@@ -27,7 +27,7 @@
             "fnMouseover": null,
             "fnMouseout": null,
             "fnClick": function() {
-                window.location = "{{$insertUrl}}";
+                window.location = "{{$url}}/insert";
             },
             "fnSelect": null,
             "fnComplete": null,
@@ -45,7 +45,7 @@
                     alert("กรุณาเลือกรายการที่ต้องการแก้ไข");
                 } else {
                     var aData = oTT.fnGetSelectedData()[0][0];
-                    window.location = "{{$updateUrl}}/" + aData;
+                    window.location = "{{$url}}/update/" + aData;
                 }
             },
             "fnSelect": null,
@@ -65,7 +65,7 @@
                 } else {
                     if (confirm('คุณแน่ใจที่จะลบข้อมูลนี้?')) {
                         var aData = oTT.fnGetSelectedData()[0][0];
-                        window.location = "{{$deleteUrl}}/" + aData;
+                        window.location = "{{$url}}/delete/" + aData;
                     }
                 }
             },
@@ -115,7 +115,7 @@
             "bScrollCollapse": true,
             "bProcessing": true,
             "bServerSide": false,
-            "iDisplayLength": 10,
+            "iDisplayLength": 20,
             "sAjaxSource": "{{$datasourceUrl}}"
         });
     });

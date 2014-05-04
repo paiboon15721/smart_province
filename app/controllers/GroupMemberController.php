@@ -2,11 +2,140 @@
 
 class GroupMemberController extends BaseController {
 
-    protected $layout = 'layouts.tablecloth';
+    //protected $layout = 'layouts.tablecloth';
     private $groupMember;
+    private $title;
+    private $career;
+    private $groups;
+    private $groupPosition;
 
     function __construct() {
         $this->groupMember = new GroupMemberClass();
+        $this->title = new TitleClass();
+        $this->career = new CareerClass();
+        $this->groups = new GroupsClass();
+        $this->groupPosition = new GroupPositionClass();
+    }
+
+    public function insertGet() {
+        return View::make('groupMember.insert')
+                        ->with('actionType', 'บันทึก')
+                        ->with('menuName', $this->groupMember->getMenuNameForDisplay())
+                        ->with('titlePrintList', $this->title->getTitlePrintList())
+                        ->with('memberCareerList', $this->career->getCareerList())
+                        ->with('backUrl', URL::to('groupMemberTable'));
+    }
+
+    public function insertPost() {
+        $this->groupMember->setMemberPid(Input::get('memberPid'));
+        $this->groupMember->setTitleId(Input::get('titleId'));
+        $this->groupMember->setMemberName(Input::get('memberName'));
+        $this->groupMember->setMemberMidname(Input::get('memberMidname'));
+        $this->groupMember->setMemberSurname(Input::get('memberSurname'));
+        $this->groupMember->setGender(Input::get('gender'));
+        $this->groupMember->setMemberCareer(Input::get('memberCareer'));
+        $this->groupMember->setMemberAddress(Input::get('memberAddress'));
+        $this->groupMember->setMemberPhoneNumber1(Input::get('memberPhoneNumber1'));
+        $this->groupMember->setMemberPhoneNumber2(Input::get('memberPhoneNumber2'));
+        $this->groupMember->setMemberImage(Input::get('memberImage'));
+        $this->groupMember->setAllInformation(Input::all());
+        $v = $this->groupMember->validate();
+        if ($v->fails()) {
+            return Redirect::to('groupMemberTable/insert')
+                            ->withErrors($v)
+                            ->withInput();
+        }
+        switch ($this->groupMember->insertToDatabase()) {
+            case 'startDateProblem' :
+                Session::flash('error', 'กรุณาระบุ วัน/เดือน/ปี ที่เริ่มดำรงตำแหน่งให้ถูกต้อง');
+                break;
+            case 'endDateProblem' :
+                Session::flash('error', 'กรุณาระบุ วัน/เดือน/ปี ที่หมดวาระดำรงตำแหน่งให้ถูกต้อง');
+                break;
+            case 'positionProblem' :
+                Session::flash('error', 'กรุณาระบุตำแหน่งที่ไม่ซ้ำกัน');
+                break;
+            default :
+                return Redirect::to('groupMemberTable/insert')
+                                ->with('insertSuccess', true);
+        }
+        return Redirect::to('groupMemberTable/insert')
+                        ->withErrors($v)
+                        ->withInput();
+    }
+
+    public function updateGet($memberPid) {
+        $this->groupMember->setMemberPid($memberPid);
+        $groupMember = $this->groupMember->getGroupMember();
+        $groupMemberPosition = $this->groupMember->getGroupMemberPosition();
+        $groupsNameList = $this->groups->getGroupsNameList();
+        $countGroupMemberPosition = count($groupMemberPosition);
+        $groupPositionNameList = array();
+        for ($i = 0; $i < $countGroupMemberPosition; $i++) {
+            $groupPositionNameList[$i] = $this->groupPosition->getGroupPositionNameList($groupMemberPosition[$i]->group_id);
+        }
+        return View::make('groupMember.update')
+                        ->with('actionType', 'บันทึก')
+                        ->with('menuName', $this->groupMember->getMenuNameForDisplay())
+                        ->with('titlePrintList', $this->title->getTitlePrintList())
+                        ->with('memberCareerList', $this->career->getCareerList())
+                        ->with('groupMember', $groupMember)
+                        ->with('groupMemberPosition', $groupMemberPosition)
+                        ->with('groupsNameList', $groupsNameList)
+                        ->with('groupPositionNameList', $groupPositionNameList)
+                        ->with('backUrl', URL::to('groupMemberTable'));
+    }
+
+    public function updatePost($memberPid) {
+        $this->groupMember->setMemberPid(Input::get('memberPid'));
+        $this->groupMember->setTitleId(Input::get('titleId'));
+        $this->groupMember->setMemberName(Input::get('memberName'));
+        $this->groupMember->setMemberMidname(Input::get('memberMidname'));
+        $this->groupMember->setMemberSurname(Input::get('memberSurname'));
+        $this->groupMember->setGender(Input::get('gender'));
+        $this->groupMember->setMemberCareer(Input::get('memberCareer'));
+        $this->groupMember->setMemberAddress(Input::get('memberAddress'));
+        $this->groupMember->setMemberPhoneNumber1(Input::get('memberPhoneNumber1'));
+        $this->groupMember->setMemberPhoneNumber2(Input::get('memberPhoneNumber2'));
+        $this->groupMember->setMemberImage(Input::get('memberImage'));
+        $this->groupMember->setAllInformation(Input::all());
+        $v = $this->groupMember->validate();
+        if ($v->fails()) {
+            return Redirect::to('groupMemberTable/update/' . $memberPid)
+                            ->withErrors($v)
+                            ->withInput();
+        }
+        switch ($this->groupMember->updateToDatabase()) {
+            case 'startDateProblem' :
+                Session::flash('error', 'กรุณาระบุ วัน/เดือน/ปี ที่เริ่มดำรงตำแหน่งให้ถูกต้อง');
+                break;
+            case 'endDateProblem' :
+                Session::flash('error', 'กรุณาระบุ วัน/เดือน/ปี ที่หมดวาระดำรงตำแหน่งให้ถูกต้อง');
+                break;
+            case 'positionProblem' :
+                Session::flash('error', 'กรุณาระบุตำแหน่งที่ไม่ซ้ำกัน');
+                break;
+            default :
+                return Redirect::to('groupMemberTable/update/' . $memberPid)
+                                ->with('updateSuccess', true);
+        }
+        return Redirect::to('groupMemberTable/update/' . $memberPid)
+                        ->withErrors($v)
+                        ->withInput();
+    }
+
+    public function deleteGet($memberPid) {
+        $this->groupMember->setMemberPid($memberPid);
+        $this->groupMember->deleteToDatabase();
+        return Redirect::to('groupMemberTable')
+                        ->with('deleteSuccess', true);
+    }
+
+    public function displayDatatable() {
+        return View::make('groupMember.index')
+                        ->with('datasourceUrl', URL::to('datasourceGroupMember'))
+                        ->with('menuName', $this->groupMember->getMenuNameForDisplay())
+                        ->with('url', 'groupMemberTable');
     }
 
     public function displayExHeadman() {
@@ -154,6 +283,21 @@ class GroupMemberController extends BaseController {
                         ->with('title', $this->groupMember->getOlderMiserableTitleForDisplay())
                         ->with('headers', $this->groupMember->getOlderMiserableHeaderForDisplay())
                         ->with('listOfData', $this->groupMember->getOlderMiserableDataForDisplay());
+    }
+
+    public function displayGroupPositionNameList($groupId) {
+        $groupPosition = $this->groupPosition->getGroupPositionNameList($groupId);
+        foreach ($groupPosition as $key => $value) {
+            echo "<option value='$key'>$value</option>";
+        }
+    }
+
+    public function displayPositionForm($max, $action) {
+        return View::make('groupMember.position')
+                        ->with('groupsNameList', $this->groups->getGroupsNameList())
+                        ->with('groupPositionNameList', $this->groupPosition->getGroupPositionNameList(1))
+                        ->with('action', $action)
+                        ->with('max', $max);
     }
 
 }

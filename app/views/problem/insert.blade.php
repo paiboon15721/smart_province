@@ -1,25 +1,6 @@
-@extends('contentLayouts.index')
+@extends('layouts.formWithDatepicker')
 
-@section('subTitle')
-{{$actionType}}{{$menuName}}
-@stop
-@section('subDescription')
-{{$actionType}}{{$menuName}}
-@stop
-@section('subKeywords')
-{{$actionType}}{{$menuName}}
-@stop
-
-@section('subScript&css')
-{{HTML::style('css/datepicker/datepick.css')}}
-{{HTML::style('css/layouts/layouts.form.css')}}
-{{HTML::script('js/datepicker/jquery.inputform.js')}}
-{{HTML::script('js/datepicker/jquery-message.js')}}
-{{HTML::script('js/datepicker/jquery.datepick.js')}}
-{{HTML::script('js/datepicker/func.js')}}
-@stop
-
-@section('subContent')
+@section('subSubSubContent')
 <div id="welcome" class="post">
     <div class="formarea">
         <div class="requiredfld">
@@ -37,7 +18,7 @@
             </div>
             <div>
                 {{HTML::decode(Form::label('problemId', "ด้านของปัญหา"))}}
-                {{Form::select('problemId', $problemDic)}}
+                {{Form::select('problemId', $problemDicList)}}
             </div>
             <div>
                 {{HTML::decode(Form::label('problemDesc', "<span class='required'>* </span> สภาพปัญหา"))}}
@@ -99,7 +80,4 @@
         {{Form::close()}}
     </div>
 </div>
-<script language="javascript">
-    input_ClassLoader("#profileForm ");
-</script>
 @stop

@@ -4,6 +4,264 @@ class GroupMemberClass {
 
     private $groupId;
     private $fieldForDisplay = array();
+    private static $MENU_ID = 218;
+    private $memberPid;
+    private $titleId;
+    private $memberName;
+    private $memberMidname;
+    private $memberSurname;
+    private $gender;
+    private $memberCareer;
+    private $memberAddress;
+    private $memberPhoneNumber1;
+    private $memberPhoneNumber2;
+    private $memberImage;
+    private $allInformation;
+    private $rules = array(
+        'memberPid' => 'required|Numeric',
+        'memberName' => 'required',
+        'memberSurname' => 'required',
+        'gender' => 'required'
+    );
+
+    public function validate() {
+        $validationData = array(
+            'memberPid' => $this->memberPid,
+            'memberName' => $this->memberName,
+            'memberSurname' => $this->memberSurname,
+            'gender' => $this->gender
+        );
+        return Validator::make($validationData, $this->rules);
+    }
+
+    public function insertToDatabase() {
+        //เตรียมข้อมูลสำหรับบันทึกข้อมูลทั่วไป
+        $groupMember = new GroupMember;
+        $groupMember->catm = Session::get('catmId');
+        $groupMember->member_pid = $this->memberPid;
+        $groupMember->title_code = $this->titleId;
+        $groupMember->fname = $this->memberName;
+        $groupMember->mname = $this->memberMidname;
+        $groupMember->lname = $this->memberSurname;
+        $groupMember->sex = $this->gender;
+        $groupMember->member_career = $this->memberCareer;
+        $groupMember->member_address = $this->memberAddress;
+        $groupMember->member_phone1 = $this->memberPhoneNumber1;
+        $groupMember->member_phone2 = $this->memberPhoneNumber2;
+        if (input::hasFile('memberImage')) {
+            $file = Input::file('memberImage');
+            $ext = $file->guessClientExtension();
+            $filename = $file->getClientOriginalName();
+            $this->memberImage = md5(date('YmdHis') . $filename) . '.' . $ext;
+        }
+        $groupMember->images = $this->memberImage;
+
+        //สร้าง array position
+        $position = array_slice($this->allInformation, 11);
+        array_pop($position);
+        array_pop($position);
+
+        //ถ้าไม่ได้เลือก position เลย ให้บันทึกข้อมูลทั่วไปได้เลย
+        if (count($position) == 0) {
+            if (input::hasFile('memberImage')) {
+                $file->move(public_path() . '/data', $this->memberImage);
+            }
+            $groupMember->save();
+            return "true";
+        }
+
+        //ถ้ามีการเลือก position ให้บันทึก position
+        $position = array_chunk($position, 5);
+        $countPosition = count($position) - 1;
+        $positionForInsert = array();
+        for ($i = 0; $i <= $countPosition; $i++) {
+            $tmpPosition = $position[$i];
+            $group_id = $tmpPosition[0];
+            $group_position_id = $tmpPosition[1];
+            $group_problem = $tmpPosition[2];
+            $group_position_start_date = $tmpPosition[3];
+            $group_position_end_date = $tmpPosition[4];
+            if (DateClass::dateCheck($group_position_start_date, 'positionStartDate') <> "true") {
+                return 'startDateProblem';
+            }
+            if (DateClass::dateCheck($group_position_end_date, 'positionEndDate') <> "true") {
+                return 'endDateProblem';
+            }
+            $group_position_start_date = DateClass::dateFormatBeforeInsert($group_position_start_date);
+            $group_position_end_date = DateClass::dateFormatBeforeInsert($group_position_end_date);
+            $subPositionForInsert = array('member_pid' => $this->memberPid, 'group_id' => $group_id, 'position_id' => $group_position_id, 'problem' => $group_problem, 'start_date' => $group_position_start_date, 'end_date' => $group_position_end_date);
+            array_push($positionForInsert, $subPositionForInsert);
+        }
+
+        $checkPositionForInsert = array();
+        for ($i = 0; $i <= $countPosition; $i++) {
+            if (empty($checkPositionForInsert[$positionForInsert[$i]['group_id']][$positionForInsert[$i]['position_id']])) {
+                $checkPositionForInsert[$positionForInsert[$i]['group_id']][$positionForInsert[$i]['position_id']] = 1;
+            } else {
+                return "positionProblem";
+            }
+        }
+
+        if (input::hasFile('memberImage')) {
+            $file->move(public_path() . '/data', $this->memberImage);
+        }
+        $groupMember->save();
+        DB::table('tab_member_position')->insert($positionForInsert);
+        return "true";
+    }
+
+    public function updateToDatabase() {
+        //เตรียมข้อมูลสำหรับแก้ไขข้อมูลทั่วไป
+        $groupMember = GroupMember::find($this->memberPid);
+        $groupMember->title_code = $this->titleId;
+        $groupMember->fname = $this->memberName;
+        $groupMember->mname = $this->memberMidname;
+        $groupMember->lname = $this->memberSurname;
+        $groupMember->sex = $this->gender;
+        $groupMember->member_career = $this->memberCareer;
+        $groupMember->member_address = $this->memberAddress;
+        $groupMember->member_phone1 = $this->memberPhoneNumber1;
+        $groupMember->member_phone2 = $this->memberPhoneNumber2;
+        if (input::hasFile('memberImage')) {
+            $file = Input::file('memberImage');
+            $ext = $file->guessClientExtension();
+            $filename = $file->getClientOriginalName();
+            $this->memberImage = md5(date('YmdHis') . $filename) . '.' . $ext;
+        }
+        $oldImageName = $groupMember->images;
+        $groupMember->images = $this->memberImage;
+
+        //สร้าง array position
+        $position = array_slice($this->allInformation, 11);
+        array_pop($position);
+        array_pop($position);
+
+        //ถ้าไม่ได้เลือก position เลย ให้บันทึกข้อมูลทั่วไปได้เลย
+        if (count($position) == 0) {
+            if (input::hasFile('memberImage')) {
+                $file->move(public_path() . '/data', $this->memberImage);
+                if (is_file(public_path() . '/data/' . $oldImageName)) {
+                    unlink(public_path() . '/data/' . $oldImageName);
+                }
+            }
+            $groupMember->save();
+
+            //ลบตำแหน่งก่อนหน้านี้ทั้งหมด
+            MemberPosition::where('member_pid', '=', $this->memberPid)->delete();
+            return "true";
+        }
+
+        //ถ้ามีการเลือก position ให้บันทึก position
+        $position = array_chunk($position, 5);
+        $countPosition = count($position) - 1;
+        $positionForInsert = array();
+        for ($i = 0; $i <= $countPosition; $i++) {
+            $tmpPosition = $position[$i];
+            $group_id = $tmpPosition[0];
+            $group_position_id = $tmpPosition[1];
+            $group_problem = $tmpPosition[2];
+            $group_position_start_date = $tmpPosition[3];
+            $group_position_end_date = $tmpPosition[4];
+            if (DateClass::dateCheck($group_position_start_date, 'positionStartDate') <> "true") {
+                return 'startDateProblem';
+            }
+            if (DateClass::dateCheck($group_position_end_date, 'positionEndDate') <> "true") {
+                return 'endDateProblem';
+            }
+            $group_position_start_date = DateClass::dateFormatBeforeInsert($group_position_start_date);
+            $group_position_end_date = DateClass::dateFormatBeforeInsert($group_position_end_date);
+            $subPositionForInsert = array('member_pid' => $this->memberPid, 'group_id' => $group_id, 'position_id' => $group_position_id, 'problem' => $group_problem, 'start_date' => $group_position_start_date, 'end_date' => $group_position_end_date);
+            array_push($positionForInsert, $subPositionForInsert);
+        }
+
+        $checkPositionForInsert = array();
+        for ($i = 0; $i <= $countPosition; $i++) {
+            if (empty($checkPositionForInsert[$positionForInsert[$i]['group_id']][$positionForInsert[$i]['position_id']])) {
+                $checkPositionForInsert[$positionForInsert[$i]['group_id']][$positionForInsert[$i]['position_id']] = 1;
+            } else {
+                return "positionProblem";
+            }
+        }
+
+        //ลบตำแหน่งก่อนหน้านี้ทั้งหมด
+        MemberPosition::where('member_pid', '=', $this->memberPid)->delete();
+
+        if (input::hasFile('memberImage')) {
+            $file->move(public_path() . '/data', $this->memberImage);
+            if (is_file(public_path() . '/data/' . $oldImageName)) {
+                unlink(public_path() . '/data/' . $oldImageName);
+            }
+        }
+        $groupMember->save();
+        DB::table('tab_member_position')->insert($positionForInsert);
+        return "true";
+    }
+
+    public function deleteToDatabase() {
+        $groupMember = GroupMember::find($this->memberPid);
+        if (is_file(public_path() . '/data/' . $groupMember->images)) {
+            unlink(public_path() . '/data/' . $groupMember->images);
+        }
+        MemberPosition::where('member_pid', '=', $this->memberPid)->delete();
+        $groupMember->delete();
+    }
+
+    public function getGroupMember() {
+        return GroupMember::find($this->memberPid);
+    }
+
+    public function getGroupMemberPosition() {
+        return MemberPosition::where('member_pid', '=', $this->memberPid)->get();
+    }
+
+    public function setAllInformation($value) {
+        $this->allInformation = $value;
+    }
+
+    public function setMemberPid($value) {
+        $this->memberPid = $value;
+    }
+
+    public function setTitleId($value) {
+        $this->titleId = $value;
+    }
+
+    public function setMemberName($value) {
+        $this->memberName = $value;
+    }
+
+    public function setMemberMidname($value) {
+        $this->memberMidname = $value;
+    }
+
+    public function setMemberSurname($value) {
+        $this->memberSurname = $value;
+    }
+
+    public function setGender($value) {
+        $this->gender = $value;
+    }
+
+    public function setMemberCareer($value) {
+        $this->memberCareer = $value;
+    }
+
+    public function setMemberAddress($value) {
+        $this->memberAddress = $value;
+    }
+
+    public function setMemberPhoneNumber1($value) {
+        $this->memberPhoneNumber1 = $value;
+    }
+
+    public function setMemberPhoneNumber2($value) {
+        $this->memberPhoneNumber2 = $value;
+    }
+
+    public function setMemberImage($value) {
+        $this->memberImage = $value;
+    }
+
     private static $EX_HEADMAN_GROUP_ID = 1;
     private static $EX_HEADMAN_FIELD = array('tab_group_member.member_pid', 'title_code', 'fname', 'mname', 'lname', 'position_name', 'images');
     private static $EX_HEADMAN_HEADER = array(
@@ -501,6 +759,13 @@ class GroupMemberClass {
         $this->groupId = self::$OLDER_MISERABLE_GROUP_ID;
         $this->fieldForDisplay = self::$OLDER_MISERABLE_FIELD;
         return $this->getDataForDisplay();
+    }
+
+    public function getMenuNameForDisplay() {
+        $menuName = MenuSetting::select('menu_name_th')
+                        ->where('menu_id', '=', self::$MENU_ID)
+                        ->first()['menu_name_th'];
+        return str_replace('การบันทึก', '', $menuName);
     }
 
 }

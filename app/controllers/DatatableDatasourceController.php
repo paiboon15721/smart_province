@@ -12,4 +12,8 @@ class DatatableDatasourceController extends BaseController {
         return $this->datatableDatasource->datasourceProblem();
     }
 
+    public function datasourceGroupMember() {
+        return $this->datatableDatasource->datasourceGroupMember();
+    }
+
 }

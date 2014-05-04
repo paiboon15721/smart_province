@@ -56,7 +56,7 @@ class ProblemClass {
     }
 
     private $fieldForDisplay = array();
-    private static $MENU_ID = 33;
+    private static $MENU_ID = 219;
     private static $PROBLEM_ECONOMY_PROBLEM_ID = 1;
     private static $PROBLEM_ECONOMY_FIELD = array('problem_desc', 'cause', 'howto');
     private static $PROBLEM_ECONOMY_HEADER = array(
@@ -115,9 +115,10 @@ class ProblemClass {
     );
 
     public function getMenuNameForDisplay() {
-        return MenuSetting::select('menu_name_th')
+        $menuName = MenuSetting::select('menu_name_th')
                         ->where('menu_id', '=', self::$MENU_ID)
                         ->first()['menu_name_th'];
+        return str_replace('การบันทึก', '', $menuName);
     }
 
     private function getDataForDisplay() {
@@ -242,8 +243,8 @@ class ProblemClass {
         $problem->problem_desc = $this->problemDesc;
         $problem->cause = $this->cause;
         $problem->howto = $this->howTo;
-        $problem->begin_date = $this->beginDate;
-        $problem->end_date = $this->endDate;
+        $problem->begin_date = DateClass::dateFormatBeforeInsert($this->beginDate);
+        $problem->end_date = DateClass::dateFormatBeforeInsert($this->endDate);
         $problem->status = $this->status;
         $problem->save();
     }
@@ -254,8 +255,8 @@ class ProblemClass {
         $problem->problem_desc = $this->problemDesc;
         $problem->cause = $this->cause;
         $problem->howto = $this->howTo;
-        $problem->begin_date = $this->beginDate;
-        $problem->end_date = $this->endDate;
+        $problem->begin_date = DateClass::dateFormatBeforeInsert($this->beginDate);
+        $problem->end_date = DateClass::dateFormatBeforeInsert($this->endDate);
         $problem->status = $this->status;
         $problem->save();
     }

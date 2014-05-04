@@ -1,25 +1,6 @@
-@extends('contentLayouts.index')
+@extends('layouts.formWithDatepicker')
 
-@section('subTitle')
-{{$actionType}}{{$menuName}}
-@stop
-@section('subDescription')
-{{$actionType}}{{$menuName}}
-@stop
-@section('subKeywords')
-{{$actionType}}{{$menuName}}
-@stop
-
-@section('subScript&css')
-{{HTML::style('css/datepicker/datepick.css')}}
-{{HTML::style('css/layouts/layouts.form.css')}}
-{{HTML::script('js/datepicker/jquery.inputform.js')}}
-{{HTML::script('js/datepicker/jquery-message.js')}}
-{{HTML::script('js/datepicker/jquery.datepick.js')}}
-{{HTML::script('js/datepicker/func.js')}}
-@stop
-
-@section('subContent')
+@section('subSubSubContent')
 <div id="welcome" class="post">
     <div class="formarea">
         <div class="requiredfld">
@@ -37,7 +18,7 @@
             </div>
             <div>
                 {{HTML::decode(Form::label('problemId', "ด้านของปัญหา"))}}
-                {{Form::select('problemId', $problemDic, $problem->problem_id)}}
+                {{Form::select('problemId', $problemDicList, $problem->problem_id)}}
             </div>
             <div>
                 {{HTML::decode(Form::label('problemDesc', "<span class='required'>* </span> สภาพปัญหา"))}}
@@ -53,11 +34,11 @@
             </div>
             <div>
                 {{HTML::decode(Form::label('beginDate', "วันที่พบปัญหา"))}}
-                {{Form::text('beginDate', $problem->begin_date, array('size' => '10', 'class' => 'type_date_key1'))}}
+                {{Form::text('beginDate', DateClass::dateFormatBeforeDisplay($problem->begin_date), array('size' => '10', 'class' => 'type_date_key1'))}}
             </div>
             <div>
                 {{HTML::decode(Form::label('endDate', "วันที่แก้ไขปัญหาเสร็จ"))}}
-                {{Form::text('endDate', $problem->end_date, array('size' => '10', 'class' => 'type_date_key1'))}}
+                {{Form::text('endDate', DateClass::dateFormatBeforeDisplay($problem->end_date), array('size' => '10', 'class' => 'type_date_key1'))}}
             </div>
             <div>
                 {{HTML::decode(Form::label("<span class='required'>* </span> สถานะของปัญหา"))}}
@@ -99,7 +80,4 @@
         {{Form::close()}}
     </div>
 </div>
-<script language="javascript">
-    input_ClassLoader("#profileForm ");
-</script>
 @stop

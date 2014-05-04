@@ -10,6 +10,14 @@ class DatatableDatasourceClass {
         $this->generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere);
     }
 
+    public function datasourceGroupMember() {
+        $aColumns = array('member_pid', 'fname', 'lname', 'member_career', 'member_address', 'member_phone1', 'member_phone2');
+        $sIndexColumn = "member_pid";
+        $sTable = "tab_group_member";
+        $sWhere = "WHERE catm = " . Session::get('catmId');
+        $this->generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere);
+    }
+
     private function generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere = "") {
         /*
          * Paging

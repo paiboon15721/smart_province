@@ -2,7 +2,7 @@
 
 class ProblemDicClass {
 
-    public function getProblemDicForCombobox() {
+    public function getProblemDicList() {
         return ProblemDic::lists('problem_name', 'problem_dic_id');
     }
 
