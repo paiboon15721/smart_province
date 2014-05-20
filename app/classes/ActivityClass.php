@@ -1,73 +1,41 @@
 <?php
 
-class TravelClass {
+class ActivityClass {
 
-    private $travelId;
-    private $travelType;
-    private $travelName;
-    private $travelStar;
-    private $travelDetail;
-    private $contractName;
-    private $contractTel;
-    private $contractAddr;
-    private $latitude;
-    private $longtitude;
-    private $travelImage;
+    private $actId;
+    private $actDesc;
+    private $actStart;
+    private $actStop;
+    private $actImage;
     private $rules = array(
-        'travelTypeId' => 'required',
-        'travelName' => 'required'
+        'actDesc' => 'required'
     );
 
     public function validate() {
         $validationData = array(
-            'travelTypeId' => $this->travelType,
-            'travelName' => $this->travelName
+            'actDesc' => $this->actDesc
         );
         return Validator::make($validationData, $this->rules);
     }
 
-    public function setTravelId($value) {
-        $this->travelId = $value;
+    public function setActId($value) {
+        $this->actId = $value;
     }
 
-    public function setTravelType($value) {
-        $this->travelType = $value;
+    public function setActDesc($value) {
+        $this->actDesc = $value;
     }
 
-    public function setTravelName($value) {
-        $this->travelName = $value;
+    public function setActStart($value) {
+        $this->actStart = $value;
     }
 
-    public function setTravelStar($value) {
-        $this->travelStar = $value;
+    public function setActStop($value) {
+        $this->actStop = $value;
     }
 
-    public function setTravelDetail($value) {
-        $this->travelDetail = $value;
-    }
-
-    public function setContractName($value) {
-        $this->contractName = $value;
-    }
-
-    public function setContractTel($value) {
-        $this->contractTel = $value;
-    }
-
-    public function setContractAddr($value) {
-        $this->contractAddr = $value;
-    }
-
-    public function setLatitude($value) {
-        $this->latitude = $value;
-    }
-
-    public function setLongtitude($value) {
-        $this->longtitude = $value;
-    }
-
-    public function setTravelImage($value) {
-        $this->travelImage = $value;
+    public function setActImage($value) {
+        $this->actImage = $value;
     }
 
     private $fieldForDisplay = array();
@@ -115,8 +83,8 @@ class TravelClass {
         return $this->getDataForDisplay();
     }
 
-    public function getTravel() {
-        return Travel::find($this->travelId);
+    public function getActivity() {
+        return Activity::find($this->actId);
     }
 
     public function insertToDatabase() {

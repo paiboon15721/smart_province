@@ -12,13 +12,17 @@ class ProblemClass {
     private $status;
     private $rules = array(
         'problemDesc' => 'required',
-        'status' => 'required'
+        'status' => 'required',
+        'beginDate' => 'required|regex:/[0-9]{2}\/[0-9]{2}\/[0-9]{4}/|dateValid',
+        'endDate' => 'required|regex:/[0-9]{2}\/[0-9]{2}\/[0-9]{4}/|dateValid'
     );
 
     public function validate() {
         $validationData = array(
             'problemDesc' => $this->problemDesc,
-            'status' => $this->status
+            'status' => $this->status,
+            'beginDate' => $this->beginDate,
+            'endDate' => $this->endDate
         );
         return Validator::make($validationData, $this->rules);
     }

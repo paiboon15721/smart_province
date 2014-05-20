@@ -1,14 +1,12 @@
 <?php
 
-class TravelController extends BaseController {
+class ActivityController extends BaseController {
 
     protected $layout = 'layouts.tablecloth';
-    private $travel;
-    private $travelType;
+    private $activity;
 
     function __construct() {
-        $this->travel = new TravelClass();
-        $this->travelType = new TravelTypeClass();
+        $this->activity = new ActivityClass();
     }
 
     public function displayTravel() {
@@ -90,10 +88,10 @@ class TravelController extends BaseController {
     }
 
     public function displayDatatable() {
-        return View::make('travel.index')
-                        ->with('datasourceUrl', URL::to('datasourceTravel'))
-                        ->with('menuName', $this->travel->getMenuNameForDisplay())
-                        ->with('url', 'travelTable');
+        return View::make('activity.index')
+                        ->with('datasourceUrl', URL::to('datasourceActivity'))
+                        ->with('menuName', $this->activity->getMenuNameForDisplay())
+                        ->with('url', 'activityTable');
     }
 
 }

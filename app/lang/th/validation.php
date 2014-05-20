@@ -52,9 +52,9 @@ return array(
         "array" => "The :attribute must have at least :min items.",
     ),
     "not_in" => "The selected :attribute is invalid.",
-    "numeric" => "The :attribute must be a number.",
+    "numeric" => ":attribute ต้องเป็นตัวเลขเท่านั้น",
     "regex" => "The :attribute format is invalid.",
-    "required" => "The :attribute field is required.",
+    "required" => "กรุณาระบุ :attribute",
     "required_if" => "The :attribute field is required when :other is :value.",
     "required_with" => "The :attribute field is required when :values is present.",
     "required_without" => "The :attribute field is required when :values is not present.",
@@ -67,6 +67,7 @@ return array(
     ),
     "unique" => "The :attribute has already been taken.",
     "url" => "The :attribute format is invalid.",
+    "date_valid" => ":attribute ไม่พบอยู่ในวันปฏิทิน",
     /*
       |--------------------------------------------------------------------------
       | Custom Validation Language Lines
@@ -88,5 +89,30 @@ return array(
       | of "email". This simply helps us make messages a little cleaner.
       |
      */
-    'attributes' => array(),
+    'attributes' => array(
+        "problemDesc" => "สภาพปัญหา",
+        "status" => "สถานะของปัญหา",
+        "beginDate" => "วันที่พบปัญหา",
+        "endDate" => "วันที่แก้ไขปัญหาเสร็จ",
+        "memberPid" => "เลขประจำตัวประชาชน",
+        "memberName" => "ชื่อ",
+        "memberSurname" => "นามสกุล",
+        "gender" => "เพศ",
+        "name" => "ชื่อเมนู",
+        "otopTypeId" => "ประเภทสินค้า",
+        "otopName" => "ชื่อสินค้า",
+        "contractName" => "ผู้ขายสินค้า/ตัวแทนผู้ผลิต",
+        "contractTel" => "เบอร์โทรศัพท์ผู้ขายสินค้า",
+        "travelTypeId" => "ประเภทสถานที่ท่องเที่ยว",
+        "travelName" => "ชื่อสถานที่ท่องเที่ยว",
+        "meetingName" => "หัวข้อการประชุม",
+        "planName" => "ชื่อโครงการ/กิจกรรม",
+        "positionName" => "ชื่อกลุ่ม",
+        "positionMember" => "จำนวนสมาชิก",
+        "positionBudget" => "เงินทุนหมุนเวียนในกลุ่ม",
+        "planDate" => "วันที่",
+        "planBudget" => "งบประมาณ",
+        "planStartYear" => "ปีที่เริ่ม",
+        "planEndYear" => "ปีที่สิ้นสุด"
+    ),
 );

@@ -12,6 +12,8 @@
             <div class="notification">
                 {{ $errors->first('problemDesc', '<div class="error">:message</div>') }}
                 {{ $errors->first('status', '<div class="error">:message</div>') }}
+                {{ $errors->first('beginDate', '<div class="error">:message</div>') }}
+                {{ $errors->first('endDate', '<div class="error">:message</div>') }}
                 @if (Session::has('updateSuccess'))
                 <div class="information">{{$actionType}}{{$menuName}}เรียบร้อย</div>
                 @endif

@@ -122,14 +122,14 @@ class GroupMemberClass {
         $groupMember->member_address = $this->memberAddress;
         $groupMember->member_phone1 = $this->memberPhoneNumber1;
         $groupMember->member_phone2 = $this->memberPhoneNumber2;
+        $oldImageName = $groupMember->images;
         if (input::hasFile('memberImage')) {
             $file = Input::file('memberImage');
             $ext = $file->guessClientExtension();
             $filename = $file->getClientOriginalName();
             $this->memberImage = md5(date('YmdHis') . $filename) . '.' . $ext;
+            $groupMember->images = $this->memberImage;
         }
-        $oldImageName = $groupMember->images;
-        $groupMember->images = $this->memberImage;
 
         //สร้าง array position
         $position = array_slice($this->allInformation, 11);

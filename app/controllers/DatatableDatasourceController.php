@@ -16,4 +16,28 @@ class DatatableDatasourceController extends BaseController {
         return $this->datatableDatasource->datasourceGroupMember();
     }
 
+    public function datasourceOtop() {
+        return $this->datatableDatasource->datasourceOtop();
+    }
+
+    public function datasourceTravel() {
+        return $this->datatableDatasource->datasourceTravel();
+    }
+
+    public function datasourceMeeting() {
+        return $this->datatableDatasource->datasourceMeeting();
+    }
+
+    public function datasourcePlan() {
+        return $this->datatableDatasource->datasourcePlan();
+    }
+
+    public function datasourceActivity() {
+        return $this->datatableDatasource->datasourceActivity();
+    }
+
+    public function datasourceGroupPositionCareer() {
+        return $this->datatableDatasource->datasourceGroupPositionCareer();
+    }
+
 }
