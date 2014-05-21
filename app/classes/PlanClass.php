@@ -83,7 +83,7 @@ class PlanClass {
 
     private $fieldForDisplay = array();
     private static $MENU_ID = 232;
-    private static $TRAVEL_TITLE = 'ข้อมูลการท่องเที่ยว';
+    private static $TRAVEL_TITLE = 'ข้อมูลโครงการ';
     private static $TRAVEL_FIELD = array('travel_type', 'travel_name', 'travel_detail', 'contract_name', 'contract_addr', 'latitude', 'longtitude', 'contract_tel', 'travel_star', 'pic_no');
     private static $TRAVEL_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
