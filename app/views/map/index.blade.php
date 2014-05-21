@@ -30,6 +30,6 @@ echo HTML::script('js/map/mymap.js');
 
 @section('area')
 @foreach ($catms as $catm)
-<area href="#" state="index.php/writeSession/{{$catm->catm_id}}" full="หมู่บ้าน{{$catm->catm_name_th}}" shape="{{$catm->shape}}" coords="{{$catm->coords}}" />	
+<area href="#" state="writeSession/{{$catm->catm_id}}" full="หมู่บ้าน{{$catm->catm_name_th}}" shape="{{$catm->shape}}" coords="{{$catm->coords}}" />
 @endforeach
 @stop
