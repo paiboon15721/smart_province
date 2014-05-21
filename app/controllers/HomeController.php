@@ -13,8 +13,8 @@ class HomeController extends BaseController {
         $catm = Catm::select('catm_id', 'catm_name_th')->find($catm);
         Session::put('catmId', $catm->catm_id);
         Session::put('catmNameTh', $catm->catm_name_th);
-        $_SESSION['catm_menu'] = $this->catm_id;
-        $_SESSION['catm_description'] = $this->catm_name_th;
+        $_SESSION['catm_menu'] = $catm->catm_id;
+        $_SESSION['catm_description'] = $catm->catm_name_th;
         return Redirect::to('villageGeneralInformation');
     }
 
