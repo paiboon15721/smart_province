@@ -117,7 +117,7 @@ class MenuSettingClass {
                 //ปุ่มแก้ไข
                 $this->menuSettingForRender .= '<a href=' . url('menuSetting/0/update/' . $childValues->menu_id) . '><img src=' . asset('images/main/add_icon.gif') . ' /> แก้ไข</a> ';
                 //ปุ่มลบ
-                $this->menuSettingForRender .= '<a href=' . url('menuSetting/0/delete/' . $childValues->menu_id) . '><img src=' . asset('images/main/add_icon.gif') . ' /> ลบ</a>';
+                $this->menuSettingForRender .= '<a href=' . url('menuSetting/0/delete/' . $childValues->menu_id) . " onclick=\"return confirm('ยืนยันการลบข้อมูล?')\" ><img src=" . asset('images/main/add_icon.gif') . ' /> ลบ</a>';
                 $this->getAllMenuForSetting($childValues->menu_id, $menuSize);
                 $this->menuSettingForRender .= '</li>';
             }
