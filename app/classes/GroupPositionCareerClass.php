@@ -39,7 +39,7 @@ class GroupPositionCareerClass {
 
     private $fieldForDisplay = array();
     private static $MENU_ID = 253;
-    private static $OTOP_TITLE = 'ข้อมูล OTOP';
+    private static $OTOP_TITLE = 'ข้อมูล กลุ่มอาชีพ';
     private static $OTOP_FIELD = array('otop_type', 'otop_name', 'otop_group', 'contract_name', 'contract_addr', 'contract_tel', 'otop_star', 'images');
     private static $OTOP_HEADER = array(
         array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
