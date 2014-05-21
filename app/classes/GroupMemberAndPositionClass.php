@@ -93,10 +93,11 @@ class GroupMemberAndPositionClass {
     }
 
     private function getTitleForDisplay($groupId, $positionId) {
-        return GroupPosition::select('position_name')
-                        ->where('group_id', '=', $groupId)
-                        ->where('position_id', '=', $positionId)
-                        ->first()['position_name'];
+        $groupPosition = GroupPosition::select('position_name')
+                ->where('group_id', '=', $groupId)
+                ->where('position_id', '=', $positionId)
+                ->first();
+        return $groupPosition['position_name'];
     }
 
     public function getMemberDirectorTitleForDisplay() {
