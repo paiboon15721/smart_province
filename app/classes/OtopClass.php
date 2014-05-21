@@ -107,9 +107,9 @@ class OtopClass {
 
     public function getMenuNameForDisplay() {
         $menuName = MenuSetting::select('menu_name_th')
-                        ->where('menu_id', '=', self::$MENU_ID)
-                        ->first()['menu_name_th'];
-        return str_replace('การบันทึก', '', $menuName);
+                ->where('menu_id', '=', self::$MENU_ID)
+                ->first();
+        return str_replace('การบันทึก', '', $menuName['menu_name_th']);
     }
 
     public function getOtop() {

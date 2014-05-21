@@ -120,9 +120,9 @@ class ProblemClass {
 
     public function getMenuNameForDisplay() {
         $menuName = MenuSetting::select('menu_name_th')
-                        ->where('menu_id', '=', self::$MENU_ID)
-                        ->first()['menu_name_th'];
-        return str_replace('การบันทึก', '', $menuName);
+                ->where('menu_id', '=', self::$MENU_ID)
+                ->first();
+        return str_replace('การบันทึก', '', $menuName['menu_name_th']);
     }
 
     private function getDataForDisplay() {
@@ -133,9 +133,10 @@ class ProblemClass {
     }
 
     private function getTitleForDisplay($problemId) {
-        return ProblemDic::select('problem_name')
-                        ->where('problem_dic_id', '=', $problemId)
-                        ->first()['problem_name'];
+        $problemDic = ProblemDic::select('problem_name')
+                ->where('problem_dic_id', '=', $problemId)
+                ->first();
+        return $problemDic['problem_name'];
     }
 
     public function getProblemEconomyTitleForDisplay() {
