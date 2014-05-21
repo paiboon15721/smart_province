@@ -462,9 +462,10 @@ class GroupMemberClass {
     }
 
     private function getTitleForDisplay($groupId) {
-        return Groups::select('group_name')
-                        ->where('group_id', '=', $groupId)
-                        ->first()['group_name'];
+        $groups = Groups::select('group_name')
+                ->where('group_id', '=', $groupId)
+                ->first();
+        return $groups['group_name'];
     }
 
     public function getExHeadmanTitleForDisplay() {
