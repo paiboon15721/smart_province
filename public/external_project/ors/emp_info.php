@@ -1,0 +1,1 @@
+<div id="emp_data" class="emp_data no_print"><span>ผู้ปฏิบัติงาน : </span><span id="emp_desc"><?php echo $_SESSION['EMPNAME']; ?> (<?php echo $_SESSION['EMPID']; ?>)</span></div>

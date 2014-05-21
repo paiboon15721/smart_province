@@ -13,6 +13,8 @@ class HomeController extends BaseController {
         $catm = Catm::select('catm_id', 'catm_name_th')->find($catm);
         Session::put('catmId', $catm->catm_id);
         Session::put('catmNameTh', $catm->catm_name_th);
+        $_SESSION['catm_menu'] = $this->catm_id;
+        $_SESSION['catm_description'] = $this->catm_name_th;
         return Redirect::to('villageGeneralInformation');
     }
 
@@ -29,7 +31,7 @@ class HomeController extends BaseController {
 
     public function contactUs() {
         Session::put('thisPage', 'contactUs');
-       return View::make('content.contactUs')
+        return View::make('content.contactUs')
                         ->with('thisPage', 'contactUs');
     }
 

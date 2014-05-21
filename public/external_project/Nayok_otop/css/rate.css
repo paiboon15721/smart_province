@@ -1,0 +1,6 @@
+.rating { display:inline-block; padding:0px; }
+.rating div { display:inline-block; width:16px; height:16px; margin:0px; float:left; background-image: url('../images/rate_dis_star.gif') ;}
+.selected { background-image: url('../images/rate_star.gif') !important; }
+.highlighted { background-image: url('../images/rate_star.gif') !important; }
+div .unrate {background-image:url("../images/rate_delete.gif"); }
+

@@ -1,0 +1,270 @@
+﻿
+/*  main css */
+	body{
+		margin:0px;
+		color:#767F62;
+		padding-bottom:160px;
+		background-color:#ececec;
+		background-image:url('../images/bottom.jpg');
+		background-repeat:none;
+		background-repeat:no-repeat;
+		background-position:bottom; 
+	}
+	
+	
+	.head ,.body ,.footer{
+		background:#fff; 
+		padding:10px 10px 10px 10px;
+	}
+	
+
+	/************ layout head **************/
+	.head h2{
+		text-align:left;
+		
+	}
+	
+	/************* layout body *************/
+	
+	
+	
+	.body .inner{
+		margin:2px 0px 2px 0px;
+		width:70%;
+	}
+	
+	.body .inner2{
+		margin:0px;
+		width:70%;
+	}
+	
+
+	/***************** other ****************/
+	.relative{
+		position:relative;
+	}
+	
+	.absolute{
+		position:absolute;
+	}
+
+	.free_space{
+		height:20px;
+	}
+	
+	.body div div:nth-child(2) .rating{
+		color:#feaacc;
+		display:inline-block;
+		height:16px;
+		padding:0px 5px 0px 5px;
+		width:150px;
+	}
+	
+	
+	
+	.preview{
+		max-width:350px;
+		max-height:150px;
+		border:solid 1px #dedede;
+		padding:5px;
+		background:#fff;
+		box-shadow: 10px 10px;
+		box-shadow: 10px 10px 5px #888;
+		box-shadow: inset 2px 2px 2px 2px black;
+		box-shadow: 10px 10px #888, -10px -10px #f4f4f4, 0px 0px 5px 5px #cc6600;
+	}
+		
+	#preview{
+		color:#cc0000;
+		font-size:12px
+	}
+
+		#header{
+			background:#ecf0f1;
+		}
+		
+		#main{
+			background:#ecf0f1;
+			border-radius:5px;
+		}
+		
+		
+		body{
+			color:#5A1E28;
+			height:750px;
+		}
+		
+		textarea {
+		  overflow: auto;
+		  vertical-align: top;
+		}
+		
+		.col1 {
+			float:left; 
+			width:120px; 
+			height:845px;
+			background-color:#D5CFCA;
+			background-image:url('../images/otop_src.png');
+			background-repeat:no-repeat;
+			background-position:bottom; 
+		}
+		
+		.col2 {
+			float:left; 
+			width:83%; 
+			height:780px;
+			background-color:#fcfcfc;
+			background-image:url('../images/otop_shadow.jpg');
+			background-repeat:no-repeat;
+			background-position:right bottom; 
+			border:1px #ccc solid;
+			margin:10px;
+			padding:10px 0px 30px 0px;
+		}
+		
+		#ajax_input{
+			text-align:center;
+		}
+		
+		.head {
+			text-align:center;
+			border-bottom:1px solid #ccc;  
+			height:60px;
+			padding-left:20px;
+			margin-bottom:10px;
+			background-color:#5A1E28;
+			color:#fff;
+		}
+		
+		.body{
+			background:#fff;
+			padding:0px;
+			display:inline-block;
+			border-top:4px #5A1E28 solid;
+			
+			width:100%;
+		}
+		
+		.main {
+			width:900px; 
+			margin:0px auto;
+			padding:10px 0px 10px 0px;
+		}
+
+		.footer {
+			text-align:center;
+			background:#5a1e28;
+			margin-bottom:50px;
+			height:15px;
+			color:#fff;
+		}
+		.inner{
+			width:100%; 
+		}
+		
+
+		.inner div{
+			display:inline-block;
+			padding:0px;
+			margin:0px 0px 5px 0px;
+		}
+		
+		.inner .first{
+			width:250px;
+			left:auto;
+			text-align:right;
+			vertical-align:middle;
+			float:left
+		}
+
+		.inner .bar{
+			border-top:1px solid #fff;
+			border-bottom:1px solid #ccc;
+			width:130%;
+			height:0px;
+			margin:20px 0px  20px -80px;
+		}
+		
+		.inner .second{
+			text-align:left;
+			padding-left:10px;
+		}
+		
+		.body div span{
+			display:inline-block;
+			text-align:left;
+		}
+	
+		.inner_info{
+			margin-top:10px;
+		}
+		
+		input[type="button"]{
+			padding:5px 20px 5px 20px;
+			background-color:#5a1e28;
+			border-style:none;
+			color:#fff;
+		}
+	
+.info, .success, .warning, .error, .validation {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+	width:100%;
+}
+
+#information .info {
+    color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url('../images/sign_info.png');
+}
+#information .success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('../images/sign_success.png');
+}
+#information .warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('../images/sign_alert.png');
+}
+#information .error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('../images/sign_error.png');
+}
+
+#information{
+	margin:0 auto;  
+	width:70%; 
+	text-align:left;
+	margin-bottom:30px;
+}
+
+
+label,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+              box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+

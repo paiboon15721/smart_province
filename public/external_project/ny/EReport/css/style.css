@@ -1,0 +1,193 @@
+/* Global Styles */
+#header {
+	/*font-family:  "THSarabunPSK";
+	font-weight:bold;
+	font-size: 25px;*/
+	color:#FFF;
+	
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 20px;
+	
+	}
+
+BODY {
+	/*font-family:   "THSarabunPSK";
+	font-size: 20px;*/
+	color: #333;
+	/*margin-top: 15px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;*/
+	background-color: #C2E4E0;
+	text-align:center;
+	margin:0 auto;
+
+	
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px;
+	
+	}
+
+
+
+
+a {
+	/*color:#333;*/
+	text-decoration:none;
+	font-weight:bold;
+	}
+	
+a:hover {
+	color:#003399;
+	}
+	
+h1 {
+    /*font-family: "THSarabunPSK";;
+	font-size: 20px;*/
+	letter-spacing: 2px;	
+	margin-right: 10px;
+	margin-bottom: 5px;
+	
+		
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px;
+	}
+h2 {
+	/*font-family:  "THSarabunPSK";
+	font-size: 18px;*/
+	letter-spacing: 2px;	
+	margin-right: 10px;
+	margin-bottom: 0px;
+	position:absolute;
+	
+		
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 11px;
+	}
+	
+h3 {
+	/*font-family:   "THSarabunPSK";
+	font-size: 16px;*/
+	letter-spacing: 2px;	
+	
+		
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 9px;
+	}
+h4, h5, h6 {
+	/*font-family:   "THSarabunPSK";
+	font-size: 20px;*/
+	letter-spacing: 0px;
+	font-weight:normal;
+	margin-bottom: 0px;
+	
+		
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px;
+	}
+	
+/* Class Styles */
+
+	
+#fontred
+{
+	/*font-family: "THSarabunPSK";*/
+	color: #F00;
+	
+		
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 10px;
+	}
+
+#fontgreen
+{
+	/*font-family:   "THSarabunPSK";*/
+	color:#0F0;
+	
+		
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 8px;
+	}
+
+#fontmenu
+{
+	/*font-family: "THSarabunPSK";
+	font-size: 20px;*/
+	color: #FFF;
+	
+		
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px;
+	}
+
+
+.title {
+/*font-family: "THSarabunPSK";
+font-size: 20px;*/
+
+	
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px;
+} 
+
+#container
+{
+	/*font-family: "THSarabunPSK";
+	font-size: 22px;*/
+	
+		
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 15px;
+	
+	
+	/*margin-bottom:10px;*/
+	width:1000;
+	background-color:#FFFFFF;
+	margin: auto 0px;
+	/*background-image: url('/MA1/EReport//images/background_body.png') !important;
+	background-repeat:repeat-y!important;*/
+	background-image: url('/MA1/EReport//images/bottom_page.png')!important;
+	background-repeat:no-repeat;
+	background-position:bottom;
+	}
+	
+#container table   /*body background = white*/
+{
+	margin-bottom:30px;
+	/*font-family: "THSarabunPSK";
+	font-size: 22px;*/
+	
+		
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 15px;
+	
+	/*background-color: #FFF;
+		z-index:-1;
+	/*opacity:0.2;*/
+	/*filter:alpha(opacity=20); */
+	/*background-color: #FFF;*/
+	}
+#container table table td
+{
+	background-color: #FFF;
+	}
+
+#container th /* head table color = blue*/
+{
+	padding-left:22px;
+	padding-top:5px;
+	padding-bottom:3px;
+	text-align:left;
+	background-color:  #69F;
+	color:#FFFFFF;
+	/*background-image:url('/MA1/ball/stock/images/sub_navbar.png');*/
+	/*background-repeat:repeat-x;*/
+	/*background-repeat:no-repeat;*/
+	/*background-position:left top;*/
+	}
+	
+	
+div{
+		font-family:   Arial, Cordia,  sans-serif;
+		/*text-align: center;*/
+}

@@ -1,0 +1,27 @@
+div.error {	
+	display:block;
+	padding: 10px 10px 10px 35px;
+	background-color: #FFDFDF;
+	border: 1px solid #FF0000;
+	border-top-width: 3px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background-image: url(images/24-message-warn.gif);
+	background-position: 5px 5px;
+	background-repeat: no-repeat;
+	margin-bottom: 10px;
+}
+
+div.information {	
+	display:block;
+	padding: 10px 10px 10px 35px;
+	background-color: #e0ebf6;
+	border: 1px solid #72a6d6;
+	border-top-width: 3px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background-image: url(images/24-message-info.gif);
+	background-position: 5px 5px;
+	background-repeat: no-repeat;
+	margin-bottom: 10px;
+}

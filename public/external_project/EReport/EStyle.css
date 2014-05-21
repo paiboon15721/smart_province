@@ -1,0 +1,179 @@
+.inputfont {	
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px; 
+	font-style: normal;
+	font-weight: normal;
+	color: #0033FF;	
+}
+.normalfont {
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px; 
+	font-weight: normal;
+}
+.selectfont {
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #0033FF;
+}
+.brcolor {
+	background-color: #EAFFAA;
+}
+.dispfont {
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	font-size: 13px;
+	color: #000000;
+}
+.fieldsetfont {
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #0000FF;
+	background-color: #C4C4D7;
+}
+.headfont {
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 20px; 
+	font-weight: bold;
+	color: #990000;
+	background-color: #FFCCFF;
+}
+.headfont2 {
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #3366FF;
+}
+.headfont3 {
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px; 
+	font-weight: normal;
+	color: #000000;
+	background:#DFEDCD; 	
+}
+.redfont {
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #CC0000;
+}
+.btns_bold {
+	border: 0px;
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+.btns_bold2 {
+	border: 0px;
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	background-color:#F2F2F2;
+}
+.normalfont2 {
+	font-family: "MS Sans Serif", Tahoma, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #CC3300;
+}
+.printfont {
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px; 
+	line-height: 127%;
+	color: #000000;
+	text-align: justify; 
+	text-justify: distribute;
+}
+.printfont2 {
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px; 
+	line-height: 127%;
+	color: #000000;
+	 
+}
+.printfont3 {
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px; 
+	line-height: 127%;
+	color: #000000;
+	text-align: justify; 
+	text-decoration: underline;
+
+}
+.printfont4 {
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px; 
+	line-height: 127%;
+	color: #000000;
+	text-align: justify; 
+}
+.printfont5 {
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px; 
+	line-height: 127%;
+	color: #000000;
+	text-align: justify; 
+}
+.printfont6 {
+	font-family: Cordia, Arial, sans-serif;
+	font-size: 13px; 
+	line-height: 127%;
+	color: #000000;
+	text-align: left;
+	text-justify: distribute;
+}
+.Bar{
+	font-family:Code 3 de 9;
+	font-size: 32px;
+}
+	@font-face {
+		 font-family: gen_barcode;
+		 src: url("/stock/tum/font/code39.eot")
+	}
+	.barcode {
+		 font-family: gen_barcode, Verdana, Arial, sans-serif;
+		 font-size:40px;
+	}
+#container_c
+{
+        font-family: "THSarabunPSK";
+        font-size: 22px;
+        /*margin-bottom:10px;*/
+        width:1000;
+        background-color:#FFFFFF;
+        margin: auto 0px;
+        /*background-image: url('/MA1/EReport//images/background_body.png') !important;
+        background-repeat:repeat-y!important;*/
+        background-image: url('/MA1/EReport//images/bottom_page.png')!important;
+        background-repeat:no-repeat;
+        background-position:bottom;
+        }
+
+#container_c table   /*body background = white*/
+{
+        margin-bottom:30px;
+        font-family: Cordia, Arial, sans-serif;
+		font-size: 13px; 
+        /*background-color: #FFF;
+                z-index:-1;
+        /*opacity:0.2;*/
+        /*filter:alpha(opacity=20); */
+        /*background-color: #FFF;*/
+        }
+
+
+#container_c th /* head table color = blue*/
+{
+        padding-left:22px;
+        padding-top:5px;
+        padding-bottom:3px;
+        text-align:left;
+        background-color:  #69F;
+        color:#FFFFFF;
+        /*background-image:url('/MA1/ball/stock/images/sub_navbar.png');*/
+        /*background-repeat:repeat-x;*/
+        /*background-repeat:no-repeat;*/
+        /*background-position:left top;*/
+        }
+

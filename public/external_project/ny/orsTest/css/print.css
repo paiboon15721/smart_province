@@ -1,0 +1,47 @@
+body , html{
+  margin : 0;
+  color : #000000;
+  background : #ffffff;
+  font-family : "TH SarabunPSK", "Angsana New";
+  font-size : 16pt;
+} 
+.main_heading {
+  color : #000000;
+  background : #ffffff;
+  font-family : "TH SarabunPSK", "Angsana New";
+  font-size : 22pt;
+  font-weight: bold;
+} 
+.label_title_bold, .label_title, .label_title_back, .display_data {
+    font-family : "TH SarabunPSK", "Angsana New";
+}
+
+#footer{
+    display:none;
+}
+.no_print{
+    display:none;
+}
+
+.paging_full_numbers .ui-button {
+	padding: 2px 6px;
+	margin: 0;
+	color : #000000;
+    background : #ffffff;
+    display:none;
+}
+
+td.details {
+	background-color: #ffffff;
+	border: 2px solid #000000;
+    display:none;
+}
+
+.dataTables_filter, .dataTables_info, .dataTables_length {display: none;}
+div.DTTT_container { /*tabletool*/
+	display:none;
+}
+
+
+
+

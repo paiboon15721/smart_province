@@ -1,0 +1,169 @@
+html,body {
+	font-size: 14px;
+	font-family: "Tahoma","Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+    margin:0px;
+    height: 100%;
+}
+
+.bg{
+    background-image:url('../images/bg.jpg');
+    /*background-repeat:repeat-x;*/
+    background-color:#f9faf8;
+    background-position:top center; 
+}
+
+.content{
+    width: 980px;
+    margin-left:auto;
+    margin-right:auto;
+    padding : 10px;
+    background-color:#FFFFFF;
+}
+
+.tabs{
+    min-height: 470px;
+    background-color:#FFFFFF;
+}
+
+.table_pop{
+    width: 100%;
+}
+
+.footer{
+    background-image:url('../images/footer.jpg');
+    margin:0px;
+    height:35px;
+    width: 980px;
+    margin-left:auto;
+    margin-right:auto;
+    width : 1000px;
+}
+
+.content_detail{
+    width: 930px;
+    margin-left:auto;
+    margin-right:auto;
+    padding : 10px;
+    background-color:#FFFFFF;
+}
+
+.label_title{
+    font-size: 100%;
+	font-family: "Tahoma","Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+    font-weight: bold;
+    padding: 3px;
+    width: 155px;
+    display: inline-block; 
+    vertical-align: top;
+}
+
+.label_title_back{
+    font-size: 100%;
+	font-family: "Tahoma","Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+    font-weight: bold;
+    padding: 3px;
+    width: 63px;
+    display: inline-block; 
+}
+
+.label_title_bold{
+    font-size: 100%;
+	font-family: "Tahoma","Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+    font-weight: bold;
+    padding: 7px;
+}
+.input_cond{
+    font-size: 100%;
+	font-family: "Tahoma","Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+    line-height: 150%;
+    display: block;
+    padding: 3px;
+}
+.left{
+    float: left;
+    width: 60%;
+}
+.right{
+    float: right;
+    width: 40%;
+    text-align: right;
+}
+.button {
+	font-size: 14px;
+    padding : 2px;
+	font-family: "Tahoma","Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+}
+
+.center_box{
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    text-align:center;
+    background-color:#FFFFFF;
+}
+
+.display_data{
+    font-size: 100%;
+	font-family: "Tahoma","Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+    padding: 4px;
+    width : 80%;
+    display : inline-block;
+}
+
+.display_data_head{
+    font-size: 100%;
+	font-family: "Tahoma","Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+    padding: 4px;
+}
+
+.main_heading{
+    font-size: 150%;
+	font-family: "Tahoma","Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+    width:1000px;
+    height:100px;
+    font-weight: bold;
+    margin-left:auto;
+    margin-right:auto;
+    background-image:url('../images/banner.jpg');
+}
+
+.hover{
+    cursor: hand; 
+    cursor: pointer; 
+}
+
+#frm_search_pop label.error {
+    /*background:url("../images/unchecked.gif") no-repeat 0px 0px;*/
+    padding-left: 10px;
+    padding-bottom: 2px;
+    font-weight: bold;
+    color: #EA5200;
+    font-size: 85%;
+}
+
+#frm_search_pop label.checked {
+   /* background:url("../images/checked.gif") no-repeat 0px 0px;*/
+}
+
+.no_show{
+    display:none;
+}
+
+fieldset, legend{
+    padding : 3px;
+}
+.sel_size{
+    width:170px;
+    height:23px;
+}
+
+.emp_data{
+    font-family: "Tahoma","Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+    font-size: 12px;
+    padding-bottom:7px;
+}
+
+.display_map{
+    width : 100%;
+    height : 600px;
+}

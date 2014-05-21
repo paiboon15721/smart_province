@@ -1,0 +1,345 @@
+/*
+CSS For Poll System
+*/
+
+body {
+	margin:0px;
+	padding:0px;
+	color: #000000;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size:14px;
+	background-repeat: repeat;
+	background-image:url(../images/pagebg.png)
+}
+
+a, a:link, a:visited { 
+	font-size: 12px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration:none;
+	color: #CC0000;
+}
+
+p { margin: 0px; padding: 0 0 20px 0; }
+img { border: none; }
+
+h1, h2, h3, h4, h5 { font-weight: normal; }
+h1 { font-size: 32px; color: #000; margin: 0 0 30px 0; padding: 5px 0; }
+h2 { font-size: 20px; color: #000; margin: 0 0 20px 0; padding: 0 0 10px 0; border-bottom: 1px dashed #999; }
+h3 { font-size: 21px; color: #333; margin: 0 0 20px 0; padding: 0; text-decoration: none; font-weight: normal; }
+h3 a { text-decoration: none; font-weight: normal; }
+h3 span { color: #69F; }
+h4 { font-size: 18px; color: #000; margin: 0 0 10px 0; padding: 0; }
+h5 { font-size: 14px; height: 20px; color: #000; margin: 0 0 10px 0; padding: 2px 8px; background: url(../images/template_h5_bg.png) no-repeat top left; } 
+h6 { font-size: 12px; margin: 0 0 5px 0; padding: 0;}
+
+.cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
+.cleaner_h10 { clear: both; width:100%; height: 10px; }
+.cleaner_h20 { clear: both; width:100%; height: 20px; }
+.cleaner_h30 { clear: both; width:100%; height: 30px; }
+.cleaner_h40 { clear: both; width:100%; height: 40px; }
+.cleaner_h50 { clear: both; width:100%; height: 50px; }
+.cleaner_h60 { clear: both; width:100%; height: 60px; }
+
+.margin_r10 { margin-right: 10px; }
+.float_l { float: left; }
+.float_r { float: right; }
+
+blockquote { font-style: italic; }
+
+ul { margin: 15px; padding: 0; list-style: none; } 
+ul li { padding: 0 0 0 20px; margin: 0 0 5px 0; background: url(../images/template_list_01.png) left center no-repeat; }
+
+
+#template_main_wrapper {
+	width: 1000px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+/* header */
+
+#template_header {
+	/*padding: 10px 20px;*/
+	padding: 10px 0px 0px 0px;
+	/*background: url(../images/template_header.png) top center;*/
+}
+
+#template_header .header_left {
+	float: left;
+	/*width: 300px;*/
+	width: 775px;
+}
+
+/* end of header */
+
+/* content */
+
+#template_content_outer {
+	margin: 3px 0px 0px 0px;
+	background-color:#FFF;
+	border:1px solid black;
+}
+
+#template_content_status {
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 23px;
+	background-color:#1F1F1F;
+}
+
+#template_content_bottom {
+	width: 1000px;
+	height: 25px;
+	text-align:center;
+	color:#FFFFFF;
+	background-color:#1F1F1F;
+}
+
+#template_content_inner {
+	padding: 0px 0px 0px 0px;
+	height: 400px;
+}
+
+#template_content {
+	float: right;
+	width: 620px;
+}
+
+/* end of content */
+
+/* footer */
+#template_footer {
+	clear: both;
+	/*color: #868686;*/
+	color:#000000;
+	padding: 20px 30px;
+	text-align: center;
+}
+
+#template_footer a{
+	color: #a3a3a3;
+	font-weight: normal;
+}
+/* end of footer */
+
+/* font status */
+#font_status {
+	color:#FFFFFF;
+	font-weight: normal;
+}
+
+#template_content_status .status_left {
+	margin-top:2px;
+	float: left;
+	width: 495px;
+	text-align:left;
+}
+
+#template_content_status .status_right {
+	margin-top:2px;
+	float: right;
+	width: 380px;
+	text-align:right;
+}
+
+#divMain, #divFinish{
+	padding: 10px 10px 10px 10px;
+	margin: 0px;
+}
+
+/* Poll */
+#pollWrap{
+	margin: 0 0 0 0px;
+	padding: 0 0 0 10px;
+	width: 98%;
+}
+#pollWrap h3 {
+	font-size:20px;
+	color:#990000;
+	font-weight:normal;
+	margin-bottom: 5px;
+}
+#pollWrap ul {
+	margin: 0 0 0 0px;
+	padding: 0 0 0 0px;
+	padding-left:40%;
+	list-style:none;
+}
+#pollWrap li {
+	padding: 0;
+	overflow:hidden; /*for our lovely friend IE6 to behave nicely*/
+	font-size: 18px;
+}
+#pollWrap li span {
+	font-size: 18px;
+}
+.pollChart {
+	margin-left: 25px;
+	height: 20px;
+	width:1px;
+	/*Adding rounded corners to the graphs - Optional - START*/
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	/*Adding rounded corners to the graphs - Optional - END*/
+}
+#pollSubmit {
+	margin-top: 5px;
+	font-size:18px;
+	font-weight:bold;
+}
+
+#txtReferendum{
+	font-size:16px;
+}
+
+.pollAns{
+	font-size:24px;
+	font-weight:bold;
+	color:#009;
+}
+
+.pollTotal{
+	font-size:22px;
+	font-weight:bold;
+	color:#009;
+}
+
+.pollTotal2{
+	font-size:18px;
+	font-weight:bold;
+	color:#009;
+}
+
+.pollTitle{
+	font-size:18px;
+	font-weight:bold;
+	color:#990000;
+}
+
+#pollQuest{
+	font-family: Tahoma, Geneva, sans-serif;
+	margin-top: 0px;
+	font-size:33px;
+	color:#990000;
+	font-weight:bold;
+}
+
+#pollExit {
+	margin-top: 5px;
+	font-size:18px;
+	font-weight:bold;
+}
+
+#pollMessage {
+	color:#C00;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.fontUP{
+	color: #FFF;
+	font-size:14px;
+	font-weight:bold;
+}
+
+#btLogin, #btReset{
+	margin-top: 5px;
+	height:30px;
+	width:90px;
+	font-size:14px;
+	font-weight:bold;
+}
+
+#btExit{
+	margin-top: 5px;
+	height:30px;
+	width:120px;
+	font-size:14px;
+	font-weight:bold;
+}
+
+#btAdd{
+	margin-top: 5px;
+	height:30px;
+	width:150px;
+	font-size:14px;
+	font-weight:bold;
+}
+
+#cntxt{
+	display: inline;
+}
+
+.warning{
+	font-size:14px;
+	color:#900;
+}
+
+.titleLabel{
+	font-size:16px;
+	color:#036;
+}
+
+
+#btnInsert, #btnCancel{
+	margin-top: 5px;
+	height:30px;
+	width:120px;
+	font-size:14px;
+	font-weight:bold;
+}
+
+#btSMC, #btExitPrg{
+	margin-top: 5px;
+	height:40px;
+	width:200px;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.fontHead{
+	font-size:18px;
+	font-weight:bold;
+}
+
+.fontHeadTb{
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+
+.fontDetailTb{
+	font-size:14px;
+	font-weight:normal;
+	color:#000000;
+}
+
+.fontUserTitle{
+	font-size:14px;
+	font-weight:bold;
+	color:#000;
+}
+
+.fontUser{
+	font-size:14px;
+	font-weight:normal;
+	color:#FFFFFF;
+}
+
+fieldset {
+    border: 1px solid black;
+    padding: 30px;
+	width:90%;
+}
+fieldset legend {
+    margin-bottom: 30px\9; /* IE7/8 needs this - same value as top padding on fieldset */
+}
+fieldset div {
+    border: 1px dotted silver;
+}

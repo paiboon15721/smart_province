@@ -1,0 +1,138 @@
+body, html{
+    margin : 0 0 0 0;
+    color : #000000;
+    background : #ffffff;
+    font-family : "TH SarabunPSK", "Angsana New";
+    font-size : 16pt;
+    min-width : 750px;
+    overflow: hidden;
+}
+
+.label_title_bold, .label_title_back {
+    font-family : "TH SarabunPSK", "Angsana New";
+    display: inline-block;
+    padding: 2px;
+}
+
+ .label_title, .display_data, .display_data_head {
+    font-family : "TH SarabunPSK", "Angsana New";
+    display: inline-block;
+    vertical-align: top;
+    padding: 2px;
+}
+
+
+#footer{
+    display:none;
+}
+
+.no_print{
+    display:none;
+}
+
+.fancybox-overlay {
+    display:none;
+}
+
+.paging_full_numbers .ui-button {
+	padding: 2px 6px;
+	margin: 0;
+	color : #000000;
+    background : #ffffff;
+    display:none;
+}
+
+td.details {
+	background-color: #ffffff;
+	border: 2px solid #000000;
+    display:none;
+}
+
+.dataTables_filter, .dataTables_info, .dataTables_length {display: none;}
+div.DTTT_container { /*tabletool*/
+	display:none;
+}
+
+.print_title{
+    display:block;
+    width: 700px;
+    height:50px;
+    line-height: 50px;
+    font-family : "TH SarabunPSK", "Angsana New";
+    font-size : 22pt;
+    font-weight: bold;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    padding : 3px;
+}
+
+.content{
+    min-width: 700px;
+    width:700px;
+    padding : 5px;
+    margin : 5px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#FFFFFF;
+}
+
+.content_detail{
+    min-width:700px;
+    width: 95%;
+    padding:5px;
+    margin:5px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#FFFFFF;
+    font-family: "TH SarabunPSK", "Angsana New";
+    font-size : 16pt;
+    display:block;
+}
+
+.content_detail .label_title{
+	font-family: "TH SarabunPSK", "Angsana New";
+    font-weight: bold;
+    width: 150px;
+    font-size : 16pt;
+    display:inline-block;
+}
+
+.content_detail .display_data{
+	font-family: "TH SarabunPSK", "Angsana New";
+    font-size : 16pt;
+    padding: 4px;
+
+}
+
+.content_detail {
+	font-family: "TH SarabunPSK", "Angsana New";
+    font-size : 16pt;
+    padding: 4px;
+    width : 85%;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+table, th, td, tr{
+    border: 1px solid black;
+}
+
+.center_box{
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    text-align:center;
+    background-color:#FFFFFF;
+}
+
+fieldset, legend{
+    padding : 3px;
+}
+
+.display_map{
+    width : 100%;
+    height : 600px;
+}
