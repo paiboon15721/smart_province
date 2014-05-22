@@ -162,6 +162,12 @@ Route::get('datasourceActivity', array('before' => 'catmId', 'uses' => 'Datatabl
 
 //external_project
 Route::get('newsVoice', 'ExternalController@newsVoice');
+Route::get('eReportAssign', 'ExternalController@eReportAssign');
+Route::get('eReport/{flag}', 'ExternalController@eReport');
+Route::get('pollIndex', 'ExternalController@pollIndex');
+Route::get('pollMainMenu', 'ExternalController@pollMainMenu');
+Route::get('pollShowFinishPoll', 'ExternalController@pollShowFinishPoll');
+Route::get('ors', 'ExternalController@ors');
 
 //validator
 Validator::extend('dateValid', function($attribute, $date, $parameters) {
