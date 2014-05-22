@@ -163,8 +163,6 @@ Route::get('datasourceActivity', array('before' => 'catmId', 'uses' => 'Datatabl
 //external_project
 Route::get('newsVoice', 'ExternalController@newsVoice');
 
-
-
 //validator
 Validator::extend('dateValid', function($attribute, $date, $parameters) {
     $date = explode('/', $date);
