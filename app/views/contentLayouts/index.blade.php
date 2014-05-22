@@ -20,14 +20,11 @@
 
 <script type="text/javascript">
     function openLoginPage() {
-        alert('test');
-        /*
-         window.location = "signin";
-         window.open('', '_self');
-         setTimeout(function() {
-         window.close();
-         }, 2000);
-         */
+        window.location = "signin";
+        window.open('', '_self');
+        setTimeout(function() {
+            window.close();
+        }, 2000);
     }
 </script>
 @yield('subScript&css')
@@ -53,7 +50,7 @@
 
 @section('login')
 <img src="{{asset('images/main/card.gif')}}" style="width: 168px;height:150px;"/>
-<input id="btnReadCard" name="btnReadCard" type="button" value="อ่านบัตรi" style="width:100px; height: 30px; float: none;" onclick="openLoginPage();" />
+<input id="btnReadCard" name="btnReadCard" type="button" value="อ่านบัตร" style="width:100px; height: 30px; float: none;" onclick="openLoginPage();" />
 <br />
 @stop
 
