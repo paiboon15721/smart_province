@@ -160,7 +160,7 @@ Route::post('activityTable/update/{id}', array('before' => 'catmId', 'uses' => '
 Route::get('activityTable/delete/{id}', array('before' => 'catmId', 'uses' => 'ActivityController@deleteGet'));
 Route::get('datasourceActivity', array('before' => 'catmId', 'uses' => 'DatatableDatasourceController@datasourceActivity'));
 //test
-Route::get('test', 'GroupMemberController@test');
+Route::get('test', 'HomeController@test');
 
 //validator
 Validator::extend('dateValid', function($attribute, $date, $parameters) {

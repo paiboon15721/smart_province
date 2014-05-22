@@ -84,4 +84,8 @@ class HomeController extends BaseController {
         return View::make('content.villageDirectors');
     }
 
+    public function test() {
+        return Redirect::to('http://google.com');
+    }
+
 }
