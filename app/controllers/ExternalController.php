@@ -8,6 +8,10 @@ class ExternalController extends BaseController {
         return Redirect::to('external_project/news_voice/send_news.php');
     }
 
+    public function newsVoiceList() {
+        return Redirect::to('external_project/news_voice/news.php');
+    }
+
     public function eReportAssign() {
         return Redirect::to('external_project/EReport/assign.php');
     }
@@ -17,19 +21,23 @@ class ExternalController extends BaseController {
     }
 
     public function pollIndex() {
-        return Redirect::to('external_project/news_voice/send_news.php');
+        return Redirect::to('external_project/poll/index.php');
     }
 
     public function pollMainMenu() {
-        return Redirect::to('external_project/news_voice/send_news.php');
+        return Redirect::to('external_project/poll/mainmenu.php');
     }
 
     public function pollShowFinishPoll() {
-        return Redirect::to('external_project/news_voice/send_news.php');
+        return Redirect::to('external_project/poll/showfinishPoll.php');
     }
 
     public function ors() {
         return Redirect::to('external_project/ors/search_pop.php');
+    }
+
+    public function nayokStat() {
+        return Redirect::to('external_project/Nayok_stat/chk_stat.php');
     }
 
 }
