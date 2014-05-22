@@ -170,6 +170,7 @@ Route::get('pollMainMenu', 'ExternalController@pollMainMenu');
 Route::get('pollShowFinishPoll', 'ExternalController@pollShowFinishPoll');
 Route::get('ors', 'ExternalController@ors');
 Route::get('nayokStat', 'ExternalController@nayokStat');
+Route::get('login', 'ExternalController@login');
 
 //validator
 Validator::extend('dateValid', function($attribute, $date, $parameters) {

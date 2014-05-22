@@ -40,4 +40,8 @@ class ExternalController extends BaseController {
         return Redirect::to('external_project/Nayok_stat/chk_stat.php');
     }
 
+    public function login() {
+        return Redirect::to("signin/signin.application?ACT_FLAG='" . $this->pathLoadPage . "/write_session'&ACT_FLAG_CANCEL=");
+    }
+
 }
