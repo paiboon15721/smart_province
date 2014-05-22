@@ -8,28 +8,28 @@ class ExternalController extends BaseController {
         return Redirect::to('external_project/news_voice/send_news.php');
     }
 
-    public function eReport1() {
+    public function eReportAssign() {
+        return Redirect::to('external_project/EReport/assign.php');
+    }
+
+    public function eReport($flag) {
+        return Redirect::to('external_project/EReport/write_cookie.php?flg=' . $flag);
+    }
+
+    public function pollIndex() {
         return Redirect::to('external_project/news_voice/send_news.php');
     }
 
-    public function eReport2() {
+    public function pollMainMenu() {
         return Redirect::to('external_project/news_voice/send_news.php');
     }
 
-    public function eReport3() {
+    public function pollShowFinishPoll() {
         return Redirect::to('external_project/news_voice/send_news.php');
     }
 
-    public function eReport4() {
-        return Redirect::to('external_project/news_voice/send_news.php');
-    }
-
-    public function newsVoice() {
-        return Redirect::to('external_project/news_voice/send_news.php');
-    }
-
-    public function newsVoice() {
-        return Redirect::to('external_project/news_voice/send_news.php');
+    public function ors() {
+        return Redirect::to('external_project/ors/search_pop.php');
     }
 
 }
