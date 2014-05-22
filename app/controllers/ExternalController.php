@@ -41,9 +41,7 @@ class ExternalController extends BaseController {
     }
 
     public function login() {
-        echo asset('');
-        exit;
-        return Redirect::to("signin/signin.application?ACT_FLAG='" . URL::base() . "/write_session'&ACT_FLAG_CANCEL=");
+        return Redirect::to("signin/signin.application?ACT_FLAG='" . asset('') . "/write_session'&ACT_FLAG_CANCEL=");
     }
 
 }
