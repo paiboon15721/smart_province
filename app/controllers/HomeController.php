@@ -85,7 +85,7 @@ class HomeController extends BaseController {
     }
 
     public function test() {
-        return Redirect::to('http://google.com');
+        return Redirect::to('external_project/poll/index.php');
     }
 
 }
