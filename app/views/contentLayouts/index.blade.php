@@ -17,6 +17,16 @@
 {{HTML::style('css/uiToTop/ui.totop.css')}}
 {{HTML::script('js/jquery-1.7.2.min.js')}}
 {{HTML::script('js/uiToTop/jquery.ui.totop.min.js')}}
+
+<script type="text/javascript">
+    function openLoginPage() {
+        window.location = "signin";
+        window.open('', '_self');
+        setTimeout(function() {
+            window.close();
+        }, 2000);
+    }
+</script>
 @yield('subScript&css')
 @stop
 
