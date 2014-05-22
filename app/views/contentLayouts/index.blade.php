@@ -20,6 +20,7 @@
 
 <script type="text/javascript">
     function openLoginPage() {
+        alert('test');
         window.location = "signin";
         window.open('', '_self');
         setTimeout(function() {
