@@ -159,8 +159,9 @@ Route::get('activityTable/update/{id}', array('before' => 'catmId', 'uses' => 'A
 Route::post('activityTable/update/{id}', array('before' => 'catmId', 'uses' => 'ActivityController@updatePost'));
 Route::get('activityTable/delete/{id}', array('before' => 'catmId', 'uses' => 'ActivityController@deleteGet'));
 Route::get('datasourceActivity', array('before' => 'catmId', 'uses' => 'DatatableDatasourceController@datasourceActivity'));
-//test
-Route::get('test', 'HomeController@test');
+
+//external_project
+Route::get('newsVoice', 'ExternalController@newsVoice');
 
 //validator
 Validator::extend('dateValid', function($attribute, $date, $parameters) {
