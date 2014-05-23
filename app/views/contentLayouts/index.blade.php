@@ -21,10 +21,12 @@
 <script type="text/javascript">
     function openLoginPage() {
         window.location = "login";
-        window.open('', '_self');
-        setTimeout(function() {
-            window.close();
-        }, 2000);
+        /*
+         window.open('', '_self');
+         setTimeout(function() {
+         window.close();
+         }, 2000);
+         */
     }
 </script>
 @yield('subScript&css')
