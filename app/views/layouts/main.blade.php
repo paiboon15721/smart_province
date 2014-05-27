@@ -6,7 +6,8 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 <!DOCTYPE HTML>
 <html lang="en-GB">
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=9" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>@yield('title')</title>
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
