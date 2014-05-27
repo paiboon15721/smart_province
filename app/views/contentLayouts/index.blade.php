@@ -20,8 +20,6 @@
 
 <script type="text/javascript">
     function openLoginPage() {
-        alert('55');
-        exit;
         window.location = "login";
         /*
          window.open('', '_self');
