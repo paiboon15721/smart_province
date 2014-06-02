@@ -13,9 +13,7 @@
 @stop
 
 @section('script&css')
-{{HTML::style('css/layouts/layouts.main.css')}}
 {{HTML::style('css/uiToTop/ui.totop.css')}}
-{{HTML::script('js/jquery-1.7.2.min.js')}}
 {{HTML::script('js/uiToTop/jquery.ui.totop.min.js')}}
 
 <script type="text/javascript">
