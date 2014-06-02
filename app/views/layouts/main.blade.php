@@ -73,6 +73,9 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
             <div id="myCarousel" class="carousel slide">
                 <!-- Carousel items -->
                 <div class="carousel-inner">
+                    <?php
+                    $catmNameEn = Session::get('catmNameEn');
+                    ?>
                     <div class="active item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/1.jpg')}}" /></div>
                     @for ($i=2; $i<29; $i++)
                     <div class="item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/'.$i.'.jpg')}}" /></div>
