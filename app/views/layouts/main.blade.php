@@ -71,6 +71,20 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
             </div>
         </div>
 
+        <div class="container">
+            <div id="myCarousel" class="carousel slide">
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="active item"><img src="img/slider/1.jpg" /></div>
+                    <div class="item"><img src="img/slider/2.jpg" /></div>
+                    <div class="item"><img src="img/slider/3.jpg" /></div>
+                </div>
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+            </div>
+
+        </div>
         <div id="header" class="head-image" style="background: url({{asset('css/layouts/banner.png')}});">
             <div class="head-text" style="font-size:65px;right: 249px;top: 45px;width: 500px;text-align: right">หมู่บ้าน{{Session::get('catmNameTh')}}</div>
         </div>
