@@ -27,7 +27,7 @@
 @section('subContent')
 <div id="example" class="post" style="border-bottom: 0px;">
     <div class="content">
-        {{$menu}}
+        ddddddd
     </div>
 </div>
 @stop
