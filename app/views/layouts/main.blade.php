@@ -69,10 +69,11 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
             </div>
         </div>
         <div class="container">
+
             <div id="myCarousel" class="carousel slide">
                 <!-- Carousel items -->
                 <div class="carousel-inner">
-                    <div class="active item"><img src="{{asset('images/slider/1.jpg')}}" /></div>
+                    <div class="item"><img src="{{asset('images/slider/1.jpg')}}" /></div>
                     <div class="item"><img src="{{asset('images/slider/2.jpg')}}" /></div>
                     <div class="item"><img src="{{asset('images/slider/3.jpg')}}" /></div>
                 </div>
