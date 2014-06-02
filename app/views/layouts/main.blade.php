@@ -90,8 +90,10 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                             <ul>@yield('menu')</ul>
                         </div><!-- end widget -->
                         <div class="widget span3">
-                            <h3>เมนู</h3>
-                            <ul>@yield('login')</ul>
+                            <h3>อ่านบัตร</h3>
+                            <div class="content" style="text-align:center;" >
+                                @yield('login')
+                            </div>
                         </div><!-- end widget -->
                         <div class="widget span3">
                             <h3>ข่าวสาร</h3>
