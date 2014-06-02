@@ -18,16 +18,12 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('.fancybox').fancybox({
-            'width':'80%'
+            'width': '80%'
         });
     });
 </script>
 @stop
 
 @section('subContent')
-<div id="example" class="post" style="border-bottom: 0px;">
-    <div class="content">
-        {{$menu}}
-    </div>
-</div>
+{{$menu}}
 @stop
