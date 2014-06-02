@@ -164,7 +164,7 @@ class MenuSettingClass {
     public function getMenuForDisplay($onFristTime = TRUE, $onParentMenu = TRUE) {
         if ($onFristTime) {
             $parentName = $this->getMenuSetting()->menu_name_th;
-            $this->menuSettingForRender .= "<h1 class='title' style='border-bottom: 1px solid #3B3B3B; padding-bottom: 10px'>" . $parentName . "</h1>";
+            $this->menuSettingForRender .= "<h3 class='title' style='border-bottom: 1px solid #3B3B3B; padding-bottom: 10px'>" . $parentName . "</h3>";
             $this->menuSettingForRender .= "<div id='" . $this->menuColour . '_menu' . "' class='menu_container'>";
         }
         $child = MenuSetting::select('menu_id', 'menu_name_th', 'menu_url', 'menu_target')
