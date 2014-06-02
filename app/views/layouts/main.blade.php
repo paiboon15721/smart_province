@@ -58,11 +58,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                     <a class="brand" href="#">หมู่บ้าน{{Session::get('catmNameTh')}}</a>
                     <div class="nav-collapse">
                         <ul class="nav">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#cotact">Contact</a></li>
+                            @yield('topMenu')
                         </ul>
                         <ul class="nav pull-right">
                             <li>{{HTML::link('/', 'กลับไปหน้าเมนู')}}</li>
