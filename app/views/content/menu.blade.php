@@ -10,7 +10,7 @@
 @stop
 
 @section('subScript&css')
-{{HTML::style('css/accordion3/accordion31.css')}}
+{{HTML::style('css/accordion3/accordion3.css')}}
 {{HTML::script('js/myAccordion3.js')}}
 
 {{HTML::script('js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5')}}
