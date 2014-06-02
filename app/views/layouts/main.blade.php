@@ -76,9 +76,9 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                     <?php
                     $catmNameEn = Session::get('catmNameEn');
                     ?>
-                    <div class="active item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/1.jpg')}}" style="height: 450px; width: 1200px;" /></div>
+                    <div class="active item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/1.jpg')}}" style="height: 350px; width: 1200px;" /></div>
                     @for ($i=2; $i<29; $i++)
-                    <div class="item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/'.$i.'.jpg')}}" style="height: 450px; width: 1200px;" /></div>
+                    <div class="item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/'.$i.'.jpg')}}" style="height: 350px; width: 1200px;" /></div>
                     @endfor
                 </div>
                 <!-- Carousel nav -->
