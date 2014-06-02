@@ -45,10 +45,6 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
         </style>
         {{HTML::style('css/layouts/bootstrap-responsive.min.css');}}
         {{HTML::script('js/jquery-1.7.2.min.js')}}
-        {{HTML::script('js/bootstrap.min.js')}}
-        <script type="text/javascript">
-            $('.carousel').carousel()
-        </script>
         @yield('script&css')
     </head>
     <body>
@@ -109,7 +105,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                         </div><!-- end widget -->
                         <div class="widget span3">
                             <h3>รูปภาพ</h3>
-                            <p><img src="http://lorempixel.com/550/325/nature/5" title="widget image" alt="an image was here" /></p>
+                            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
                         </div><!-- end widget -->
                     </div><!-- end widget row -->
                 </aside> <!-- end sidebar -->
@@ -118,6 +114,9 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                 </div>
             </div>
         </div>
-
+        {{HTML::script('js/bootstrap.min.js')}}
+        <script type="text/javascript">
+            $('.carousel').carousel();
+        </script>
     </body>
 </html>
