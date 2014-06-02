@@ -45,6 +45,10 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
         </style>
         {{HTML::style('css/layouts/bootstrap-responsive.min.css');}}
         {{HTML::script('js/jquery-1.7.2.min.js')}}
+        {{HTML::script('js/bootstrap.min.js')}}
+        <script type="text/javascript">
+            $('.carousel').carousel()
+        </script>
         @yield('script&css')
     </head>
     <body>
@@ -114,9 +118,6 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                 </div>
             </div>
         </div>
-        {{HTML::script('js/bootstrap.min.js')}}
-        <script type="text/javascript">
-            $('.carousel').carousel()
-        </script>
+
     </body>
 </html>
