@@ -38,10 +38,10 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
             .post:first-of-type { padding-top: 0px;}
             .widget ul { margin-left: 0px;}
             .widget ul li { list-style: none; font-size: 14px;}
-            .widget ul li a { display: block; padding: 5px 0px; color: #888; border-top: 1px dotted #ccc;}
+            .widget ul li a { display: block; padding: 5px 0px;border-top: 1px dotted #ccc;}
             .widget ul li a:hover { background: #fff; text-decoration: none; padding-left: 5px;}
 
-            .active_sidebar_menu { background: #fff; text-decoration: none; font-weight: bold; color:#0000ff;}
+            .active_sidebar_menu { background: #fff; text-decoration: none; font-weight: bold; color:#0000ff}
         </style>
         {{HTML::style('css/layouts/bootstrap-responsive.min.css');}}
         @yield('script&css1')
