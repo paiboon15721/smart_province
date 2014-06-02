@@ -63,7 +63,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                             <li><a href="#cotact">Contact</a></li>
                         </ul>
                         <ul class="nav pull-right">
-                            <li><a href="http://wp.me/p2m9ik-j6">Back To Untame</a></li>
+                            <li>{{HTML::link('/', 'กลับไปหน้าเมนู')}}</li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
