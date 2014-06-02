@@ -31,7 +31,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                 box-sizing: border-box;         /* Opera/IE 8+ */
             }
 
-            .widget h3 { display: block; background: #212121; color: #f1f1f1; text-transform: capitalize; border-radius: 5px; margin-bottom: 10px; text-align: center; padding: 5px 0px;}
+            .widget h3 { display: block; background: #212121; color: #888; text-transform: capitalize; border-radius: 5px; margin-bottom: 10px; text-align: center; padding: 5px 0px;}
 
             .feat-img img { padding: 5px; border: 1px solid #ccc;}
 
