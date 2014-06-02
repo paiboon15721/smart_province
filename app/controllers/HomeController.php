@@ -75,8 +75,8 @@ class HomeController extends BaseController {
         Session::put('thisPage', 'villageGeneralInformation');
         $catm = new CatmClass(Session::get('catmId'));
         $catmNameEn = $catm->getCatmNameEn();
-        return View::make('villageGeneralInformation.' . $catmNameEn)
-                        ->with('catmNameEn', $catmNameEn);
+        Session::put('catmNameEn', $catmNameEn);
+        return View::make('villageGeneralInformation.' . $catmNameEn);
     }
 
     public function villageDirectors() {
