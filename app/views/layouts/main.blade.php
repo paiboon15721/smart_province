@@ -45,7 +45,6 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
         @yield('script&css1')
     </head>
     <body>
-
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
@@ -54,7 +53,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="index.html">Untame Bootstrap</a>
+                    <a class="brand" href="#">หมู่บ้าน{{Session::get('catmNameTh')}}</a>
                     <div class="nav-collapse">
                         <ul class="nav">
                             <li class="active"><a href="index.html">Home</a></li>
@@ -70,7 +69,6 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                 </div>
             </div>
         </div>
-
         <div class="container">
             <div id="myCarousel" class="carousel slide">
                 <!-- Carousel items -->
@@ -86,37 +84,29 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 
             <div class="row">
                 <aside class="span3">
-
                     <div class="row">
-
                         <div class="widget span3">
                             <h3>เมนู</h3>
-
-                            <ul>
-                                @yield('menu')
-                            </ul>
+                            <ul>@yield('menu')</ul>
                         </div><!-- end widget -->
-
+                        <div class="widget span3">
+                            <h3>เมนู</h3>
+                            <ul>@yield('login')</ul>
+                        </div><!-- end widget -->
                         <div class="widget span3">
                             <h3>ข่าวสาร</h3>
-
-                            <ul>
-                                @yield('message')
-                            </ul>
+                            <ul>@yield('message')</ul>
                         </div><!-- end widget -->
-
                         <div class="widget span3">
-                            <h3>Widget Title</h3>
-
-                            <p>
-                                <img src="http://lorempixel.com/550/325/nature/5" title="widget image" alt="an image was here" />
-                            </p>
+                            <h3>รูปภาพ</h3>
+                            <p><img src="http://lorempixel.com/550/325/nature/5" title="widget image" alt="an image was here" /></p>
                         </div><!-- end widget -->
-
                     </div><!-- end widget row -->
-
                 </aside> <!-- end sidebar -->
 
+                <div class="span9">
+                    @yield('content')
+                </div>
             </div>
 
         </div>
