@@ -49,9 +49,8 @@
 @stop
 
 @section('login')
-<img src="{{asset('images/main/card.gif')}}" style="width: 168px;height:150px;"/>
+<img src="{{asset('images/main/card.png')}}" />
 <input id="btnReadCard" name="btnReadCard" type="button" value="อ่านบัตร" style="width:100px; height: 30px; float: none;" onclick="openLoginPage();" />
-<br />
 @stop
 
 @section('message')
