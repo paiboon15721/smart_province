@@ -1,15 +1,15 @@
 @extends('contentLayouts.index')
 
 @section('subTitle')
-	ติดต่อเรา
+ติดต่อเรา
 @stop
 @section('subDescription')
-	ติดต่อเรา
+ติดต่อเรา
 @stop
 @section('subKeywords')
-	ติดต่อเรา
+ติดต่อเรา
 @stop
 
 @section('subContent')
-	<img src="{{asset('images/main/contactUs.jpg')}}"/>
+<img src="{{asset('images/main/contactUs.jpg')}}"/>
 @stop
