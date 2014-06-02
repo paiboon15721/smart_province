@@ -36,15 +36,15 @@
 
 @section('menu')
 <?php $thisPage = Session::get('thisPage'); ?>
-<li <?php echo ($thisPage == 'main') ? 'class="active"' : '' ?>>{{HTML::link('main', 'หน้าหลัก')}}</li>
-<li <?php echo ($thisPage == 'villageDirectors') ? 'class="active"' : '' ?>>{{HTML::link('villageDirectors', 'ทำเนียบผู้บริหารหมู่บ้าน')}}</li>
-<li <?php echo ($thisPage == 'villageGeneralInformation') ? 'class="active"' : '' ?>>{{HTML::link('villageGeneralInformation', 'ข้อมูลทั่วไปของหมู่บ้าน')}}</li>
-<li <?php echo ($thisPage == 'villageInformationSystem') ? 'class="active"' : '' ?>>{{HTML::link('villageInformationSystem', 'ระบบข้อมูลหมู่บ้าน')}}</li>
-<li <?php echo ($thisPage == 'servicesSystem') ? 'class="active"' : '' ?>>{{HTML::link('servicesSystem', 'ระบบงานบริการด้านต่างๆ')}}</li>
-<li <?php echo ($thisPage == 'generalSystem') ? 'class="active"' : '' ?>>{{HTML::link('generalSystem', 'ระบบงานทั่วไป')}}</li>
-<li <?php echo ($thisPage == 'recordingSystem') ? 'class="active"' : '' ?>>{{HTML::link('recordingSystem', 'ระบบการบันทึกเพื่อการบริหาร')}}</li>
-<li <?php echo ($thisPage == 'contactUs') ? 'class="active"' : '' ?>>{{HTML::link('contactUs', 'ติดต่อเรา')}}</li>
-<li <?php echo ($thisPage == 'map') ? 'class="active"' : '' ?>>{{HTML::link('map', 'แผนที่')}}</li>
+<li <?php echo ($thisPage == 'main') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('main', 'หน้าหลัก')}}</li>
+<li <?php echo ($thisPage == 'villageDirectors') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('villageDirectors', 'ทำเนียบผู้บริหารหมู่บ้าน')}}</li>
+<li <?php echo ($thisPage == 'villageGeneralInformation') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('villageGeneralInformation', 'ข้อมูลทั่วไปของหมู่บ้าน')}}</li>
+<li <?php echo ($thisPage == 'villageInformationSystem') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('villageInformationSystem', 'ระบบข้อมูลหมู่บ้าน')}}</li>
+<li <?php echo ($thisPage == 'servicesSystem') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('servicesSystem', 'ระบบงานบริการด้านต่างๆ')}}</li>
+<li <?php echo ($thisPage == 'generalSystem') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('generalSystem', 'ระบบงานทั่วไป')}}</li>
+<li <?php echo ($thisPage == 'recordingSystem') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('recordingSystem', 'ระบบการบันทึกเพื่อการบริหาร')}}</li>
+<li <?php echo ($thisPage == 'contactUs') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('contactUs', 'ติดต่อเรา')}}</li>
+<li <?php echo ($thisPage == 'map') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('map', 'แผนที่')}}</li>
 @stop
 
 @section('login')
