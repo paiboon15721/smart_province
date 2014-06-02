@@ -44,6 +44,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
             .active_sidebar_menu { background: #fff; text-decoration: none; font-weight: bold; }
         </style>
         {{HTML::style('css/layouts/bootstrap-responsive.min.css');}}
+        {{HTML::script('js/jquery-1.7.2.min.js')}}
         @yield('script&css')
     </head>
     <body>
@@ -148,7 +149,6 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                 <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
             </p>
         </div>
-        {{HTML::script('js/jquery-1.7.2.min.js')}}
         {{HTML::script('js/bootstrap.min.js')}}
         <script type="text/javascript">
             $('.carousel').carousel()
