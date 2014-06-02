@@ -84,6 +84,46 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                 <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
             </div>
 
+            <div class="row">
+                <aside class="span3">
+
+                    <div class="row">
+
+                        <div class="widget span3">
+                            <h3>เมนู</h3>
+
+                            <ul>
+                                <li><a href="#">Log In</a></li>
+                                <li><a href="#">Log Out</a></li>
+                                <li><a href="#">Sign Up</a></li>
+                                <li><a href="#">Comment</a></li>
+                                <li><a href="#">On This</a></li>
+                                <li><a href="#">Post</a></li>
+                            </ul>
+                        </div><!-- end widget -->
+
+                        <div class="widget span3">
+                            <h3>Widget Title</h3>
+
+                            <p>
+                                Lorem ipsum incididunt labore proident sit laboris ex ullamco reprehenderit esse consequat deserunt proident Ut proident in velit minim cupidatat in reprehenderit nulla Ut qui dolor dolore sunt dolore aliqua Ut qui.
+                            </p>
+                        </div><!-- end widget -->
+
+                        <div class="widget span3">
+                            <h3>Widget Title</h3>
+
+                            <p>
+                                <img src="http://lorempixel.com/550/325/nature/5" title="widget image" alt="an image was here" />
+                            </p>
+                        </div><!-- end widget -->
+
+                    </div><!-- end widget row -->
+
+                </aside> <!-- end sidebar -->
+
+            </div>
+
         </div>
         <div id="header" class="head-image" style="background: url({{asset('css/layouts/banner.png')}});">
             <div class="head-text" style="font-size:65px;right: 249px;top: 45px;width: 500px;text-align: right">หมู่บ้าน{{Session::get('catmNameTh')}}</div>
