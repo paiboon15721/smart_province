@@ -36,7 +36,6 @@
 
 @section('menu')
 <?php $thisPage = Session::get('thisPage'); ?>
-<li>{{HTML::link('/', 'กลับไปหน้าเมนู')}}</li>
 <li <?php echo ($thisPage == 'main') ? 'class="active"' : '' ?>>{{HTML::link('main', 'หน้าหลัก')}}</li>
 <li <?php echo ($thisPage == 'villageDirectors') ? 'class="active"' : '' ?>>{{HTML::link('villageDirectors', 'ทำเนียบผู้บริหารหมู่บ้าน')}}</li>
 <li <?php echo ($thisPage == 'villageGeneralInformation') ? 'class="active"' : '' ?>>{{HTML::link('villageGeneralInformation', 'ข้อมูลทั่วไปของหมู่บ้าน')}}</li>
