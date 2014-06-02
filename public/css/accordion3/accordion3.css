@@ -2,21 +2,21 @@ HTML {
     OVERFLOW-Y: scroll
 }
 .container {
-    MARGIN: 0px auto; WIDTH: 900px
+    MARGIN: 0px auto; WIDTH: 500px
 }
 H2.acc_red {
-    PADDING-BOTTOM: 0px; LINE-HEIGHT: 46px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 5px; PADDING-LEFT: 0px; WIDTH: 900px; PADDING-RIGHT: 0px; FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", sans-serif; BACKGROUND: url(menu_bar_red.png) no-repeat; FLOAT: left; HEIGHT: 46px; COLOR: #ccc; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+    PADDING-BOTTOM: 0px; LINE-HEIGHT: 46px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 5px; PADDING-LEFT: 0px; WIDTH: 500px; PADDING-RIGHT: 0px; FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", sans-serif; BACKGROUND: url(menu_bar_red.png) no-repeat; FLOAT: left; HEIGHT: 46px; COLOR: #ccc; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
 }
 H2.acc_green {
-    PADDING-BOTTOM: 0px; LINE-HEIGHT: 46px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 5px; PADDING-LEFT: 0px; WIDTH: 900px; PADDING-RIGHT: 0px; FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", sans-serif; BACKGROUND: url(menu_bar_green.png) no-repeat; FLOAT: left; HEIGHT: 46px; COLOR: #ccc; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+    PADDING-BOTTOM: 0px; LINE-HEIGHT: 46px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 5px; PADDING-LEFT: 0px; WIDTH: 500px; PADDING-RIGHT: 0px; FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", sans-serif; BACKGROUND: url(menu_bar_green.png) no-repeat; FLOAT: left; HEIGHT: 46px; COLOR: #ccc; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
 }
 
 H2.acc_purple {
-    PADDING-BOTTOM: 0px; LINE-HEIGHT: 46px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 5px; PADDING-LEFT: 0px; WIDTH: 900px; PADDING-RIGHT: 0px; FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", sans-serif; BACKGROUND: url(menu_bar_purple.png) no-repeat; FLOAT: left; HEIGHT: 46px; COLOR: #ccc; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+    PADDING-BOTTOM: 0px; LINE-HEIGHT: 46px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 5px; PADDING-LEFT: 0px; WIDTH: 500px; PADDING-RIGHT: 0px; FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", sans-serif; BACKGROUND: url(menu_bar_purple.png) no-repeat; FLOAT: left; HEIGHT: 46px; COLOR: #ccc; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
 }
 
 H2.acc_yellow {
-    PADDING-BOTTOM: 0px; LINE-HEIGHT: 46px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 5px; PADDING-LEFT: 0px; WIDTH: 900px; PADDING-RIGHT: 0px; FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", sans-serif; BACKGROUND: url(menu_bar_yellow.png) no-repeat; FLOAT: left; HEIGHT: 46px; COLOR: #ccc; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+    PADDING-BOTTOM: 0px; LINE-HEIGHT: 46px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 5px; PADDING-LEFT: 0px; WIDTH: 500px; PADDING-RIGHT: 0px; FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", sans-serif; BACKGROUND: url(menu_bar_yellow.png) no-repeat; FLOAT: left; HEIGHT: 46px; COLOR: #ccc; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
 }
 
 H2.acc_red A,H2.acc_green A,H2.acc_purple A,H2.acc_yellow A {
@@ -28,7 +28,7 @@ H2.acc_red A:hover,H2.acc_green A:hover,H2.acc_green A:hover {
 H2.active {
     BACKGROUND-POSITION: left bottom
 }
-.acc_container {
+.acc_container1 {
     BORDER-BOTTOM: #d6d6d6 1px solid;
     BORDER-LEFT: #d6d6d6 1px solid;
     PADDING-BOTTOM: 0px;
