@@ -25,5 +25,5 @@
 @stop
 
 @section('subContent')
-{{$menu}}
+5556
 @stop
