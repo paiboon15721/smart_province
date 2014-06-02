@@ -98,11 +98,11 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                         </div><!-- end widget -->
 
                         <div class="widget span3">
-                            <h3>Widget Title</h3>
+                            <h3>ข่าวสาร</h3>
 
-                            <p>
-                                Lorem ipsum incididunt labore proident sit laboris ex ullamco reprehenderit esse consequat deserunt proident Ut proident in velit minim cupidatat in reprehenderit nulla Ut qui dolor dolore sunt dolore aliqua Ut qui.
-                            </p>
+                            <ul>
+                                @yield('message')
+                            </ul>
                         </div><!-- end widget -->
 
                         <div class="widget span3">
