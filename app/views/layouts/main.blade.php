@@ -73,9 +73,10 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
             <div id="myCarousel" class="carousel slide">
                 <!-- Carousel items -->
                 <div class="carousel-inner">
-                    <div class="item"><img src="{{asset('images/slider/1.jpg')}}" /></div>
-                    <div class="item"><img src="{{asset('images/slider/2.jpg')}}" /></div>
-                    <div class="item"><img src="{{asset('images/slider/3.jpg')}}" /></div>
+                    <div class="active item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/1.jpg')}}" /></div>
+                    @for ($i=2; $i<29; $i++)
+                    <div class="item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/'.$i.'.jpg')}}" /></div>
+                    @endfor
                 </div>
                 <!-- Carousel nav -->
                 <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
