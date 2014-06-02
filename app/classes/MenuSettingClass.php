@@ -180,7 +180,7 @@ class MenuSettingClass {
                 $this->menuId = $childValues->menu_id;
                 if ($onParentMenu) {
                     $this->menuSettingForRender .= "<h2 class='" . 'acc_' . $this->menuColour . "'><a href='#'>" . $childValues->menu_name_th . "</a></h2>";
-                    $this->menuSettingForRender .= "<div class='acc_container1'>";
+                    $this->menuSettingForRender .= "<div class='acc_container'>";
                 } else {
                     if ($childValues->menu_url == '') {
                         $this->menuSettingForRender .= "<li>" . $childValues->menu_name_th;
