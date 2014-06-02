@@ -105,11 +105,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                     </div><!-- end widget row -->
                 </aside> <!-- end sidebar -->
                 <div class="span9">
-                    <div class="post">
-                        <div class="row">
-                            @yield('content')
-                        </div><!-- end post row -->
-                    </div><!-- end post -->
+                    @yield('content')
                 </div>
             </div>
         </div>
