@@ -93,12 +93,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                             <h3>เมนู</h3>
 
                             <ul>
-                                <li><a href="#">Log In</a></li>
-                                <li><a href="#">Log Out</a></li>
-                                <li><a href="#">Sign Up</a></li>
-                                <li><a href="#">Comment</a></li>
-                                <li><a href="#">On This</a></li>
-                                <li><a href="#">Post</a></li>
+                                @yield('menu')
                             </ul>
                         </div><!-- end widget -->
 
