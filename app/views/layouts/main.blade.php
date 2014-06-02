@@ -42,7 +42,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
             .widget ul li a:hover { background: #fff; text-decoration: none; padding-left: 5px;}
         </style>
         {{HTML::style('css/layouts/bootstrap-responsive.min.css');}}
-        @yield('script&css')
+        @yield('script&css1')
     </head>
     <body>
 
@@ -81,7 +81,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                 </div>
                 <!-- Carousel nav -->
                 <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
             </div>
 
             <div class="row">
