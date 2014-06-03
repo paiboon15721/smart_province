@@ -109,9 +109,13 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                         </div><!-- end widget -->
                     </div><!-- end widget row -->
                 </aside> <!-- end sidebar -->
+
                 <div class="span6">
-                    @yield('content')
+                    <div class="row">
+                        @yield('content')
+                    </div>
                 </div>
+
                 <aside class="span3">
                     <div class="row">
                         <div class="widget span3">
