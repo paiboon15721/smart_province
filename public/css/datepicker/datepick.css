@@ -95,6 +95,7 @@ img.datepick-trigger {
     text-align: center;
     font-weight: bold;
     height: 1.6em;
+    padding-bottom:4px;
 }
 .datepick-header select {
     background: #5c9ccc;
