@@ -11,7 +11,7 @@
 @stop
 
 @section('subScript&css')
-{{HTML::style('css/dataTables/jquery-ui-1.8.14.custom.css')}}
+{{HTML::style('css/dataTables/jquery-ui-1.8.14.custom1.css')}}
 {{HTML::style('css/dataTables/demo_table_jui.css')}}
 {{HTML::style('css/dataTables/TableTools_JUI.css')}}
 {{HTML::script('js/dataTables/jquery.dataTables.min.js')}}
