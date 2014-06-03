@@ -29,7 +29,13 @@
 @stop
 
 @section('content')
-@yield('subContent')
+<div class="span6">
+    <div class="row">
+        <div class="details span6">
+            @yield('subContent')
+        </div>
+    </div>
+</div>
 @stop
 
 @section('carouselSlide')
@@ -48,6 +54,29 @@
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
     <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
+@stop
+
+@section('rightWidget')
+<aside class="span3">
+    <div class="row">
+        <div class="widget span3">
+            <h3>ลิงค์ต่างๆ</h3>
+            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
+        </div><!-- end widget -->
+        <div class="widget span3">
+            <h3>ปฏิทิน</h3>
+            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
+        </div><!-- end widget -->
+        <div class="widget span3">
+            <h3>อื่นๆ</h3>
+            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
+        </div><!-- end widget -->
+        <div class="widget span3">
+            <h3>รูปภาพ</h3>
+            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
+        </div><!-- end widget -->
+    </div><!-- end widget row -->
+</aside> <!-- end sidebar -->
 @stop
 
 @section('topMenu')
