@@ -11,13 +11,15 @@
 @stop
 
 @section('subScript&css')
-{{HTML::style('css/dataTables/jquery-ui-1.8.14.custom1.css')}}
+{{HTML::style('css/dataTables/jquery-ui-1.8.14.custom.css')}}
 {{HTML::style('css/dataTables/demo_table_jui.css')}}
 {{HTML::style('css/dataTables/TableTools_JUI.css')}}
+{{HTML::style('css/dataTables/dataTables.bootstrap.css')}}
 {{HTML::script('js/dataTables/jquery.dataTables.min.js')}}
 {{HTML::script('js/dataTables/TableTools.js')}}
 {{HTML::script('js/dataTables/ZeroClipboard.js')}}
 {{HTML::script('js/dataTables/jquery.jeditable.js')}}
+{{HTML::script('js/dataTables/dataTables.bootstrap.js')}}
 <script type="text/javascript">
     var oTable;
     $(document).ready(function() {
