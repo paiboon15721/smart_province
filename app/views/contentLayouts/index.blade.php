@@ -32,6 +32,24 @@
 @yield('subContent')
 @stop
 
+@section('carouselSlide')
+<div id="myCarousel" class="carousel slide">
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+        <?php
+        $catmNameEn = Session::get('catmNameEn');
+        ?>
+        <div class="active item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/1.jpg')}}" style="height: 350px; width: 1200px;" /></div>
+        @for ($i=2; $i<29; $i++)
+        <div class="item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/'.$i.'.jpg')}}" style="height: 350px; width: 1200px;" /></div>
+        @endfor
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+@stop
+
 @section('topMenu')
 <?php $thisPage = Session::get('thisPage'); ?>
 <li <?php echo ($thisPage == 'main') ? 'class="active"' : '' ?>>{{HTML::link('main', 'หน้าหลัก')}}</li>
