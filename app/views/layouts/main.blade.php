@@ -24,9 +24,9 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <span class="icon-bar">555</span>
+                        <span class="icon-bar">55</span>
+                        <span class="icon-bar">5</span>
                     </a>
                     <a class="brand" href="#">หมู่บ้าน{{Session::get('catmNameTh')}}</a>
                     <div class="nav-collapse">
