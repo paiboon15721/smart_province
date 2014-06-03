@@ -121,18 +121,16 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                 <aside class="span3">
                     <div class="row">
                         <div class="widget span3">
-                            <h3>เมนู</h3>
-                            <ul>@yield('menu')</ul>
+                            <h3>ลิงค์ต่างๆ</h3>
+                            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
                         </div><!-- end widget -->
                         <div class="widget span3">
-                            <h3>อ่านบัตร</h3>
-                            <div class="content" style="text-align:center;" >
-                                @yield('login')
-                            </div>
+                            <h3>ปฏิทิน</h3>
+                            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
                         </div><!-- end widget -->
                         <div class="widget span3">
-                            <h3>ข่าวสาร</h3>
-                            <ul>@yield('message')</ul>
+                            <h3>อื่นๆ</h3>
+                            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
                         </div><!-- end widget -->
                         <div class="widget span3">
                             <h3>รูปภาพ</h3>
