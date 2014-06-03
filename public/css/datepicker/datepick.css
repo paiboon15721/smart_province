@@ -89,6 +89,7 @@ img.datepick-trigger {
     text-align: left;
 }
 .datepick-header {
+    height:28px;
     background: #5c9ccc;
     color: #fff;
     text-align: center;
@@ -189,6 +190,15 @@ img.datepick-trigger {
 }
 .datepick-new-row {
     clear: left;
+}
+
+
+.datepick-new-month{
+    width:50%;
+}
+
+.datepick-new-year{
+    width:50%;
 }
 /* ___________ IE6 IFRAME FIX ________ */
 .datepick-cover {
