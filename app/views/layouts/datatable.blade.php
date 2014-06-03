@@ -1,4 +1,4 @@
-@extends('contentLayouts.index')
+@extends('contentLayouts.content')
 
 @section('subTitle')
 {{$menuName}}
