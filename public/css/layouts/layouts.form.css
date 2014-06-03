@@ -1,10 +1,9 @@
 .formarea {
     background-color: #FFFFFF;
-    width: 100%;
+    width: 90%;
     margin-top: 10px;
-    margin-right: 0px;
+    margin: 0 auto;
     margin-bottom: 10px;
-    margin-left: 0px;
     position: relative;
     padding: 25px;
     border: 1px solid #CCCCCC;
