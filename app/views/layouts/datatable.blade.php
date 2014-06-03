@@ -15,7 +15,7 @@
 {{HTML::style('css/dataTables/demo_table_jui.css')}}
 {{HTML::style('css/dataTables/TableTools_JUI.css')}}
 {{HTML::style('css/dataTables/dataTables.bootstrap.css')}}
-{{HTML::script('js/dataTables/jquery.dataTables.min.js')}}
+{{HTML::script('js/dataTables/jquery.dataTables1.min.js')}}
 {{HTML::script('js/dataTables/TableTools.js')}}
 {{HTML::script('js/dataTables/ZeroClipboard.js')}}
 {{HTML::script('js/dataTables/jquery.jeditable.js')}}
