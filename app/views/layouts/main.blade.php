@@ -112,7 +112,9 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 
                 <div class="span6">
                     <div class="row">
-                        @yield('content')
+                        <div class="details span6">
+                            @yield('content')
+                        </div>
                     </div>
                 </div>
 
