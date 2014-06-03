@@ -13,7 +13,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        {{HTML::style('css/layouts/bootstrap.min.css');}}
+        {{HTML::style('css/layouts/bootstrap.css');}}
         <style type="text/css">
             body {
                 padding-top: 60px;
@@ -43,7 +43,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 
             .active_sidebar_menu { background: #fff; text-decoration: none; font-weight: bold; }
         </style>
-        {{HTML::style('css/layouts/bootstrap-responsive.min.css');}}
+        {{HTML::style('css/layouts/bootstrap-responsive.css');}}
         {{HTML::script('js/jquery-1.7.2.min.js')}}
         @yield('script&css')
     </head>
