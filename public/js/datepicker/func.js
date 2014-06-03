@@ -103,17 +103,17 @@ var input_ClassLoader = function(f) {
             .focus(function() {
                 $(this).select();
             })
-            .datepick({showOn: 'button', buttonImage: '../../css/datepicker/calenda.png', buttonImageOnly: true});
+            .datepick({showOn: 'button', buttonImage: '../css/datepicker/calenda.png', buttonImageOnly: true});
     $(f + ':text.type_date_key1').attr('readonly', false).addClass("MainClass").css({'text-align': 'right'})
             .focus(function() {
                 $(this).select();
             })
-            .datepick({showOn: 'button', buttonImage: '../../../css/datepicker/calenda.png', buttonImageOnly: true});
+            .datepick({showOn: 'button', buttonImage: '../../css/datepicker/calenda.png', buttonImageOnly: true});
     $(f + ':text.type_date_key2').attr('readonly', false).addClass("MainClass").css({'text-align': 'right'})
             .focus(function() {
                 $(this).select();
             })
-            .datepick({showOn: 'button', buttonImage: '../../../../css/datepicker/calenda.png', buttonImageOnly: true});
+            .datepick({showOn: 'button', buttonImage: '../../../css/datepicker/calenda.png', buttonImageOnly: true});
 }
 
 var new_win_def_prot2 = function(mypage, myname, w, h, scroll, fullscreen) { //Show center screen,focus page in use
