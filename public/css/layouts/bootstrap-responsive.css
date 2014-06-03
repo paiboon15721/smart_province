@@ -199,6 +199,21 @@
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
+
+    H2.acc_red {
+        PADDING-BOTTOM: 0px; LINE-HEIGHT: 46px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 5px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", sans-serif; BACKGROUND: url(menu_bar_red.png) no-repeat; FLOAT: left; HEIGHT: 46px; COLOR: #ccc; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+    }
+    H2.acc_green {
+        PADDING-BOTTOM: 0px; LINE-HEIGHT: 46px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 5px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", sans-serif; BACKGROUND: url(menu_bar_green.png) no-repeat; FLOAT: left; HEIGHT: 46px; COLOR: #ccc; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+    }
+
+    H2.acc_purple {
+        PADDING-BOTTOM: 0px; LINE-HEIGHT: 46px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 5px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", sans-serif; BACKGROUND: url(menu_bar_purple.png) no-repeat; FLOAT: left; HEIGHT: 46px; COLOR: #ccc; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+    }
+
+    H2.acc_yellow {
+        PADDING-BOTTOM: 0px; LINE-HEIGHT: 46px; TEXT-TRANSFORM: uppercase; MARGIN: 0px 0px 5px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", sans-serif; BACKGROUND: url(menu_bar_yellow.png) no-repeat; FLOAT: left; HEIGHT: 46px; COLOR: #ccc; FONT-SIZE: 16px; FONT-WEIGHT: normal; PADDING-TOP: 0px
+    }
     .row {
         margin-left: -20px;
         *zoom: 1;
