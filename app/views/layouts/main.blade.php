@@ -13,7 +13,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        {{HTML::style('css/layouts/bootstrap.css');}}
+        {{HTML::style('css/layouts/bootstrap1.css');}}
         {{HTML::style('css/layouts/my-css.css');}}
         {{HTML::style('css/layouts/bootstrap-responsive.css');}}
         {{HTML::script('js/jquery-1.7.2.min.js')}}
