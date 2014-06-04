@@ -42,7 +42,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                     <a class="brand" href="#">@yield('headerName')</a>
                     <div class="nav-collapse">
                         <ul class="nav">
-                            @yield('topMenu')
+                            @yield('topLeftMenu')
                         </ul>
                         <ul class="nav pull-right">
                             @yield('topRightMenu')

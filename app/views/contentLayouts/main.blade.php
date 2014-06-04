@@ -46,7 +46,12 @@
     <div class="row">
         <div class="widget span3">
             <h3>เมนู</h3>
-            <ul>@yield('menu')</ul>
+            <ul>
+                <li>{{HTML::link('#', 'ทำเนียบผู้บริหารศูนย์')}}</li>
+                <li>{{HTML::link('#', 'รายชื่อหมู่บ้านของศูนย์')}}</li>
+                <li>{{HTML::link('#', 'ระบบงานของ ศขบ.')}}</li>
+                <li>{{HTML::link('#', 'ข่าวประชาสัมพันธ์')}}</li>
+            </ul>
         </div><!-- end widget -->
         <div class="widget span3">
             <h3>อ่านบัตร</h3>
@@ -111,16 +116,9 @@
 @endforeach
 @stop
 
-@section('topMenu')
+@section('topLeftMenu')
 <li>{{HTML::link('#', 'หน้าหลัก')}}</li>
 <li>{{HTML::link('#', 'ความเป็นมาของศูนย์')}}</li>
 <li>{{HTML::link('#', 'ติดต่อเรา')}}</li>
 <li>{{HTML::link('#', 'แผนที่')}}</li>
-@stop
-
-@section('menu')
-<li>{{HTML::link('#', 'ทำเนียบผู้บริหารศูนย์')}}</li>
-<li>{{HTML::link('#', 'รายชื่อหมู่บ้านของศูนย์')}}</li>
-<li>{{HTML::link('#', 'ระบบงานของ ศขบ.')}}</li>
-<li>{{HTML::link('#', 'ข่าวประชาสัมพันธ์')}}</li>
 @stop
