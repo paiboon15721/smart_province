@@ -29,7 +29,7 @@
 @stop
 
 @section('content')
-<div class="span6">
+<div class="span9">
     @yield('subContent')
 </div>
 @stop
