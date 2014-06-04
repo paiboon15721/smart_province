@@ -32,6 +32,35 @@
 @yield('subRightWidget')
 @stop
 
+@section('leftWidget')
+<aside class="span3">
+    <div class="row">
+        <div class="widget span3">
+            <h3>เมนู</h3>
+            <ul>@yield('menu')</ul>
+        </div><!-- end widget -->
+        <div class="widget span3">
+            <h3>อ่านบัตร</h3>
+            <p style="text-align:center;" >
+                <img src="{{asset('images/main/card.png')}}" width="100%" height="100%" />
+            </p>
+        </div><!-- end widget -->
+        <div class="widget span3">
+            <h3>ปฏิทินข่าวกิจกรรมของหมู่บ้าน</h3>
+            <p><img src="{{asset('images/main/calendar.jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
+        </div><!-- end widget -->
+        <div class="widget span3">
+            <h3>ข่าวพยากรณ์อากาศ</h3>
+            <iframe src="http://www.tmd.go.th/daily_forecast_forweb.php?strProvinceID=8-37-2-38-14-18-60" width="100%" height="240" scrolling="no" frameborder="0"></iframe>
+        </div><!-- end widget -->
+        <div class="widget span3">
+            <h3>สถิติการใช้งาน</h3>
+            <p><img src="{{asset('images/main/images.jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
+        </div><!-- end widget -->
+    </div><!-- end widget row -->
+</aside> <!-- end sidebar -->
+@stop
+
 @section('topRightMenu')
 <li>{{HTML::link('/', 'กลับไปหน้าศูนย์ข้อมูลบริการหมู่บ้าน')}}</li>
 @stop
