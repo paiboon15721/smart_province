@@ -12,7 +12,7 @@
  */
 
 //map
-Route::get('/', 'MapController@index');
+Route::get('/', 'MapController@main');
 
 //home
 Route::get('writeSession/{catmId}', 'HomeController@writeSession');
