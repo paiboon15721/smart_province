@@ -56,9 +56,9 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                             </p>
                         </div><!-- end widget -->
                         <div class="widget span3">
-                            <h3>่ข่าวพยากรณ์อากาศ</h3>
-                            <iframe src="http://www.tmd.go.th/daily_forecast_forweb.php?strProvinceID=8-37-2-38-14-18-60" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
-                        </div>
+                            <h3>ปฏิทิน</h3>
+                            <iframe src="http://www.tmd.go.th/daily_forecast_forweb.php?strProvinceID=8-37-2-38-14-18-60" width="180" height="260" scrolling="no" frameborder="0"></iframe>
+                        </div><!-- end widget -->
                         <div class="widget span3">
                             <h3>ปฏิทิน</h3>
                             <p style="text-align:center;"><img src="{{asset('images/main/calendar.jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
