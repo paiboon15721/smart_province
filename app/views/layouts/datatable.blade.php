@@ -124,6 +124,6 @@
 </script>
 @stop
 
-@section('subContent')
-@yield('subSubContent')
+@section('subSubContent')
+@yield('subSubSubContent')
 @stop
