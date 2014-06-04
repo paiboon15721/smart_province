@@ -73,6 +73,12 @@
 </aside> <!-- end sidebar -->
 @stop
 
+@section('topRightMenu')
+@foreach ($catms as $catm)
+<li>{{HTML::link('writeSession/'{{$catm->catm_id}}, 'หมู่บ้าน'{{$catm->catm_name_th}})}}</li>
+@endforeach
+@stop
+
 @section('topMenu')
 <li>{{HTML::link('#', 'หน้าหลัก')}}</li>
 <li>{{HTML::link('#', 'ความเป็นมาของศูนย์')}}</li>

@@ -11,7 +11,7 @@ class MapController extends BaseController {
 
     public function main() {
         return View::make('map.main')
-                        ->with('catmNameThList', Catm::lists('catm_name_th', 'catm_id'));
+                        ->with('catms', Catm::lists('catm_name_th', 'catm_id'));
     }
 
 }

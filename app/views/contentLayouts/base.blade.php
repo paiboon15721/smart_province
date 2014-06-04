@@ -32,6 +32,10 @@
 @yield('subRightWidget')
 @stop
 
+@section('topRightMenu')
+<li>{{HTML::link('/', 'กลับไปหน้าศูนย์ข้อมูลบริการหมู่บ้าน')}}</li>
+@stop
+
 @section('topMenu')
 <?php $thisPage = Session::get('thisPage'); ?>
 <li <?php echo ($thisPage == 'main') ? 'class="active"' : '' ?>>{{HTML::link('main', 'หน้าหลัก')}}</li>

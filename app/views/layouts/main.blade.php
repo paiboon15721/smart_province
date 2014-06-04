@@ -45,7 +45,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                             @yield('topMenu')
                         </ul>
                         <ul class="nav pull-right">
-                            <li>{{HTML::link('/', 'กลับไปหน้าศูนย์ข้อมูลบริการหมู่บ้าน')}}</li>
+                            @yield('topRightMenu')
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
