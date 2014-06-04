@@ -41,46 +41,4 @@
         <a class="btn pull-right" href="#">อ่านต่อ..</a>
     </div><!-- end post row -->
 </div><!-- end post -->
-
-<div class="post">
-    <div class="row">
-        <div class="details span6">
-            <h2>ลิงค์เว็บไซต์กระทรวงต่างๆ</h2>
-            <div class="feat-img span3">
-                <ul>
-                    <li>{{HTML::link('#', 'สำนักนายกรัฐมนตรี')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงเทคโนโลยีสารสนเทศ')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงมหาดไทย')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงเกษตรกร')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงสหกรณ์')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงพานิช')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงการคลัง')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงวัฒนธรรม')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงกลาโหม')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงวิทยาศาสตร์')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงพลังงาน')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงอุตสาหกรรม')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงคมนาคม')}}</li>
-                </ul>
-            </div>
-            <div class="details span3">
-                <ul>
-                    <li>{{HTML::link('#', 'สำนักนายกรัฐมนตรี')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงเทคโนโลยีสารสนเทศ')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงมหาดไทย')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงเกษตรกร')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงสหกรณ์')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงพานิช')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงการคลัง')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงวัฒนธรรม')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงกลาโหม')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงวิทยาศาสตร์')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงพลังงาน')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงอุตสาหกรรม')}}</li>
-                    <li>{{HTML::link('#', 'กระทรวงคมนาคม')}}</li>
-                </ul>
-            </div>
-        </div><!-- end widget -->
-    </div><!-- end post row -->
-</div><!-- end post -->
 @stop
