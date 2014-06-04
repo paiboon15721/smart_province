@@ -62,11 +62,14 @@
         <div class="widget span3">
             <h3>โครงการพระราชดำริ</h3>
             <p><img src="{{asset('images/main/472875.gif')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
-            <p><img src="{{asset('images/main/activity_icon.jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
-            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
         </div><!-- end widget -->
         <div class="widget span3">
-            <h3>รูปภาพ</h3>
+            <h3>ปฏิทินข่าวกิจกรรมของศูนย์</h3>
+            <p><img src="{{asset('images/main/calendar.jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
+        </div><!-- end widget -->
+        <div class="widget span3">
+            <h3>ข่าวสารและข้อมูลต่างๆ</h3>
+            <p><img src="{{asset('images/main/activity_icon.jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
             <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
         </div><!-- end widget -->
         <div class="widget span3">
