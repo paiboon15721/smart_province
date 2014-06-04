@@ -1,15 +1,15 @@
 @extends('contentLayouts.index')
 
 @section('subTitle')
-	แผนที่
+แผนที่
 @stop
 @section('subDescription')
-	แผนที่
+แผนที่
 @stop
 @section('subKeywords')
-	แผนที่
+แผนที่
 @stop
 
-@section('subContent')
-	<img src="{{asset('images/main/nakhonnayok.jpg')}}" style="width: 796px;height:1000px;"/>
+@section('subSubContent')
+<img src="{{asset('images/main/nakhonnayok.jpg')}}" style="width: 796px;height:1000px;"/>
 @stop

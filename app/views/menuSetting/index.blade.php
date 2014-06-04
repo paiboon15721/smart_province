@@ -14,7 +14,7 @@
 {{HTML::style('css/layouts/layouts.form.css')}}
 @stop
 
-@section('subContent')
+@section('subSubContent')
 <div id="welcome" class="post">
     <div class="formarea">
         <h2>การตั้งค่าเมนู</h2>

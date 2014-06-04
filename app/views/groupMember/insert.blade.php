@@ -1,6 +1,6 @@
 @extends('layouts.formWithDatepicker')
 
-@section('subSubSubContent')
+@section('subSubSubSubContent')
 <script type='text/javascript'>
 
     function onGroupsChange(max) {

@@ -24,6 +24,6 @@
 </script>
 @stop
 
-@section('subContent')
+@section('subSubContent')
 {{$menu}}
 @stop

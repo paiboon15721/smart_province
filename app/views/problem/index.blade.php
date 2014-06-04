@@ -1,6 +1,6 @@
 @extends('layouts.datatable')
 
-@section('subSubContent')
+@section('subSubSubContent')
 <div id="welcome" class="post">
     <table cellspacing="0" cellpadding="0" border="0"  id="datatable" class="display">
         <thead>

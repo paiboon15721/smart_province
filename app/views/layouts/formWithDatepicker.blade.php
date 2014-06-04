@@ -8,8 +8,8 @@
 {{HTML::script('js/datepicker/func.js')}}
 @stop
 
-@section('subSubContent')
-@yield('subSubSubContent')
+@section('subSubSubContent')
+@yield('subSubSubSubContent')
 <script language="javascript">
     input_ClassLoader("#profileForm ");
 </script>

@@ -1,6 +1,6 @@
 @extends('layouts.formWithDatepicker')
 
-@section('subSubSubContent')
+@section('subSubSubSubContent')
 <div id="welcome" class="post">
     <div class="formarea">
         <div class="requiredfld">

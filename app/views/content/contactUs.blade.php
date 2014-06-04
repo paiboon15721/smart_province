@@ -10,6 +10,6 @@
 ติดต่อเรา
 @stop
 
-@section('subContent')
+@section('subSubContent')
 <img src="{{asset('images/main/contactUs.jpg')}}"/>
 @stop

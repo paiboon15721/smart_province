@@ -16,7 +16,18 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
         {{HTML::style('css/layouts/bootstrap.css');}}
         {{HTML::style('css/layouts/my-css.css');}}
         {{HTML::style('css/layouts/bootstrap-responsive.css');}}
+        {{HTML::style('css/uiToTop/ui.totop.css')}}
         {{HTML::script('js/jquery-1.7.2.min.js')}}
+        {{HTML::script('js/uiToTop/jquery.ui.totop.min.js')}}
+        <script type="text/javascript">
+            function openLoginPage() {
+                window.location = "login";
+                window.open('', '_self');
+                setTimeout(function() {
+                    window.close();
+                }, 2000);
+            }
+        </script>
         @yield('script&css')
     </head>
     <body>
@@ -28,7 +39,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">หมู่บ้าน{{Session::get('catmNameTh')}}</a>
+                    <a class="brand" href="#">@yield('headerName')</a>
                     <div class="nav-collapse">
                         <ul class="nav">
                             @yield('topMenu')

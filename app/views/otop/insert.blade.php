@@ -1,6 +1,6 @@
 @extends('layouts.form')
 
-@section('subContent')
+@section('subSubContent')
 <div id="welcome" class="post">
     <div class="formarea">
         <div class="requiredfld">
