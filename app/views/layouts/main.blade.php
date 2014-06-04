@@ -51,13 +51,13 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                         </div><!-- end widget -->
                         <div class="widget span3">
                             <h3>อ่านบัตร</h3>
-                            <div class="content" style="text-align:center;" >
+                            <p style="text-align:center;" >
                                 @yield('login')
-                            </div>
+                            </p>
                         </div><!-- end widget -->
                         <div class="widget span3">
                             <h3>ปฏิทิน</h3>
-                            <p><img src="{{asset('images/main/calendar.jpg')}}" title="widget image" alt="an image was here" /></p>
+                            <p style="text-align:center;"><img src="{{asset('images/main/calendar.jpg')}}" title="widget image" alt="an image was here" /></p>
                         </div><!-- end widget -->
                         <div class="widget span3">
                             <h3>ข่าวสาร</h3>
