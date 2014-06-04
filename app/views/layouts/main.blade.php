@@ -56,12 +56,16 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                             </p>
                         </div><!-- end widget -->
                         <div class="widget span3">
+                            <h3>ปฏิทินข่าวกิจกรรมของศูนย์</h3>
+                            <p style="text-align:center;"><img src="{{asset('images/main/calendar.jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
+                        </div><!-- end widget -->
+                        <div class="widget span3">
                             <h3>ข่าวพยากรณ์อากาศ</h3>
                             <iframe src="http://www.tmd.go.th/daily_forecast_forweb.php?strProvinceID=8-37-2-38-14-18-60" width="100%" height="240" scrolling="no" frameborder="0"></iframe>
                         </div><!-- end widget -->
                         <div class="widget span3">
-                            <h3>ปฏิทิน</h3>
-                            <p style="text-align:center;"><img src="{{asset('images/main/calendar.jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
+                            <h3>สถิติการใช้งาน</h3>
+                            <p style="width: 120px;"><a href="http://www.u-analyzer.com" target="_blank"><img src="http://www.u-analyzer.com/co_tag.php?sid=1127414_1" border="0" alt="ฟรีบริการเก็บสถิติเว็บไซด์ "></a><a href="http://aim.co.th" target="_blank" title="รับพัฒนา ปรึกษา Smartphone APP">บริษัท AIM Bangkok จำกัด</a></p><script language="javascript" src="http://www.u-analyzer.com/getstats.js.php?sid=1127414"></script>
                         </div><!-- end widget -->
                         <div class="widget span3">
                             <h3>ข่าวสาร</h3>
@@ -75,7 +79,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
         </div>
         {{HTML::script('js/bootstrap.min.js')}}
         <script type="text/javascript">
-            $('.carousel').carousel();
+$('.carousel').carousel();
         </script>
     </body>
 </html>
