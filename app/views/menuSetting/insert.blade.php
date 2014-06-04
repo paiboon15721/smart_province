@@ -1,4 +1,18 @@
-@extends('layouts.form')
+@extends('contentLayouts.index')
+
+@section('subTitle')
+เพิ่มเมนู
+@stop
+@section('subDescription')
+เพิ่มเมนู
+@stop
+@section('subKeywords')
+เพิ่มเมนู
+@stop
+
+@section('subScript&css')
+{{HTML::style('css/layouts/layouts.form.css')}}
+@stop
 
 @section('subContent')
 <div id="welcome" class="post">
