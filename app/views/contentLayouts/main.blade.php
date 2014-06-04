@@ -89,6 +89,10 @@
             <p><img src="{{asset('images/main/calendar.jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
         </div><!-- end widget -->
         <div class="widget span3">
+            <h3>ใช้สำหรับโฆษณาให้เช่า</h3>
+            <p><img src="{{asset('images/main/web_advertising_icon.jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
+        </div><!-- end widget -->
+        <div class="widget span3">
             <h3>ลิงค์เว็บไซต์กระทรวงต่างๆ</h3>
             <ul>
                 <li>{{HTML::link('#', 'สำนักนายกรัฐมนตรี')}}</li>
