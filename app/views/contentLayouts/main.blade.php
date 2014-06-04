@@ -75,7 +75,7 @@
 
 @section('topRightMenu')
 @foreach ($catms as $catm)
-<li>{{HTML::link('writeSession/'{{$catm->catm_id}}, 'หมู่บ้าน'{{$catm->catm_name_th}})}}</li>
+<li>{{HTML::link('writeSession/' . $catm->catm_id, 'หมู่บ้าน' . $catm->catm_name_th)}}</li>
 @endforeach
 @stop
 
