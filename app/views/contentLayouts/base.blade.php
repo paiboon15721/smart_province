@@ -33,6 +33,7 @@
 @stop
 
 @section('leftWidget')
+<?php $thisPage = Session::get('thisPage'); ?>
 <aside class="span3">
     <div class="row">
         <div class="widget span3">
@@ -71,7 +72,6 @@
 @stop
 
 @section('topLeftMenu')
-<?php $thisPage = Session::get('thisPage'); ?>
 <li <?php echo ($thisPage == 'main') ? 'class="active"' : '' ?>>{{HTML::link('main', 'หน้าหลัก')}}</li>
 <li <?php echo ($thisPage == 'villageDirectors') ? 'class="active"' : '' ?>>{{HTML::link('villageDirectors', 'ทำเนียบผู้บริหารหมู่บ้าน')}}</li>
 <li <?php echo ($thisPage == 'villageGeneralInformation') ? 'class="active"' : '' ?>>{{HTML::link('villageGeneralInformation', 'ข้อมูลทั่วไปของหมู่บ้าน')}}</li>
