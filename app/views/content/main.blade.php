@@ -22,7 +22,7 @@
                 Lorem ipsum pariatur velit pariatur dolore aliqua voluptate sed Duis dolor ea cillum qui anim consequat quis sunt ex eu culpa veniam nisi nulla non dolor esse sit aliquip irure in amet reprehenderit quis voluptate occaecat in enim Duis.Aliqua voluptate sed Duis dolor ea cillum qui anim consequat quis sunt ex eu culpa veniam nisi nulla non dolor esse sit aliquip irure in amet reprehenderit quis voluptate occaecat in enim Duis.
             </p>
         </div> <!-- end details -->
-        <a class="btn pull-right" href="#">Read More!</a>
+        <a class="btn pull-right" href="#">อ่านต่อ..</a>
     </div><!-- end post row -->
 </div><!-- end post -->
 
@@ -38,7 +38,7 @@
                 Lorem ipsum pariatur velit pariatur dolore aliqua voluptate sed Duis dolor ea cillum qui anim consequat quis sunt ex eu culpa veniam nisi nulla non dolor esse sit aliquip irure in amet reprehenderit quis voluptate occaecat in enim Duis.Aliqua voluptate sed Duis dolor ea cillum qui anim consequat quis sunt ex eu culpa veniam nisi nulla non dolor esse sit aliquip irure in amet reprehenderit quis voluptate occaecat in enim Duis.
             </p>
         </div> <!-- end details -->
-        <a class="btn pull-right" href="#">Read More!</a>
+        <a class="btn pull-right" href="#">อ่านต่อ..</a>
     </div><!-- end post row -->
 </div><!-- end post -->
 @stop
