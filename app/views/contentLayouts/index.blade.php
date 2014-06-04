@@ -78,10 +78,6 @@
             </ul>
         </div><!-- end widget -->
         <div class="widget span3">
-            <h3>ปฏิทิน</h3>
-            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
-        </div><!-- end widget -->
-        <div class="widget span3">
             <h3>อื่นๆ</h3>
             <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
         </div><!-- end widget -->

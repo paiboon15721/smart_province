@@ -56,12 +56,12 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                             </div>
                         </div><!-- end widget -->
                         <div class="widget span3">
-                            <h3>ข่าวสาร</h3>
-                            <ul>@yield('message')</ul>
+                            <h3>ปฏิทิน</h3>
+                            <p><img src="{{asset('images/main/calendar.jpg')}}" title="widget image" alt="an image was here" /></p>
                         </div><!-- end widget -->
                         <div class="widget span3">
-                            <h3>รูปภาพ</h3>
-                            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
+                            <h3>ข่าวสาร</h3>
+                            <ul>@yield('message')</ul>
                         </div><!-- end widget -->
                     </div><!-- end widget row -->
                 </aside> <!-- end sidebar -->
