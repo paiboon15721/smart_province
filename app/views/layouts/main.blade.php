@@ -57,7 +57,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                         </div><!-- end widget -->
                         <div class="widget span3">
                             <h3>ปฏิทิน</h3>
-                            <p style="text-align:center;"><img src="{{asset('images/main/calendar.jpg')}}" title="widget image" alt="an image was here" /></p>
+                            <p style="text-align:center;"><img src="{{asset('images/main/calendar.jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
                         </div><!-- end widget -->
                         <div class="widget span3">
                             <h3>ข่าวสาร</h3>
