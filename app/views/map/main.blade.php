@@ -12,8 +12,7 @@
 @section('subContent')
 <div class="post">
     <div class="row">
-        {{HTML::decode(Form::label('catmId', "หมู่บ้าน"))}}
-        {{Form::select('catmId', $catmNameThList)}}
+        {{HTML::decode(Form::label('catmId', "หมู่บ้าน"))}}{{Form::select('catmId', $catmNameThList)}}
     </div>
 </div>
 <div class="post">
