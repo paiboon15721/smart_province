@@ -60,6 +60,14 @@
 <aside class="span3">
     <div class="row">
         <div class="widget span3">
+            <h3>โครงการพระราชดำริ</h3>
+            <p><img src="{{asset('images/main/472875.gif')}}" title="widget image" alt="an image was here" /></p>
+        </div><!-- end widget -->
+        <div class="widget span3">
+            <h3>รูปภาพ</h3>
+            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
+        </div><!-- end widget -->
+        <div class="widget span3">
             <h3>ลิงค์อื่นๆ</h3>
             <ul>
                 <li>{{HTML::link('#', 'สำนักนายกรัฐมนตรี')}}</li>
@@ -76,14 +84,6 @@
                 <li>{{HTML::link('#', 'กระทรวงอุตสาหกรรม')}}</li>
                 <li>{{HTML::link('#', 'กระทรวงคมนาคม')}}</li>
             </ul>
-        </div><!-- end widget -->
-        <div class="widget span3">
-            <h3>อื่นๆ</h3>
-            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
-        </div><!-- end widget -->
-        <div class="widget span3">
-            <h3>รูปภาพ</h3>
-            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
         </div><!-- end widget -->
     </div><!-- end widget row -->
 </aside> <!-- end sidebar -->
