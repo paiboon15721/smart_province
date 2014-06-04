@@ -79,7 +79,7 @@
         </div><!-- end widget -->
         <div class="widget span3">
             <h3>อื่นๆ</h3>
-            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here"  width="100%" height="100%" /></p>
+            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
         </div><!-- end widget -->
         <div class="widget span3">
             <h3>รูปภาพ</h3>
@@ -106,7 +106,7 @@
 @stop
 
 @section('login')
-<img src="{{asset('images/main/card.png')}}" />
+<img src="{{asset('images/main/card.png')}}" width="100%" height="100%" />
 @stop
 
 @section('message')
