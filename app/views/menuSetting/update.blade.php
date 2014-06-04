@@ -1,18 +1,4 @@
-@extends('contentLayouts.index')
-
-@section('subTitle')
-แก้ไขเมนู
-@stop
-@section('subDescription')
-แก้ไขเมนู
-@stop
-@section('subKeywords')
-แก้ไขเมนู
-@stop
-
-@section('subScript&css')
-{{HTML::style('css/layouts/layouts.form.css')}}
-@stop
+@extends('layouts.form')
 
 @section('subContent')
 <div id="welcome" class="post">
