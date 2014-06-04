@@ -30,7 +30,7 @@
 <div id="myCarousel" class="carousel slide">
     <!-- Carousel items -->
     <div class="carousel-inner">
-        @for ($i=1; $i<4; $i++)
+        @for ($i=1; $i<3; $i++)
         <div class="item"><img src="{{asset('images/slider/'.$i.'.jpg')}}" style="height: 350px; width: 1200px;" /></div>
         @endfor
     </div>
