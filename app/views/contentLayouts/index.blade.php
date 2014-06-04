@@ -79,7 +79,7 @@
         </div><!-- end widget -->
         <div class="widget span3">
             <h3>อื่นๆ</h3>
-            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
+            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here"  width="100%" height="100%" /></p>
         </div><!-- end widget -->
         <div class="widget span3">
             <h3>รูปภาพ</h3>
