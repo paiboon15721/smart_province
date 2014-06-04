@@ -60,8 +60,22 @@
 <aside class="span3">
     <div class="row">
         <div class="widget span3">
-            <h3>ลิงค์ต่างๆ</h3>
-            <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
+            <h3>ลิงค์อื่นๆ</h3>
+            <ul>
+                <li>{{HTML::link('#', 'สำนักนายกรัฐมนตรี')}}</li>
+                <li>{{HTML::link('#', 'กระทรวงเทคโนโลยีสารสนเทศ')}}</li>
+                <li>{{HTML::link('#', 'กระทรวงมหาดไทย')}}</li>
+                <li>{{HTML::link('#', 'กระทรวงเกษตรกร')}}</li>
+                <li>{{HTML::link('#', 'กระทรวงสหกรณ์')}}</li>
+                <li>{{HTML::link('#', 'กระทรวงพานิช')}}</li>
+                <li>{{HTML::link('#', 'กระทรวงการคลัง')}}</li>
+                <li>{{HTML::link('#', 'กระทรวงวัฒนธรรม')}}</li>
+                <li>{{HTML::link('#', 'กระทรวงกลาโหม')}}</li>
+                <li>{{HTML::link('#', 'กระทรวงวิทยาศาสตร์')}}</li>
+                <li>{{HTML::link('#', 'กระทรวงพลังงาน')}}</li>
+                <li>{{HTML::link('#', 'กระทรวงอุตสาหกรรม')}}</li>
+                <li>{{HTML::link('#', 'กระทรวงคมนาคม')}}</li>
+            </ul>
         </div><!-- end widget -->
         <div class="widget span3">
             <h3>ปฏิทิน</h3>
