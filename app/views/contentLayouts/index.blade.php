@@ -30,11 +30,7 @@
 
 @section('content')
 <div class="span6">
-    <div class="row">
-        <div class="details span6">
-            @yield('subContent')
-        </div>
-    </div>
+    @yield('subContent')
 </div>
 @stop
 
