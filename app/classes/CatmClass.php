@@ -25,4 +25,8 @@ class CatmClass {
         return $this->catmNameTh;
     }
 
+    public function getCatmNameThList() {
+        return Catm::lists('catm_name_th', 'catm_id');
+    }
+
 }

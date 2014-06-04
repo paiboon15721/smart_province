@@ -12,6 +12,12 @@
 @section('subContent')
 <div class="post">
     <div class="row">
+        {{HTML::decode(Form::label('catmId', "หมู่บ้าน"))}}
+        {{Form::select('catmId', $catmNameThList)}}
+    </div>
+</div>
+<div class="post">
+    <div class="row">
         <div class="feat-img span2">
             <img src="http://lorempixel.com/350/325/sports/1" title="featured image" alt="an image was here" />
         </div><!-- end featured image -->
