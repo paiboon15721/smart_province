@@ -46,7 +46,7 @@
     <div class="row">
         <div class="details span6">
             <h2>ลิงค์เว็บไซต์กระทรวงต่างๆ</h2>
-            <div class="details span3">
+            <div class="feat-img span3">
                 <ul>
                     <li>{{HTML::link('#', 'สำนักนายกรัฐมนตรี')}}</li>
                     <li>{{HTML::link('#', 'กระทรวงเทคโนโลยีสารสนเทศ')}}</li>
