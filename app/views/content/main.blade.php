@@ -12,7 +12,7 @@
 @section('subContent')
 <div class="post">
     <div class="row">
-        <div class="feat-img span2">
+        <div class="feat-img span1">
             <img src="http://lorempixel.com/350/325/sports/1" title="featured image" alt="an image was here" />
         </div><!-- end featured image -->
 
@@ -28,7 +28,7 @@
 
 <div class="post">
     <div class="row">
-        <div class="feat-img span2">
+        <div class="feat-img span1">
             <img src="http://lorempixel.com/350/325/sports/3" title="featured image" alt="an image was here" />
         </div><!-- end featured image -->
 
