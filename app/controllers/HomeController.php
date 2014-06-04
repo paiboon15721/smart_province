@@ -15,7 +15,7 @@ class HomeController extends BaseController {
         Session::put('catmNameTh', $catm->catm_name_th);
         $_SESSION['catm_menu'] = $catm->catm_id;
         $_SESSION['catm_description'] = $catm->catm_name_th;
-        return Redirect::to('villageGeneralInformation');
+        return Redirect::to('main');
     }
 
     public function main() {
