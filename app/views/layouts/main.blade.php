@@ -52,7 +52,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                         <div class="widget span3">
                             <h3>อ่านบัตร</h3>
                             <p style="text-align:center;" >
-                                @yield('login')
+                                <img src="{{asset('images/main/card.png')}}" width="100%" height="100%" />
                             </p>
                         </div><!-- end widget -->
                         <div class="widget span3">

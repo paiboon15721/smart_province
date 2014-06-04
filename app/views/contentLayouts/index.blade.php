@@ -107,10 +107,6 @@
 <li <?php echo ($thisPage == 'recordingSystem') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('recordingSystem', 'ระบบการบันทึกเพื่อการบริหาร')}}</li>
 @stop
 
-@section('login')
-<img src="{{asset('images/main/card.png')}}" width="100%" height="100%" />
-@stop
-
 @section('message')
 <li>
     <h4>7 มกราคม 2556</h4>
