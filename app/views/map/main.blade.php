@@ -44,8 +44,8 @@
 
 <div class="post">
     <div class="row">
-        <div class="widget span3">
-            <h3>ลิงค์เว็บไซต์กระทรวงต่างๆ</h3>
+        <div class="details span3">
+            <h2>ลิงค์เว็บไซต์กระทรวงต่างๆ</h2>
             <ul>
                 <li>{{HTML::link('#', 'สำนักนายกรัฐมนตรี')}}</li>
                 <li>{{HTML::link('#', 'กระทรวงเทคโนโลยีสารสนเทศ')}}</li>
@@ -62,8 +62,8 @@
                 <li>{{HTML::link('#', 'กระทรวงคมนาคม')}}</li>
             </ul>
         </div><!-- end widget -->
-        <div class="widget span3">
-            <h3>ลิงค์เว็บไซต์กระทรวงต่างๆ</h3>
+        <div class="details span3">
+            <h2>ลิงค์เว็บไซต์กระทรวงต่างๆ</h2>
             <ul>
                 <li>{{HTML::link('#', 'สำนักนายกรัฐมนตรี')}}</li>
                 <li>{{HTML::link('#', 'กระทรวงเทคโนโลยีสารสนเทศ')}}</li>
