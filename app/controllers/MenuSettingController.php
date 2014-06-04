@@ -30,6 +30,8 @@ class MenuSettingController extends BaseController {
             $parentName = 'ย่อยของ' . $parentName;
         }
         return View::make('menuSetting.insert')
+                        ->with('actionType', 'บันทึก')
+                        ->with('menuName', 'เมนู')
                         ->with('parentMenuIdForBack', $parentMenuIdForBack)
                         ->with('parentName', $parentName)
                         ->with('parent', $parent)
@@ -58,6 +60,8 @@ class MenuSettingController extends BaseController {
         $menuSetting = $this->menuSetting->getMenuSetting();
         $this->menuSetting->setParent($menuSetting->menu_parent);
         return View::make('menuSetting.update')
+                        ->with('actionType', 'แก้ไข')
+                        ->with('menuName', 'เมนู')
                         ->with('parentMenuIdForBack', $parentMenuIdForBack)
                         ->with('menuSetting', $menuSetting)
                         ->with('countParent', $this->menuSetting->getCountParent());
