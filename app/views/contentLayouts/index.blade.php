@@ -70,7 +70,7 @@
             <p><img src="{{asset('images/slider/1.jpg')}}" title="widget image" alt="an image was here" /></p>
         </div><!-- end widget -->
         <div class="widget span3">
-            <h3>ลิงค์อื่นๆ</h3>
+            <h3>ลิงค์เว็บไซต์กระทรวงต่างๆ</h3>
             <ul>
                 <li>{{HTML::link('#', 'สำนักนายกรัฐมนตรี')}}</li>
                 <li>{{HTML::link('#', 'กระทรวงเทคโนโลยีสารสนเทศ')}}</li>
