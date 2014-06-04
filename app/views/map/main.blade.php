@@ -9,7 +9,7 @@
 หน้าหลัก
 @stop
 
-@section('subSubContent')
+@section('subContent')
 <div class="post">
     <div class="row">
         <div class="feat-img span2">
