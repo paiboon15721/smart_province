@@ -63,7 +63,7 @@
         <div class="widget span3">
             <h3>อ่านบัตร</h3>
             <p style="text-align:center;" >
-            <div class=></div>
+            <div class='card'></div>
             </p>
         </div><!-- end widget -->
         <div class="widget span3">
