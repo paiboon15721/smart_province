@@ -36,8 +36,8 @@
 
 <style>
     .card{
-        height:92px;
-        width:214;
+        height:100%;
+        width:100%;
         margin-top:-7px;
         background-image:{{asset('images/main/card_unselected.png')}};
         background-repeat:no-repeat;
