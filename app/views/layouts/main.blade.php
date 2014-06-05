@@ -27,12 +27,6 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
                     window.close();
                 }, 2000);
             }
-
-            $('#card').hover(function() {
-                $(this).attr('src', 'images/main/card_selected.png'));
-            }, function() {
-                $(this).attr('src', 'images/main/card_unselected.png');
-            });
         </script>
         @yield('script&css')
     </head>
