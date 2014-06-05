@@ -36,11 +36,12 @@
 
 <style>
     .card{
-        height:100%;
-        width:100%;
+        height:92px;
+        width:214px;
         margin-top:-7px;
         background-image:{{asset('images/main/card_unselected.png')}};
         background-repeat:no-repeat;
+        margin:0px auto;
     }
 
     .card:hover{
