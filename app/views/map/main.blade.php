@@ -12,17 +12,13 @@
 @section('subContent')
 <div class="post">
     <div class="row">
-        <div class="feat-img span2">
-            <img src="http://lorempixel.com/350/325/sports/1" title="featured image" alt="an image was here" />
-        </div><!-- end featured image -->
-
-        <div class="details span4">
-            <h2>ข่าวประชาสัมพันธ์ของศูนย์</h2>
+        <div class="details span6">
+            <h2>เลือกหมู่บ้านที่ต้องการ</h2>
             <p>
                 {{Form::select('catmId', $catmNameThList)}}
+                <a class="btn" href="#">ตกลง</a>
             </p>
         </div> <!-- end details -->
-        <a class="btn" href="#">ตกลง</a>
     </div><!-- end post row -->
 </div><!-- end post -->
 
