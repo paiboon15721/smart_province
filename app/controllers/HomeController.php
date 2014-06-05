@@ -10,7 +10,7 @@ class HomeController extends BaseController {
     }
 
     public function writeSession($catm) {
-        $catm = Catm::select('catm_id', 'catm_name_th')->find($catm);
+        $catm = Catm::select('catm_id', 'catm_name_th', 'catm_name_en')->find($catm);
         Session::put('catmId', $catm->catm_id);
         Session::put('catmNameEn', $catm->catm_name_en);
         Session::put('catmNameTh', $catm->catm_name_th);
