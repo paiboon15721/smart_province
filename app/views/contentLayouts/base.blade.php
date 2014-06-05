@@ -39,12 +39,12 @@
         height:92px;
         width:214;
         margin-top:-7px;
-        background-image:url("../../images/main/card_unselected.png");
+        background-image:url("../../public/images/main/card_unselected.png");
         background-repeat:no-repeat;
     }
 
     .card:hover{
-        background-image:url("../../images/main/card_selected.png");
+        background-image:url("../../public/images/main/card_selected.png");
         cursor:pointer;
     }
 </style>
