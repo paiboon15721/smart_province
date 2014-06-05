@@ -19,7 +19,7 @@
         <div class="details span4">
             <h2>ข่าวประชาสัมพันธ์ของศูนย์</h2>
             <p>
-                {{Form::select('catmId', $catmNameTh)}}
+                {{Form::select('catmId', $catmNameThList)}}
             </p>
         </div> <!-- end details -->
         <a class="btn pull-right" href="#">อ่านต่อ..</a>
