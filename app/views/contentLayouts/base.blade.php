@@ -33,23 +33,6 @@
 @stop
 
 @section('leftWidget')
-
-<style>
-    .card{
-        height:92px;
-        width:100%;
-        margin-top:-7px;
-        background-image:{{asset('images/main/card_unselected.png')}};
-        background-repeat:no-repeat;
-        margin:0px auto;
-        background-position:center;
-    }
-
-    .card:hover{
-        background-image:{{asset('images/main/card_unselected.png')}};
-        cursor:pointer;
-    }
-</style>
 <?php $thisPage = Session::get('thisPage'); ?>
 <aside class="span3">
     <div class="row">
@@ -65,7 +48,7 @@
         <div class="widget span3">
             <h3>อ่านบัตร</h3>
             <p style="text-align:center;" >
-            <div class='card'></div>
+                <img src="{{asset('images/main/card_unselected.png')}}" width="100%" height="100%" id='card' />
             </p>
         </div><!-- end widget -->
         <div class="widget span3">

@@ -25,15 +25,3 @@ img {
 .widget ul li a:hover { background: #fff; text-decoration: none; padding-left: 5px;}
 
 .active_sidebar_menu { background: #fff; text-decoration: none; font-weight: bold; }
-
-.card{
-    height:100%;
-    width:100%;
-    background-image:url("../../images/main/card_unselected.png");
-    background-repeat:no-repeat;
-}
-
-.card:hover{
-    background-image:url("../../images/main/card_selected.png");
-    cursor:pointer;
-}

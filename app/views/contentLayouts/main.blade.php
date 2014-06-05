@@ -56,7 +56,7 @@
         <div class="widget span3">
             <h3>อ่านบัตร</h3>
             <p style="text-align:center;" >
-                <img src="{{asset('images/main/card_unselected.png')}}" width="100%" height="100%" />
+                <img src="{{asset('images/main/card_unselected.png')}}" width="100%" height="100%" id='card' />
             </p>
         </div><!-- end widget -->
         <div class="widget span3">

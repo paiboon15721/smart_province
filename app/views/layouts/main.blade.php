@@ -21,13 +21,18 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
         {{HTML::script('js/uiToTop/jquery.ui.totop.min.js')}}
         <script type="text/javascript">
             function openLoginPage() {
-                window.location = "login";
-                window.open('', '_self');
-                setTimeout(function() {
+            window.location = "login";
+                    window.open('', '_self');
+                    setTimeout(function() {
                     window.close();
-                }, 2000);
+                    }, 2000);
             }
-        </script>
+
+            $('#card').hover(function() {
+            $(this).attr('src', {{asset('images/main/card_selected.png')}});
+            }, function() {
+            $(this).attr('src', {{asset('images/main/card_unselected.png')}});
+            });        </script>
         @yield('script&css')
     </head>
     <body>
@@ -61,7 +66,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
         </div>
         {{HTML::script('js/bootstrap.min.js')}}
         <script type="text/javascript">
-            $('.carousel').carousel();
+                    $('.carousel').carousel();
         </script>
     </body>
 </html>
