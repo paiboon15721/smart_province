@@ -36,7 +36,7 @@
 
 <style>
     .card{
-        height:100%;
+        height:92px;
         width:100%;
         margin-top:-7px;
         background-image:{{asset('images/main/card_unselected.png')}};
