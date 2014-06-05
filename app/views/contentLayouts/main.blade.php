@@ -85,7 +85,7 @@
         </div><!-- end widget -->
         <div class="widget span3">
             <h3>ปฏิทินข่าวกิจกรรมของศูนย์</h3>
-            <p><img src="{{asset('images/main/calendar.jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
+            <iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;hl=th&amp;bgcolor=%23FFFFFF&amp;src=th.th%23holiday%40group.v.calendar.google.com&amp;color=%232952A3&amp;ctz=Asia%2FBangkok" style=" border-width:0 " width="100%" height="100%" frameborder="0" scrolling="no">
         </div><!-- end widget -->
         <div class="widget span3">
             <p><img src="{{asset('images/main/banner(2).jpg')}}" title="widget image" alt="an image was here" width="100%" height="100%" /></p>
