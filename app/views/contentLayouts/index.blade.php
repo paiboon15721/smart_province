@@ -13,8 +13,8 @@
         <?php
         $catmNameEn = Session::get('catmNameEn');
         ?>
-        <div class="active item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/1.jpg')}}" style="height: 350px; width: 1200px;" /></div>
-        @for ($i=2; $i<4; $i++)
+        <div class="active item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/2.jpg')}}" style="height: 350px; width: 1200px;" /></div>
+        @for ($i=3; $i<5; $i++)
         <div class="item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/'.$i.'.jpg')}}" style="height: 350px; width: 1200px;" /></div>
         @endfor
     </div>
