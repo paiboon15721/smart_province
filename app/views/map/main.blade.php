@@ -22,7 +22,7 @@
                 {{Form::select('catmId', $catmNameThList)}}
             </p>
         </div> <!-- end details -->
-        <a class="btn pull-right" href="#">อ่านต่อ..</a>
+        <a class="btn" href="#">ตกลง</a>
     </div><!-- end post row -->
 </div><!-- end post -->
 
