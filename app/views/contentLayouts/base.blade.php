@@ -42,6 +42,7 @@
         background-image:{{asset('images/main/card_unselected.png')}};
         background-repeat:no-repeat;
         margin:0px auto;
+        background-position:center;
     }
 
     .card:hover{
