@@ -63,12 +63,12 @@
             </ul>
         </div><!-- end widget -->
         <div class="widget span3">
-            @if ((Session::has('loginSuccess')) and ($loginSuccess == true))
+            @if (Session::has('loginSuccess'))
             <h3>{{Session::get('EMPNAME')}}</h3>
             <p style="text-align:center;" >
                 {{HTML::link('bypassLogin', 'Logout', array('class' => 'btn'))}}
             </p>
-            @endif
+            @else
             <h3>อ่านบัตร</h3>
             <p style="text-align:center;" >
                 <img src="{{asset('images/main/card_unselected.png')}}"
@@ -79,7 +79,7 @@
             <p style="text-align:center;" >
                 {{HTML::link('bypassLogin', 'BYPASS', array('class' => 'btn'))}}
             </p>
-
+            @endif
         </div><!-- end widget -->
         <div class="widget span3">
             <h3>ปฏิทินข่าวกิจกรรมของหมู่บ้าน</h3>
