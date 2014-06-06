@@ -19,7 +19,7 @@ class HomeController extends BaseController {
                             ->with('loginSuccess', true);
         } else {
             return Redirect::to('main')
-                            ->with('loginSuccess', false);
+                            ->with('loginError', false);
         }
     }
 
