@@ -17,150 +17,150 @@ Route::get('writeSession/{catmId}', 'HomeController@writeSession');
 Route::group(array('before' => 'catm'), function() {
     //home
     Route::get('main', 'HomeController@main');
-    Route::get('villageDirectors', array('before' => 'catmId', 'uses' => 'HomeController@villageDirectors'));
-    Route::get('villageGeneralInformation', array('before' => 'catmId', 'uses' => 'HomeController@villageGeneralInformation'));
-    Route::get('villageInformationSystem', array('before' => 'catmId', 'uses' => 'HomeController@villageInformationSystem'));
-    Route::get('servicesSystem', array('before' => 'catmId', 'uses' => 'HomeController@servicesSystem'));
-    Route::get('generalSystem', array('before' => 'catmId', 'uses' => 'HomeController@generalSystem'));
-    Route::get('recordingSystem', array('before' => 'catmId', 'uses' => 'HomeController@recordingSystem'));
-    Route::get('contactUs', array('before' => 'catmId', 'uses' => 'HomeController@contactUs'));
-    Route::get('map', array('before' => 'catmId', 'uses' => 'HomeController@map'));
+    Route::get('villageDirectors', 'HomeController@villageDirectors');
+    Route::get('villageGeneralInformation', 'HomeController@villageGeneralInformation');
+    Route::get('villageInformationSystem', 'HomeController@villageInformationSystem');
+    Route::get('servicesSystem', 'HomeController@servicesSystem');
+    Route::get('generalSystem', 'HomeController@generalSystem');
+    Route::get('recordingSystem', 'HomeController@recordingSystem');
+    Route::get('contactUs', 'HomeController@contactUs');
+    Route::get('map', 'HomeController@map');
     Route::get('bypassLogin', 'HomeController@bypassLogin');
     Route::get('logout', 'HomeController@logout');
 
 
 //menu setting
-    Route::get('menuSetting/{id}', array('before' => 'catmId', 'uses' => 'MenuSettingController@index'));
-    Route::get('menuSetting/{parentMenuIdForBack}/insert/{id}', array('before' => 'catmId', 'uses' => 'MenuSettingController@insertGet'));
-    Route::post('menuSetting/{parentMenuIdForBack}/insert', array('before' => 'catmId', 'uses' => 'MenuSettingController@insertPost'));
-    Route::get('menuSetting/{parentMenuIdForBack}/update/{id}', array('before' => 'catmId', 'uses' => 'MenuSettingController@updateGet'));
-    Route::post('menuSetting/{parentMenuIdForBack}/update/{id}', array('before' => 'catmId', 'uses' => 'MenuSettingController@updatePost'));
-    Route::get('menuSetting/{parentMenuIdForBack}/delete/{id}', array('before' => 'catmId', 'uses' => 'MenuSettingController@deleteGet'));
+    Route::get('menuSetting/{id}', 'MenuSettingController@index');
+    Route::get('menuSetting/{parentMenuIdForBack}/insert/{id}', 'MenuSettingController@insertGet');
+    Route::post('menuSetting/{parentMenuIdForBack}/insert', 'MenuSettingController@insertPost');
+    Route::get('menuSetting/{parentMenuIdForBack}/update/{id}', 'MenuSettingController@updateGet');
+    Route::post('menuSetting/{parentMenuIdForBack}/update/{id}', 'MenuSettingController@updatePost');
+    Route::get('menuSetting/{parentMenuIdForBack}/delete/{id}', 'MenuSettingController@deleteGet');
 
 //group member
-    Route::get('exHeadman', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayExHeadman'));
-    Route::get('exSAO', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayExSAO'));
-    Route::get('exVillageCommittee', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayExVillageCommittee'));
-    Route::get('exFundVillageCommittee', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayExFundVillageCommittee'));
-    Route::get('exProjectVillageCommittee', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayExProjectVillageCommittee'));
-    Route::get('exFundWomenDelegate', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayExFundWomenDelegate'));
-    Route::get('exProjectPoorCommittee', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayExProjectPoorCommittee'));
-    Route::get('exFundQueen', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayExFundQueen'));
-    Route::get('exSavingsMenufacturingCommittee', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayExSavingsMenufacturingCommittee'));
-    Route::get('orgaPublicHealthUndertake', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayOrgaPublicHealthUndertake'));
-    Route::get('orgaSecurityUndertake', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayOrgaSecurityUndertake'));
-    Route::get('orgaDevCommunityUndertake', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayOrgaDevCommunityUndertake'));
-    Route::get('orgaLivestockUndertake', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayOrgaLivestockUndertake'));
-    Route::get('orga25Pineapple', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayOrga25Pineapple'));
-    Route::get('orgaRedCrossUndertake', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayOrgaRedCrossUndertake'));
-    Route::get('orgaMediateCivilDelegate', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayOrgaMediateCivilDelegate'));
-    Route::get('orgaFarmer', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayOrgaFarmer'));
-    Route::get('orgaSoilDocter', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayOrgaSoilDocter'));
-    Route::get('olderOlder', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayOlderOlder'));
-    Route::get('olderDisabled', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayOlderDisabled'));
-    Route::get('olderMiserable', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayOlderMiserable'));
+    Route::get('exHeadman', 'GroupMemberController@displayExHeadman');
+    Route::get('exSAO', 'GroupMemberController@displayExSAO');
+    Route::get('exVillageCommittee', 'GroupMemberController@displayExVillageCommittee');
+    Route::get('exFundVillageCommittee', 'GroupMemberController@displayExFundVillageCommittee');
+    Route::get('exProjectVillageCommittee', 'GroupMemberController@displayExProjectVillageCommittee');
+    Route::get('exFundWomenDelegate', 'GroupMemberController@displayExFundWomenDelegate');
+    Route::get('exProjectPoorCommittee', 'GroupMemberController@displayExProjectPoorCommittee');
+    Route::get('exFundQueen', 'GroupMemberController@displayExFundQueen');
+    Route::get('exSavingsMenufacturingCommittee', 'GroupMemberController@displayExSavingsMenufacturingCommittee');
+    Route::get('orgaPublicHealthUndertake', 'GroupMemberController@displayOrgaPublicHealthUndertake');
+    Route::get('orgaSecurityUndertake', 'GroupMemberController@displayOrgaSecurityUndertake');
+    Route::get('orgaDevCommunityUndertake', 'GroupMemberController@displayOrgaDevCommunityUndertake');
+    Route::get('orgaLivestockUndertake', 'GroupMemberController@displayOrgaLivestockUndertake');
+    Route::get('orga25Pineapple', 'GroupMemberController@displayOrga25Pineapple');
+    Route::get('orgaRedCrossUndertake', 'GroupMemberController@displayOrgaRedCrossUndertake');
+    Route::get('orgaMediateCivilDelegate', 'GroupMemberController@displayOrgaMediateCivilDelegate');
+    Route::get('orgaFarmer', 'GroupMemberController@displayOrgaFarmer');
+    Route::get('orgaSoilDocter', 'GroupMemberController@displayOrgaSoilDocter');
+    Route::get('olderOlder', 'GroupMemberController@displayOlderOlder');
+    Route::get('olderDisabled', 'GroupMemberController@displayOlderDisabled');
+    Route::get('olderMiserable', 'GroupMemberController@displayOlderMiserable');
 
-    Route::get('groupPositionNameList/{groupId}', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayGroupPositionNameList'));
-    Route::get('positionForm/{max}/{action}', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayPositionForm'));
-    Route::get('groupMemberTable', array('before' => 'catmId', 'uses' => 'GroupMemberController@displayDatatable'));
-    Route::get('groupMemberTable/insert', array('before' => 'catmId', 'uses' => 'GroupMemberController@insertGet'));
-    Route::post('groupMemberTable/insert', array('before' => 'catmId', 'uses' => 'GroupMemberController@insertPost'));
-    Route::get('groupMemberTable/update/{id}', array('before' => 'catmId', 'uses' => 'GroupMemberController@updateGet'));
-    Route::post('groupMemberTable/update/{id}', array('before' => 'catmId', 'uses' => 'GroupMemberController@updatePost'));
-    Route::get('groupMemberTable/delete/{id}', array('before' => 'catmId', 'uses' => 'GroupMemberController@deleteGet'));
-    Route::get('datasourceGroupMember', array('before' => 'catmId', 'uses' => 'DatatableDatasourceController@datasourceGroupMember'));
+    Route::get('groupPositionNameList/{groupId}', 'GroupMemberController@displayGroupPositionNameList');
+    Route::get('positionForm/{max}/{action}', 'GroupMemberController@displayPositionForm');
+    Route::get('groupMemberTable', 'GroupMemberController@displayDatatable');
+    Route::get('groupMemberTable/insert', 'GroupMemberController@insertGet');
+    Route::post('groupMemberTable/insert', 'GroupMemberController@insertPost');
+    Route::get('groupMemberTable/update/{id}', 'GroupMemberController@updateGet');
+    Route::post('groupMemberTable/update/{id}', 'GroupMemberController@updatePost');
+    Route::get('groupMemberTable/delete/{id}', 'GroupMemberController@deleteGet');
+    Route::get('datasourceGroupMember', 'DatatableDatasourceController@datasourceGroupMember');
 
 //group member and position
-    Route::get('memberDirector', array('before' => 'catmId', 'uses' => 'GroupMemberAndPositionController@displayMemberDirector'));
-    Route::get('memberSecurity', array('before' => 'catmId', 'uses' => 'GroupMemberAndPositionController@displayMemberSecurity'));
-    Route::get('memberDevelop', array('before' => 'catmId', 'uses' => 'GroupMemberAndPositionController@displayMemberDevelop'));
-    Route::get('memberEconomy', array('before' => 'catmId', 'uses' => 'GroupMemberAndPositionController@displayMemberEconomy'));
-    Route::get('memberSocial', array('before' => 'catmId', 'uses' => 'GroupMemberAndPositionController@displayMemberSocial'));
-    Route::get('memberCulture', array('before' => 'catmId', 'uses' => 'GroupMemberAndPositionController@displayMemberCulture'));
-    Route::get('memberPerform', array('before' => 'catmId', 'uses' => 'GroupMemberAndPositionController@displayMemberPerform'));
+    Route::get('memberDirector', 'GroupMemberAndPositionController@displayMemberDirector');
+    Route::get('memberSecurity', 'GroupMemberAndPositionController@displayMemberSecurity');
+    Route::get('memberDevelop', 'GroupMemberAndPositionController@displayMemberDevelop');
+    Route::get('memberEconomy', 'GroupMemberAndPositionController@displayMemberEconomy');
+    Route::get('memberSocial', 'GroupMemberAndPositionController@displayMemberSocial');
+    Route::get('memberCulture', 'GroupMemberAndPositionController@displayMemberCulture');
+    Route::get('memberPerform', 'GroupMemberAndPositionController@displayMemberPerform');
 
 //problem
-    Route::get('problemEconomy', array('before' => 'catmId', 'uses' => 'ProblemController@displayProblemEconomy'));
-    Route::get('problemSocial', array('before' => 'catmId', 'uses' => 'ProblemController@displayProblemSocial'));
-    Route::get('problemEnvironment', array('before' => 'catmId', 'uses' => 'ProblemController@displayProblemEnvironment'));
-    Route::get('problemManagement', array('before' => 'catmId', 'uses' => 'ProblemController@displayProblemManagement'));
-    Route::get('problemStable', array('before' => 'catmId', 'uses' => 'ProblemController@displayProblemStable'));
-    Route::get('problemFarmer', array('before' => 'catmId', 'uses' => 'ProblemController@displayProblemFarmer'));
-    Route::get('problemSocialPerformance', array('before' => 'catmId', 'uses' => 'ProblemController@displayProblemSocialPerformance'));
+    Route::get('problemEconomy', 'ProblemController@displayProblemEconomy');
+    Route::get('problemSocial', 'ProblemController@displayProblemSocial');
+    Route::get('problemEnvironment', 'ProblemController@displayProblemEnvironment');
+    Route::get('problemManagement', 'ProblemController@displayProblemManagement');
+    Route::get('problemStable', 'ProblemController@displayProblemStable');
+    Route::get('problemFarmer', 'ProblemController@displayProblemFarmer');
+    Route::get('problemSocialPerformance', 'ProblemController@displayProblemSocialPerformance');
 
-    Route::get('problemTable', array('before' => 'catmId', 'uses' => 'ProblemController@displayDatatable'));
-    Route::get('problemTable/insert', array('before' => 'catmId', 'uses' => 'ProblemController@insertGet'));
-    Route::post('problemTable/insert', array('before' => 'catmId', 'uses' => 'ProblemController@insertPost'));
-    Route::get('problemTable/update/{id}', array('before' => 'catmId', 'uses' => 'ProblemController@updateGet'));
-    Route::post('problemTable/update/{id}', array('before' => 'catmId', 'uses' => 'ProblemController@updatePost'));
-    Route::get('problemTable/delete/{id}', array('before' => 'catmId', 'uses' => 'ProblemController@deleteGet'));
-    Route::get('datasourceProblem', array('before' => 'catmId', 'uses' => 'DatatableDatasourceController@datasourceProblem'));
+    Route::get('problemTable', 'ProblemController@displayDatatable');
+    Route::get('problemTable/insert', 'ProblemController@insertGet');
+    Route::post('problemTable/insert', 'ProblemController@insertPost');
+    Route::get('problemTable/update/{id}', 'ProblemController@updateGet');
+    Route::post('problemTable/update/{id}', 'ProblemController@updatePost');
+    Route::get('problemTable/delete/{id}', 'ProblemController@deleteGet');
+    Route::get('datasourceProblem', 'DatatableDatasourceController@datasourceProblem');
 
 //otop
-    Route::get('otop', array('before' => 'catmId', 'uses' => 'OtopController@displayOtop'));
+    Route::get('otop', 'OtopController@displayOtop');
 
-    Route::get('otopTable', array('before' => 'catmId', 'uses' => 'OtopController@displayDatatable'));
-    Route::get('otopTable/insert', array('before' => 'catmId', 'uses' => 'OtopController@insertGet'));
-    Route::post('otopTable/insert', array('before' => 'catmId', 'uses' => 'OtopController@insertPost'));
-    Route::get('otopTable/update/{id}', array('before' => 'catmId', 'uses' => 'OtopController@updateGet'));
-    Route::post('otopTable/update/{id}', array('before' => 'catmId', 'uses' => 'OtopController@updatePost'));
-    Route::get('otopTable/delete/{id}', array('before' => 'catmId', 'uses' => 'OtopController@deleteGet'));
-    Route::get('datasourceOtop', array('before' => 'catmId', 'uses' => 'DatatableDatasourceController@datasourceOtop'));
+    Route::get('otopTable', 'OtopController@displayDatatable');
+    Route::get('otopTable/insert', 'OtopController@insertGet');
+    Route::post('otopTable/insert', 'OtopController@insertPost');
+    Route::get('otopTable/update/{id}', 'OtopController@updateGet');
+    Route::post('otopTable/update/{id}', 'OtopController@updatePost');
+    Route::get('otopTable/delete/{id}', 'OtopController@deleteGet');
+    Route::get('datasourceOtop', 'DatatableDatasourceController@datasourceOtop');
 
 //travel
-    Route::get('travel', array('before' => 'catmId', 'uses' => 'TravelController@displayTravel'));
+    Route::get('travel', 'TravelController@displayTravel');
 
-    Route::get('travelTable', array('before' => 'catmId', 'uses' => 'TravelController@displayDatatable'));
-    Route::get('travelTable/insert', array('before' => 'catmId', 'uses' => 'TravelController@insertGet'));
-    Route::post('travelTable/insert', array('before' => 'catmId', 'uses' => 'TravelController@insertPost'));
-    Route::get('travelTable/update/{id}', array('before' => 'catmId', 'uses' => 'TravelController@updateGet'));
-    Route::post('travelTable/update/{id}', array('before' => 'catmId', 'uses' => 'TravelController@updatePost'));
-    Route::get('travelTable/delete/{id}', array('before' => 'catmId', 'uses' => 'TravelController@deleteGet'));
-    Route::get('datasourceTravel', array('before' => 'catmId', 'uses' => 'DatatableDatasourceController@datasourceTravel'));
+    Route::get('travelTable', 'TravelController@displayDatatable');
+    Route::get('travelTable/insert', 'TravelController@insertGet');
+    Route::post('travelTable/insert', 'TravelController@insertPost');
+    Route::get('travelTable/update/{id}', 'TravelController@updateGet');
+    Route::post('travelTable/update/{id}', 'TravelController@updatePost');
+    Route::get('travelTable/delete/{id}', 'TravelController@deleteGet');
+    Route::get('datasourceTravel', 'DatatableDatasourceController@datasourceTravel');
 
 //meeting
-    Route::get('meeting', array('before' => 'catmId', 'uses' => 'MeetingController@displayMeeting'));
+    Route::get('meeting', 'MeetingController@displayMeeting');
 
-    Route::get('meetingTable', array('before' => 'catmId', 'uses' => 'MeetingController@displayDatatable'));
-    Route::get('meetingTable/insert', array('before' => 'catmId', 'uses' => 'MeetingController@insertGet'));
-    Route::post('meetingTable/insert', array('before' => 'catmId', 'uses' => 'MeetingController@insertPost'));
-    Route::get('meetingTable/update/{id}', array('before' => 'catmId', 'uses' => 'MeetingController@updateGet'));
-    Route::post('meetingTable/update/{id}', array('before' => 'catmId', 'uses' => 'MeetingController@updatePost'));
-    Route::get('meetingTable/delete/{id}', array('before' => 'catmId', 'uses' => 'MeetingController@deleteGet'));
-    Route::get('datasourceMeeting', array('before' => 'catmId', 'uses' => 'DatatableDatasourceController@datasourceMeeting'));
+    Route::get('meetingTable', 'MeetingController@displayDatatable');
+    Route::get('meetingTable/insert', 'MeetingController@insertGet');
+    Route::post('meetingTable/insert', 'MeetingController@insertPost');
+    Route::get('meetingTable/update/{id}', 'MeetingController@updateGet');
+    Route::post('meetingTable/update/{id}', 'MeetingController@updatePost');
+    Route::get('meetingTable/delete/{id}', 'MeetingController@deleteGet');
+    Route::get('datasourceMeeting', 'DatatableDatasourceController@datasourceMeeting');
 
 //plan
-    Route::get('plan', array('before' => 'catmId', 'uses' => 'PlanController@displayPlan'));
+    Route::get('plan', 'PlanController@displayPlan');
 
-    Route::get('planTable', array('before' => 'catmId', 'uses' => 'PlanController@displayDatatable'));
-    Route::get('planTable/insert', array('before' => 'catmId', 'uses' => 'PlanController@insertGet'));
-    Route::post('planTable/insert', array('before' => 'catmId', 'uses' => 'PlanController@insertPost'));
-    Route::get('planTable/update/{id}', array('before' => 'catmId', 'uses' => 'PlanController@updateGet'));
-    Route::post('planTable/update/{id}', array('before' => 'catmId', 'uses' => 'PlanController@updatePost'));
-    Route::get('planTable/delete/{id}', array('before' => 'catmId', 'uses' => 'PlanController@deleteGet'));
-    Route::get('datasourcePlan', array('before' => 'catmId', 'uses' => 'DatatableDatasourceController@datasourcePlan'));
+    Route::get('planTable', 'PlanController@displayDatatable');
+    Route::get('planTable/insert', 'PlanController@insertGet');
+    Route::post('planTable/insert', 'PlanController@insertPost');
+    Route::get('planTable/update/{id}', 'PlanController@updateGet');
+    Route::post('planTable/update/{id}', 'PlanController@updatePost');
+    Route::get('planTable/delete/{id}', 'PlanController@deleteGet');
+    Route::get('datasourcePlan', 'DatatableDatasourceController@datasourcePlan');
 
 //groupPositionCareer
-    Route::get('groupPositionCareer', array('before' => 'catmId', 'uses' => 'GroupPositionCareerController@displayGroupPositionCareer'));
+    Route::get('groupPositionCareer', 'GroupPositionCareerController@displayGroupPositionCareer');
 
-    Route::get('groupPositionCareerTable', array('before' => 'catmId', 'uses' => 'GroupPositionCareerController@displayDatatable'));
-    Route::get('groupPositionCareerTable/insert', array('before' => 'catmId', 'uses' => 'GroupPositionCareerController@insertGet'));
-    Route::post('groupPositionCareerTable/insert', array('before' => 'catmId', 'uses' => 'GroupPositionCareerController@insertPost'));
-    Route::get('groupPositionCareerTable/update/{id}', array('before' => 'catmId', 'uses' => 'GroupPositionCareerController@updateGet'));
-    Route::post('groupPositionCareerTable/update/{id}', array('before' => 'catmId', 'uses' => 'GroupPositionCareerController@updatePost'));
-    Route::get('groupPositionCareerTable/delete/{id}', array('before' => 'catmId', 'uses' => 'GroupPositionCareerController@deleteGet'));
-    Route::get('datasourceGroupPositionCareer', array('before' => 'catmId', 'uses' => 'DatatableDatasourceController@datasourceGroupPositionCareer'));
+    Route::get('groupPositionCareerTable', 'GroupPositionCareerController@displayDatatable');
+    Route::get('groupPositionCareerTable/insert', 'GroupPositionCareerController@insertGet');
+    Route::post('groupPositionCareerTable/insert', 'GroupPositionCareerController@insertPost');
+    Route::get('groupPositionCareerTable/update/{id}', 'GroupPositionCareerController@updateGet');
+    Route::post('groupPositionCareerTable/update/{id}', 'GroupPositionCareerController@updatePost');
+    Route::get('groupPositionCareerTable/delete/{id}', 'GroupPositionCareerController@deleteGet');
+    Route::get('datasourceGroupPositionCareer', 'DatatableDatasourceController@datasourceGroupPositionCareer');
 
 //activity
-    Route::get('activity', array('before' => 'catmId', 'uses' => 'ActivityController@displayActivity'));
+    Route::get('activity', 'ActivityController@displayActivity');
 
-    Route::get('activityTable', array('before' => 'catmId', 'uses' => 'ActivityController@displayDatatable'));
-    Route::get('activityTable/insert', array('before' => 'catmId', 'uses' => 'ActivityController@insertGet'));
-    Route::post('activityTable/insert', array('before' => 'catmId', 'uses' => 'ActivityController@insertPost'));
-    Route::get('activityTable/update/{id}', array('before' => 'catmId', 'uses' => 'ActivityController@updateGet'));
-    Route::post('activityTable/update/{id}', array('before' => 'catmId', 'uses' => 'ActivityController@updatePost'));
-    Route::get('activityTable/delete/{id}', array('before' => 'catmId', 'uses' => 'ActivityController@deleteGet'));
-    Route::get('datasourceActivity', array('before' => 'catmId', 'uses' => 'DatatableDatasourceController@datasourceActivity'));
+    Route::get('activityTable', 'ActivityController@displayDatatable');
+    Route::get('activityTable/insert', 'ActivityController@insertGet');
+    Route::post('activityTable/insert', 'ActivityController@insertPost');
+    Route::get('activityTable/update/{id}', 'ActivityController@updateGet');
+    Route::post('activityTable/update/{id}', 'ActivityController@updatePost');
+    Route::get('activityTable/delete/{id}', 'ActivityController@deleteGet');
+    Route::get('datasourceActivity', 'DatatableDatasourceController@datasourceActivity');
 
 //external_project
     Route::get('newsVoice', 'ExternalController@newsVoice');
