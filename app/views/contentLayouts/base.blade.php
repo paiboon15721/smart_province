@@ -63,7 +63,7 @@
             </ul>
         </div><!-- end widget -->
         <div class="widget span3">
-            @if (Session::has('loginSuccess'))
+            @if (Session::has('loginSuccess') and $loginSuccess == true)
             <h3>{{Session::get('EMPNAME')}}</h3>
             <p style="text-align:center;" >
                 {{HTML::link('bypassLogin', 'Logout', array('class' => 'btn'))}}
