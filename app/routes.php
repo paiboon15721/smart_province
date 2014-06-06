@@ -14,7 +14,7 @@
 //map
 Route::get('/', 'MapController@main');
 
-Route::group(array('before' => 'catmId'), function() {
+Route::group(array('before' => 'catm'), function() {
     //home
     Route::get('writeSession/{catmId}', 'HomeController@writeSession');
     Route::get('main', 'HomeController@main');
