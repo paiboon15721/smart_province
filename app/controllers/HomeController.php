@@ -9,17 +9,21 @@ class HomeController extends BaseController {
         $this->menuSetting = new MenuSettingClass;
     }
 
+    public function logout() {
+        Session::flush();
+        session_destroy();
+    }
+
     public function bypassLogin() {
         $empId = '3740300044869';
         $fName = 'นายนรพงษ์ หัวรักกิจ';
         $address = '194/20 ซอยนพเก้า แขวงวงศ์สว่าง เขตบางซื่อ กรุงเทพมหานคร';
         $writeSuccess = $this->write_session($empId, $fName, $address);
         if ($writeSuccess) {
-            return Redirect::to('main')
-                            ->with('loginSuccess', true);
+            return Redirect::to('main');
         } else {
             return Redirect::to('main')
-                            ->with('loginError', false);
+                            ->with('loginError', true);
         }
     }
 

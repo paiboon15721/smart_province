@@ -69,7 +69,7 @@
                 <font color='blue'>ยินดีต้อนรับ<br />{{Session::get('EMPNAME')}}</font>
             </p>
             <p style="text-align:center;" >
-                {{HTML::link('bypassLogin', 'Logout', array('class' => 'btn'))}}
+                {{HTML::link('logout', 'Logout', array('class' => 'btn'))}}
             </p>
             @else
             <h3>อ่านบัตร</h3>
