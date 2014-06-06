@@ -18,7 +18,7 @@ class HomeController extends BaseController {
 
     public function write_session($empId, $fName, $address) {
         $emp = Emp::find($empId);
-        if ($emp->contains(1)) {
+        if ($emp->exists()) {
             Session::put('EMPID', $empId);
             Session::put('EMPNAME', rawurldecode($fName));
             Session::put('EMPADD', rawurldecode($address));
