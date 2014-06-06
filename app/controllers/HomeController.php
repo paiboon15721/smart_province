@@ -13,14 +13,19 @@ class HomeController extends BaseController {
         $empId = '3740300044869';
         $fName = 'นายนรพงษ์ หัวรักกิจ';
         $address = '194/20 ซอยนพเก้า แขวงวงศ์สว่าง เขตบางซื่อ กรุงเทพมหานคร';
-        $this->write_session($empId, $fName, $address);
-        return Redirect::to('main');
+        $writeSuccess = $this->write_session($empId, $fName, $address);
+        if ($writeSuccess) {
+            return Redirect::to('main')
+                            ->with('loginSuccess', true);
+        } else {
+            return Redirect::to('main')
+                            ->with('loginSuccess', false);
+        }
     }
 
     public function write_session($empId, $fName, $address) {
         $emp = Emp::find($empId);
         if ($emp->exists()) {
-
             Session::put('EMPID', $empId);
             Session::put('EMPNAME', rawurldecode($fName));
             Session::put('EMPADD', rawurldecode($address));
@@ -34,9 +39,9 @@ class HomeController extends BaseController {
             $_SESSION['START'] = time();
             $_SESSION['EXPIRE'] = $_SESSION['START'] + 1800;
             $_SESSION['catm_login'] = $emp->ccaattmm;
-            return Redirect::to('/');
+            return true;
         } else {
-            return Redirect::to('main');
+            return false;
         }
     }
 
