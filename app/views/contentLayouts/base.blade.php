@@ -63,7 +63,7 @@
             </ul>
         </div><!-- end widget -->
         <div class="widget span3">
-            @if (Session::has('loginSuccess'))
+            @if (Session::has('EMPID'))
             <h3>เข้าสู่ระบบสำเร็จ</h3>
             <p style="text-align:center;" >
                 <font color='blue'>ยินดีต้อนรับ<br />{{Session::get('EMPNAME')}}</font>
