@@ -48,16 +48,27 @@
         <div class="widget span3">
             <h3>เมนู</h3>
             <ul>
-                <li <?php echo ($thisPage == 'villageInformationSystem') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('villageInformationSystem', 'ระบบข้อมูลหมู่บ้าน')}}</li>
-                <li <?php echo ($thisPage == 'servicesSystem') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('servicesSystem', 'ระบบงานบริการด้านต่างๆ')}}</li>
-                <li <?php echo ($thisPage == 'generalSystem') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('generalSystem', 'ระบบงานทั่วไป')}}</li>
-                <li <?php echo ($thisPage == 'recordingSystem') ? 'class="active_sidebar_menu"' : '' ?>>{{HTML::link('recordingSystem', 'ระบบการบันทึกเพื่อการบริหาร')}}</li>
+                <li <?php echo ($thisPage == 'villageInformationSystem') ? 'class="active_sidebar_menu"' : '' ?>>
+                    {{HTML::link('villageInformationSystem', 'ระบบข้อมูลหมู่บ้าน')}}
+                </li>
+                <li <?php echo ($thisPage == 'servicesSystem') ? 'class="active_sidebar_menu"' : '' ?>>
+                    {{HTML::link('servicesSystem', 'ระบบงานบริการด้านต่างๆ')}}
+                </li>
+                <li <?php echo ($thisPage == 'generalSystem') ? 'class="active_sidebar_menu"' : '' ?>>
+                    {{HTML::link('generalSystem', 'ระบบงานทั่วไป')}}
+                </li>
+                <li <?php echo ($thisPage == 'recordingSystem') ? 'class="active_sidebar_menu"' : '' ?>>
+                    {{HTML::link('recordingSystem', 'ระบบการบันทึกเพื่อการบริหาร')}}
+                </li>
             </ul>
         </div><!-- end widget -->
         <div class="widget span3">
             <h3>อ่านบัตร</h3>
             <p style="text-align:center;" >
-                <img src="{{asset('images/main/card_unselected.png')}}" style="cursor:pointer;" width="100%" height="100%" onclick="openLoginPage();" onmouseover="this.src ='{{asset('images/main/card_selected.png')}}';" onmouseout="this.src ='{{asset('images/main/card_unselected.png')}}';"/>
+                <img src="{{asset('images/main/card_unselected.png')}}"
+                     style="cursor:pointer;" width="100%" height="100%" onclick="openLoginPage();"
+                     onmouseover="this.src ='{{asset('images/main/card_selected.png')}}';"
+                     onmouseout="this.src ='{{asset('images/main/card_unselected.png')}}';"/>
             </p>
         </div><!-- end widget -->
         <div class="widget span3">
