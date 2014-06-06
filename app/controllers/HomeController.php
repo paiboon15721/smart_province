@@ -31,7 +31,7 @@ class HomeController extends BaseController {
         $address = '194/20 ซอยนพเก้า แขวงวงศ์สว่าง เขตบางซื่อ กรุงเทพมหานคร';
         $writeSuccess = $this->write_session($empId, $fName, $address);
         if ($writeSuccess) {
-            //return Redirect::to('main');
+            return Redirect::to('main');
         } else {
             return Redirect::to('main')
                             ->with('loginError', true);
