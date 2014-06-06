@@ -16,7 +16,12 @@ class HomeController extends BaseController {
         Session::forget('START');
         Session::forget('EXPIRE');
         Session::forget('catm_login');
-        //session_destroy();
+        unset($_SESSION['EMPID']);
+        unset($_SESSION['EMPNAME']);
+        unset($_SESSION['EMPADD']);
+        unset($_SESSION['START']);
+        unset($_SESSION['EXPIRE']);
+        unset($_SESSION['catm_login']);
         return Redirect::to('main');
     }
 
