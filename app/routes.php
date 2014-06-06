@@ -13,10 +13,9 @@
 
 //map
 Route::get('/', 'MapController@main');
-
+Route::get('writeSession/{catmId}', 'HomeController@writeSession');
 Route::group(array('before' => 'catm'), function() {
     //home
-    Route::get('writeSession/{catmId}', 'HomeController@writeSession');
     Route::get('main', 'HomeController@main');
     Route::get('villageDirectors', array('before' => 'catmId', 'uses' => 'HomeController@villageDirectors'));
     Route::get('villageGeneralInformation', array('before' => 'catmId', 'uses' => 'HomeController@villageGeneralInformation'));
