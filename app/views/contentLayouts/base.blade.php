@@ -57,7 +57,7 @@
         <div class="widget span3">
             <h3>อ่านบัตร</h3>
             <p style="text-align:center;" >
-                <img src="{{asset('images/main/card_unselected.png')}}" style="cursor:pointer;" width="100%" height="100%" onmouseover="this.src ='{{asset('images/main/card_selected.png')}}';" onmouseout="this.src ='{{asset('images/main/card_unselected.png')}}';"/>
+                <img src="{{asset('images/main/card_unselected.png')}}" style="cursor:pointer;" width="100%" height="100%" onclick="openLoginPage();" onmouseover="this.src ='{{asset('images/main/card_selected.png')}}';" onmouseout="this.src ='{{asset('images/main/card_unselected.png')}}';"/>
             </p>
         </div><!-- end widget -->
         <div class="widget span3">
