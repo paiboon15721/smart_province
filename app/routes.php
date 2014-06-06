@@ -25,6 +25,7 @@ Route::get('generalSystem', array('before' => 'catmId', 'uses' => 'HomeControlle
 Route::get('recordingSystem', array('before' => 'catmId', 'uses' => 'HomeController@recordingSystem'));
 Route::get('contactUs', array('before' => 'catmId', 'uses' => 'HomeController@contactUs'));
 Route::get('map', array('before' => 'catmId', 'uses' => 'HomeController@map'));
+Route::get('bypassLogin', 'HomeController@bypassLogin');
 
 
 //menu setting

@@ -25,6 +25,10 @@
             window.close();
             }, 2000);
     }
+
+    function bypassLogin() {
+    window.location = "bypassLogin";
+    }
 </script>
 @yield('subScript&css')
 @stop
@@ -70,6 +74,7 @@
                      onmouseover="this.src ='{{asset('images/main/card_selected.png')}}';"
                      onmouseout="this.src ='{{asset('images/main/card_unselected.png')}}';"/>
             </p>
+            {{HTML::link('main', 'หน้าหลัก')}}
         </div><!-- end widget -->
         <div class="widget span3">
             <h3>ปฏิทินข่าวกิจกรรมของหมู่บ้าน</h3>

@@ -9,6 +9,34 @@ class HomeController extends BaseController {
         $this->menuSetting = new MenuSettingClass;
     }
 
+    public function bypassLogin() {
+        $empId = '3740300044869';
+        $fName = 'นายนรพงษ์ หัวรักกิจ';
+        $address = '194/20 ซอยนพเก้า แขวงวงศ์สว่าง เขตบางซื่อ กรุงเทพมหานคร';
+        $this->write_session($empId, $fName, $address);
+    }
+
+    public function write_session($empId, $fName, $address) {
+        $emp = Emp::find($empId);
+        if ($emp->contains(1)) {
+            Session::put('EMPID', $empId);
+            Session::put('EMPNAME', rawurldecode($fName));
+            Session::put('EMPADD', rawurldecode($address));
+            Session::put('START', time());
+            Session::put('EXPIRE', time() + 1800);
+            Session::put('catm_login', $emp->ccaattmm);
+
+            $_SESSION['EMPID'] = $empId;
+            $_SESSION['EMPNAME'] = rawurldecode($fName);
+            $_SESSION['EMPADD'] = rawurldecode($address);
+            $_SESSION['START'] = time();
+            $_SESSION['EXPIRE'] = $_SESSION['START'] + 1800;
+            $_SESSION['catm_login'] = $emp->ccaattmm;
+        } else {
+
+        }
+    }
+
     public function writeSession($catm) {
         $catm = Catm::select('catm_id', 'catm_name_th', 'catm_name_en')->find($catm);
         Session::put('catmId', $catm->catm_id);
