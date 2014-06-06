@@ -12,6 +12,7 @@ class HomeController extends BaseController {
     public function logout() {
         Session::flush();
         session_destroy();
+        return Redirect::to('main');
     }
 
     public function bypassLogin() {
