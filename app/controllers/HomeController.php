@@ -16,7 +16,7 @@ class HomeController extends BaseController {
         Session::forget('START');
         Session::forget('EXPIRE');
         Session::forget('catm_login');
-        session_destroy();
+        //session_destroy();
         return Redirect::to('main');
     }
 
