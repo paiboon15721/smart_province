@@ -18,9 +18,8 @@ class HomeController extends BaseController {
 
     public function write_session($empId, $fName, $address) {
         $emp = Emp::find($empId);
-        echo '555';
         if ($emp->exists()) {
-            echo '666';
+
             Session::put('EMPID', $empId);
             Session::put('EMPNAME', rawurldecode($fName));
             Session::put('EMPADD', rawurldecode($address));
@@ -34,7 +33,7 @@ class HomeController extends BaseController {
             $_SESSION['START'] = time();
             $_SESSION['EXPIRE'] = $_SESSION['START'] + 1800;
             $_SESSION['catm_login'] = $emp->ccaattmm;
-
+            echo '666';
             return Redirect::to('main');
         } else {
             return Redirect::to('main');
