@@ -14,6 +14,7 @@ class HomeController extends BaseController {
         $fName = 'นายนรพงษ์ หัวรักกิจ';
         $address = '194/20 ซอยนพเก้า แขวงวงศ์สว่าง เขตบางซื่อ กรุงเทพมหานคร';
         $this->write_session($empId, $fName, $address);
+        return Redirect::to('main');
     }
 
     public function write_session($empId, $fName, $address) {
