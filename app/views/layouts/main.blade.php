@@ -8,6 +8,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
     <head>
         <meta charset="utf-8" />
         <title>@yield('title')</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=9" />
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
