@@ -10,7 +10,12 @@ class HomeController extends BaseController {
     }
 
     public function logout() {
-        Session::flush();
+        Session::forget('EMPID');
+        Session::forget('EMPNAME');
+        Session::forget('EMPADD');
+        Session::forget('START');
+        Session::forget('EXPIRE');
+        Session::forget('catm_login');
         session_destroy();
         return Redirect::to('main');
     }
