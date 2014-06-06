@@ -17,7 +17,6 @@ class HomeController extends BaseController {
     }
 
     public function write_session($empId, $fName, $address) {
-        return Redirect::to('main');
         $emp = Emp::find($empId);
         if ($emp->exists()) {
 
@@ -34,7 +33,7 @@ class HomeController extends BaseController {
             $_SESSION['START'] = time();
             $_SESSION['EXPIRE'] = $_SESSION['START'] + 1800;
             $_SESSION['catm_login'] = $emp->ccaattmm;
-            return Redirect::to('main');
+            return Redirect::to('/');
         } else {
             return Redirect::to('main');
         }
