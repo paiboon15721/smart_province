@@ -33,7 +33,7 @@ class HomeController extends BaseController {
             $_SESSION['EXPIRE'] = $_SESSION['START'] + 1800;
             $_SESSION['catm_login'] = $emp->ccaattmm;
 
-            return redirecct::to('main');
+            return redirect::to('main');
         } else {
 
         }
