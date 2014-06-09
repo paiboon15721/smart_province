@@ -98,7 +98,7 @@ Route::group(array('before' => 'catm'), function() {
 
 //otop
     Route::get('otop', 'OtopController@displayOtop');
-    Route::group(array('login' => 'catm'), function() {
+    Route::group(array('before' => 'login'), function() {
         Route::get('otopTable', 'OtopController@displayDatatable');
     });
     Route::get('otopTable/insert', 'OtopController@insertGet');
