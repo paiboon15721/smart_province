@@ -97,7 +97,6 @@ error_reporting(E_ALL & ~E_NOTICE);
         <div  id="container">
             <?php
             $EMPID = $_SESSION['EMPID'];
-            echo $_SESSION['EMPID'];
             $EMPNAME = $_SESSION['EMPNAME'];
             $CATM_MOO = $_SESSION['catm_menu'];
             ?>
