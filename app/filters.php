@@ -79,7 +79,7 @@ Route::filter('catm', function() {
         return Redirect::to('/');
     }
 });
-
+//ตรวจสอบว่าได้ผ่านการ login มาก่อนหรือไม่
 Route::filter('login', function() {
     if (!Session::has('EMPID')) {
         return Redirect::to('main');
