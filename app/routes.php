@@ -90,7 +90,7 @@ Route::group(array('before' => 'catm'), function() {
     Route::get('activity', 'ActivityController@displayActivity');
 
     //ระบบที่จำเป็นต้องผ่านการ login ก่อน
-    Route::group(array('before1' => 'login'), function() {
+    Route::group(array('before' => 'login'), function() {
         //menu setting
         Route::get('menuSetting/{id}', 'MenuSettingController@index');
         Route::get('menuSetting/{parentMenuIdForBack}/insert/{id}', 'MenuSettingController@insertGet');
