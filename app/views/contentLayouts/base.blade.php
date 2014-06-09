@@ -57,9 +57,11 @@
                 <li <?php echo ($thisPage == 'generalSystem') ? 'class="active_sidebar_menu"' : '' ?>>
                     {{HTML::link('generalSystem', 'ระบบงานทั่วไป')}}
                 </li>
+                @if (Session::has('EMPID'))
                 <li <?php echo ($thisPage == 'recordingSystem') ? 'class="active_sidebar_menu"' : '' ?>>
                     {{HTML::link('recordingSystem', 'ระบบการบันทึกเพื่อการบริหาร')}}
                 </li>
+                @endif
             </ul>
         </div><!-- end widget -->
         <div class="widget span3">
