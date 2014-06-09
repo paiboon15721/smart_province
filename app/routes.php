@@ -206,11 +206,11 @@ Validator::extend('dateValid', function($attribute, $date, $parameters) {
     }
 });
 
-/*
-Route::get('dev', function() {
-    GroupMember::with('title')->get();
-});
 
+Route::get('checkSession', function() {
+    return $_SESSION['EMPID'];
+});
+/*
 Event::listen('illuminate.query', function($sql) {
     var_dump($sql);
 });
