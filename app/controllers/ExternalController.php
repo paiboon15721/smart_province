@@ -16,8 +16,20 @@ class ExternalController extends BaseController {
         return Redirect::to('external_project/EReport/assign.php');
     }
 
-    public function eReport($flag) {
-        return Redirect::to('external_project/EReport/write_cookie.php?flg=' . $flag);
+    public function eReport1() {
+        return Redirect::to('external_project/EReport/write_cookie.php?flg=1');
+    }
+
+    public function eReport2() {
+        return Redirect::to('external_project/EReport/write_cookie.php?flg=2');
+    }
+
+    public function eReport3() {
+        return Redirect::to('external_project/EReport/write_cookie.php?flg=3');
+    }
+
+    public function eReport4() {
+        return Redirect::to('external_project/EReport/write_cookie.php?flg=4');
     }
 
     public function pollIndex() {

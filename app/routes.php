@@ -95,7 +95,7 @@ Route::group(array('before' => 'catm'), function() {
     Route::get('newsVoiceList', 'ExternalController@newsVoiceList');
     Route::get('pollIndex', 'ExternalController@pollIndex');
     Route::get('pollShowFinishPoll', 'ExternalController@pollShowFinishPoll');
-    Route::get('eReport/4', 'ExternalController@eReport');
+    Route::get('eReport4', 'ExternalController@eReport4');
 
     //ระบบที่จำเป็นต้องผ่านการ login ก่อน
     Route::group(array('before' => 'login'), function() {
@@ -184,9 +184,9 @@ Route::group(array('before' => 'catm'), function() {
         //external_project
         Route::get('newsVoice', 'ExternalController@newsVoice');
         Route::get('eReportAssign', 'ExternalController@eReportAssign');
-        Route::get('eReport/3', 'ExternalController@eReport/3');
-        Route::get('eReport/2', 'ExternalController@eReport/2');
-        Route::get('eReport/1', 'ExternalController@eReport/1');
+        Route::get('eReport1', 'ExternalController@eReport1');
+        Route::get('eReport2', 'ExternalController@eReport2');
+        Route::get('eReport3', 'ExternalController@eReport3');
         Route::get('pollMainMenu', 'ExternalController@pollMainMenu');
         Route::get('ors', 'ExternalController@ors');
     });
