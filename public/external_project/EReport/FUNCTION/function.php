@@ -175,6 +175,7 @@ function get_name_ccaattmm($catm) {
 
 function check_use($id) {
     echo $id;
+    echo 555;
     $sql = "select count(*) as sum from tab_e_regis where pid='$id' and expire_date='0' ";
     $query = mysql_query($sql);
     $result = mysql_fetch_array($query);
