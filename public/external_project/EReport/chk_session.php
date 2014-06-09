@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 echo $_SESSION['EMPID'];
 include ("./FUNCTION/con_db.ini");
 $emp_id = $_SESSION['EMPID'];
