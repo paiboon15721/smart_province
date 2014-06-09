@@ -82,6 +82,6 @@ Route::filter('catm', function() {
 
 Route::filter('login', function() {
     if (!Session::has('EMPID')) {
-        return Redirect::to('/');
+        return Redirect::to('main');
     }
 });
