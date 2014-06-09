@@ -93,15 +93,15 @@ error_reporting(E_ALL & ~E_NOTICE);
         </script>
     </head>
     <body  >
-            <?php include ("header_body.php"); ?>
+        <?php include ("header_body.php"); ?>
         <div  id="container">
-<?php
-$EMPID = $_SESSION['EMPID'];
-echo $EMPID;
-$EMPNAME = $_SESSION['EMPNAME'];
-$CATM_MOO = $_SESSION['catm_menu'];
-?>
-<?php if (check_use($EMPID)) { ?>
+            <?php
+            $EMPID = $_SESSION['EMPID'];
+            echo $_SESSION['EMPID'];
+            $EMPNAME = $_SESSION['EMPNAME'];
+            $CATM_MOO = $_SESSION['catm_menu'];
+            ?>
+            <?php if (check_use($EMPID)) { ?>
                 <form id="form1" name="form1" method="post" action="">
                     <input type="hidden" id="page_now" value="" />
                     <input type="hidden" id="em_pid" value="<?php echo $EMPID; ?>" />
@@ -119,7 +119,7 @@ $CATM_MOO = $_SESSION['catm_menu'];
                     </table>
                     <div id="divGetData" ></div>
                 </form>
-<?php } else { ?>
+            <?php } else { ?>
                 <table width="1000" align="center" border=0 >
                     <tr  valign="middle">
                         <th colspan="2" align="center"   >บันทึกข้อมูลการเข้างาน และเหตุการณ์ที่เกิดขึ้น</th>
@@ -128,7 +128,7 @@ $CATM_MOO = $_SESSION['catm_menu'];
                         <td  colspan="2" align="center"  >ท่านไม่มีสิทธิใช้งานในระบบนี้ </td>
                     </tr>
                 </table>
-<?php } ?>
+            <?php } ?>
         </div >
     </body>
 </html>
