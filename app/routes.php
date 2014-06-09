@@ -184,9 +184,9 @@ Route::group(array('before' => 'catm'), function() {
         //external_project
         Route::get('newsVoice', 'ExternalController@newsVoice');
         Route::get('eReportAssign', 'ExternalController@eReportAssign');
-        Route::get('eReport/3', 'ExternalController@eReport');
-        Route::get('eReport/2', 'ExternalController@eReport');
-        Route::get('eReport/1', 'ExternalController@eReport');
+        Route::get('eReport/3', 'ExternalController@eReport/3');
+        Route::get('eReport/2', 'ExternalController@eReport/2');
+        Route::get('eReport/1', 'ExternalController@eReport/1');
         Route::get('pollMainMenu', 'ExternalController@pollMainMenu');
         Route::get('ors', 'ExternalController@ors');
     });
