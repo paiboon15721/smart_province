@@ -89,6 +89,14 @@ Route::group(array('before' => 'catm'), function() {
     //activity
     Route::get('activity', 'ActivityController@displayActivity');
 
+    //external_project
+    Route::get('nayokStat', 'ExternalController@nayokStat');
+    Route::get('login', 'ExternalController@login');
+    Route::get('newsVoiceList', 'ExternalController@newsVoiceList');
+    Route::get('pollIndex', 'ExternalController@pollIndex');
+    Route::get('pollShowFinishPoll', 'ExternalController@pollShowFinishPoll');
+    Route::get('eReport/4', 'ExternalController@eReport');
+
     //ระบบที่จำเป็นต้องผ่านการ login ก่อน
     Route::group(array('before' => 'login'), function() {
         //menu setting
@@ -175,15 +183,12 @@ Route::group(array('before' => 'catm'), function() {
 
         //external_project
         Route::get('newsVoice', 'ExternalController@newsVoice');
-        Route::get('newsVoiceList', 'ExternalController@newsVoiceList');
         Route::get('eReportAssign', 'ExternalController@eReportAssign');
-        Route::get('eReport/{flag}', 'ExternalController@eReport');
-        Route::get('pollIndex', 'ExternalController@pollIndex');
+        Route::get('eReport/3', 'ExternalController@eReport');
+        Route::get('eReport/2', 'ExternalController@eReport');
+        Route::get('eReport/1', 'ExternalController@eReport');
         Route::get('pollMainMenu', 'ExternalController@pollMainMenu');
-        Route::get('pollShowFinishPoll', 'ExternalController@pollShowFinishPoll');
         Route::get('ors', 'ExternalController@ors');
-        Route::get('nayokStat', 'ExternalController@nayokStat');
-        Route::get('login', 'ExternalController@login');
     });
 });
 //validator
