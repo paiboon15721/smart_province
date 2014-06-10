@@ -1,5 +1,5 @@
 ﻿<?php
-session_start();
+//session_start();
 echo $_SESSION['START'];
 exit();
 if (isset($_GET['flg'])) {
