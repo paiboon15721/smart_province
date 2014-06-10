@@ -14,8 +14,7 @@ return array(
       |
      */
 
-    'driver' => 'cookie', //file
-
+    'driver' => 'file',
     /*
       |--------------------------------------------------------------------------
       | File Cache Location
