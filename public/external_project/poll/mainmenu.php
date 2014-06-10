@@ -1,5 +1,6 @@
 <?php
 session_start();
+echo $_SESSION['EMPID'];
 header('Content-type: text/html; charset=utf-8');
 require_once("inc/MySQL/mySQLFunc.php");
 require_once("inc/function.php");
