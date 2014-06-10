@@ -1,5 +1,4 @@
 <?php
 
-session_start();
-echo $_SESSION['EMPID'];
+print_r($_COOKIE);
 
