@@ -25,7 +25,8 @@ class ExternalController extends BaseController {
     }
 
     public function eReport3() {
-        return Redirect::to('external_project/EReport/write_cookie.php?flg=3');
+        return View::make('../../public/external_project/EReport/write_cookie.php?flg=3');
+        //return Redirect::to('external_project/EReport/write_cookie.php?flg=3');
     }
 
     public function eReport4() {
