@@ -1,6 +1,6 @@
 <?php
 
 session_start();
-$session_id = Session::getId();
-echo $session_id;
+
+echo $_SESSION['4sgdmfql4h5j897n89u4ink7l6'];
 
