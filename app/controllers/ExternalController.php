@@ -37,7 +37,7 @@ class ExternalController extends BaseController {
     }
 
     public function pollMainMenu() {
-        return Redirect::to('external_project/poll/mainmenu.php')->with('test', 'test');
+        return Redirect::to('external_project/poll/mainmenu.php');
     }
 
     public function pollShowFinishPoll() {
