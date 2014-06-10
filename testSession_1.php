@@ -1,6 +1,7 @@
 <?php
 
-session_start();
+//session_start();
 //$_SESSION['EMPID'] = 'test';
+$_SESSION['EMPID'] = 'test';
 echo $_SESSION['EMPID'];
 
