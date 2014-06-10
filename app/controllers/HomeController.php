@@ -1,5 +1,7 @@
 <?php
 
+session_strat();
+
 class HomeController extends BaseController {
 
     protected $layout = 'layouts.main';
@@ -22,7 +24,6 @@ class HomeController extends BaseController {
         unset($_SESSION['START']);
         unset($_SESSION['EXPIRE']);
         unset($_SESSION['catm_login']);
-        session_destroy();
         return Redirect::to('main');
     }
 
