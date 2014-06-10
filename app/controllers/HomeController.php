@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 class HomeController extends BaseController {
 
     protected $layout = 'layouts.main';
