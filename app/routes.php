@@ -210,10 +210,6 @@ Validator::extend('dateValid', function($attribute, $date, $parameters) {
 Route::get('checkSession', function() {
     return $_SESSION['EMPID'];
 });
-
-Route::get('checkAuth', function() {
-    return Auth::getName();
-});
 /*
 Event::listen('illuminate.query', function($sql) {
     var_dump($sql);
