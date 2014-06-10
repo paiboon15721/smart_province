@@ -1,7 +1,5 @@
 <?php
 
-session_strat();
-
 class HomeController extends BaseController {
 
     protected $layout = 'layouts.main';
@@ -41,6 +39,8 @@ class HomeController extends BaseController {
     }
 
     public function write_session($empId, $fName, $address) {
+        session_strat();
+
         $emp = Emp::find($empId);
         if ($emp->exists()) {
             Session::put('EMPID', $empId);
