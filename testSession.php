@@ -1,6 +1,6 @@
 <?php
 
-$sessionName = 'login_82e5d2c56bdd0811318f0cf078b78bfc';
+$sessionName = '4sgdmfql4h5j897n89u4ink7l6';
 if (isset($_SESSION[$sessionName])) {
     $userId = $_SESSION[$sessionName];
     echo $userId;
