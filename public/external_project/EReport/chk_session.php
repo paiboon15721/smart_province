@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 include ("./FUNCTION/con_db.ini");
 $emp_id = $_SESSION['EMPID'];
 $catm_meun_chk = $_SESSION['catm_menu'];
