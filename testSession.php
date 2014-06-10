@@ -2,5 +2,11 @@
 
 session_start();
 
-echo $_SESSION['4sgdmfql4h5j897n89u4ink7l6'];
+$sessionName = 'login_82e5d2c56bdd0811318f0cf078b78bfc';
+if (isset($_SESSION[$sessionName])) {
+    $userId = $_SESSION[$sessionName];
+    echo $userId;
+} else {
+    echo 'not login';
+}
 
