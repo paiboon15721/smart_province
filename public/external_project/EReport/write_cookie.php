@@ -1,6 +1,6 @@
 ﻿<?php
 session_start();
-echo $_SESSION['EMPID'];
+echo $_SESSION['EMPNAME'];
 exit();
 if (isset($_GET['flg'])) {
     $flg = $_GET['flg'];
