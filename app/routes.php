@@ -210,7 +210,7 @@ Validator::extend('dateValid', function($attribute, $date, $parameters) {
 Route::get('checkSession', function() {
     //return $_SESSION['EMPID'];
     //return Session::getId();
-    //return Session::get('EMPID');
+    return Session::get('EMPID');
 });
 /*
 Event::listen('illuminate.query', function($sql) {
