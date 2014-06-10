@@ -15,8 +15,7 @@ return array(
       |
      */
 
-    'driver' => 'cookie', //native
-
+    'driver' => 'native',
     /*
       |--------------------------------------------------------------------------
       | Session Lifetime
