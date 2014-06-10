@@ -1,7 +1,5 @@
 ﻿<?php
 session_start();
-echo $_SESSION['EMPID'];
-exit();
 if (isset($_GET['flg'])) {
     $flg = $_GET['flg'];
 } else {

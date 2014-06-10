@@ -1,6 +1,8 @@
 <?php
 header('Content-type: text/html; charset=utf-8');
 session_start();
+echo $_SESSION['EMPID'];
+exit();
 require_once("inc/MySQL/mySQLFunc.php");
 require_once("inc/function.php");
 $_SESSION['EMPID'] = str_replace("-", "", $_SESSION['EMPID']);
