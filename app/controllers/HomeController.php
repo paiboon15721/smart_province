@@ -47,13 +47,13 @@ class HomeController extends BaseController {
             Session::put('START', time());
             Session::put('EXPIRE', time() + 1800);
             Session::put('catm_login', $emp->ccaattmm);
-            /*
-              $_SESSION['EMPID'] = $empId;
-              $_SESSION['EMPNAME'] = rawurldecode($fName);
-              $_SESSION['EMPADD'] = rawurldecode($address);
-              $_SESSION['START'] = time();
-              $_SESSION['EXPIRE'] = $_SESSION['START'] + 1800;
-              $_SESSION['catm_login'] = $emp->ccaattmm; */
+
+            $_SESSION['EMPID'] = $empId;
+            $_SESSION['EMPNAME'] = rawurldecode($fName);
+            $_SESSION['EMPADD'] = rawurldecode($address);
+            $_SESSION['START'] = time();
+            $_SESSION['EXPIRE'] = $_SESSION['START'] + 1800;
+            $_SESSION['catm_login'] = $emp->ccaattmm;
             return true;
         } else {
             return false;
