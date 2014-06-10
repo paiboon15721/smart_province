@@ -208,7 +208,6 @@ Validator::extend('dateValid', function($attribute, $date, $parameters) {
 
 
 Route::get('checkSession', function() {
-    session_start();
     return $_SESSION['EMPID'];
     //return Session::getId();
 });
