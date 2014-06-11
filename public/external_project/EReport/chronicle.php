@@ -1,4 +1,5 @@
 ﻿<?php
+require '../session_start.php';
 //include("./chk_session.php");
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
