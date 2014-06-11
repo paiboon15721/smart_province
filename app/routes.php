@@ -99,6 +99,9 @@ Route::group(array('before' => 'catm'), function() {
 
     //ระบบที่จำเป็นต้องผ่านการ login ก่อน
     Route::group(array('before' => 'login'), function() {
+        //image slide setting
+        Route::get('imageSlideSettingTable', 'ImageSlideSettingController@displayTablecloth');
+
         //menu setting
         Route::get('menuSetting/{id}', 'MenuSettingController@index');
         Route::get('menuSetting/{parentMenuIdForBack}/insert/{id}', 'MenuSettingController@insertGet');
