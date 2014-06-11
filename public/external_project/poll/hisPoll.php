@@ -1,6 +1,6 @@
 <?php
 header ('Content-type: text/html; charset=utf-8');
-session_start(); 
+require("../session_start.php");
 require("inc/MySQL/mySQLFunc.php");
 require("inc/function.php");
 ?>

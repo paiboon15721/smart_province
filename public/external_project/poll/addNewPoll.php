@@ -1,9 +1,9 @@
 <?php
 header ('Content-type: text/html; charset=utf-8');
-session_start();
+require("../session_start.php");
 error_reporting( ~(E_NOTICE));
-require_once("inc/MySQL/mySQLFunc.php");
-require_once("inc/function.php");
+require("inc/MySQL/mySQLFunc.php");
+require("inc/function.php");
 
 if((isset($_GET['insertId'])) && ((int)($_GET['insertId'] > 0))){
 	mysql_query("SET NAMES 'utf8' COLLATE 'utf8_general_ci';");
