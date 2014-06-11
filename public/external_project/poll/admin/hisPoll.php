@@ -1,6 +1,6 @@
 <?php
 header ('Content-type: text/html; charset=utf-8');
-require("file:///D|/WORK_CDG/NY/laravel/smart_province/public/external_project/session_start.php");
+require("../../session_start.php");
 require("../inc/MySQL/mySQLFunc.php");
 require("../inc/function.php");
 ?>
