@@ -10,12 +10,14 @@ class HomeController extends BaseController {
     }
 
     public function logout() {
-        Session::forget('EMPID');
-        Session::forget('EMPNAME');
-        Session::forget('EMPADD');
-        Session::forget('START');
-        Session::forget('EXPIRE');
-        Session::forget('catm_login');
+        /*
+          Session::forget('EMPID');
+          Session::forget('EMPNAME');
+          Session::forget('EMPADD');
+          Session::forget('START');
+          Session::forget('EXPIRE');
+          Session::forget('catm_login');
+         */
         unset($_SESSION['EMPID']);
         unset($_SESSION['EMPNAME']);
         unset($_SESSION['EMPADD']);
@@ -41,12 +43,15 @@ class HomeController extends BaseController {
     public function write_session($empId, $fName, $address) {
         $emp = Emp::find($empId);
         if ($emp->exists()) {
-            Session::put('EMPID', $empId);
-            Session::put('EMPNAME', rawurldecode($fName));
-            Session::put('EMPADD', rawurldecode($address));
-            Session::put('START', time());
-            Session::put('EXPIRE', time() + 1800);
-            Session::put('catm_login', $emp->ccaattmm);
+            /*
+              Session::put('EMPID', $empId);
+              Session::put('EMPNAME', rawurldecode($fName));
+              Session::put('EMPADD', rawurldecode($address));
+              Session::put('START', time());
+              Session::put('EXPIRE', time() + 1800);
+              Session::put('catm_login', $emp->ccaattmm);
+             *
+             */
             $_SESSION['EMPID'] = $empId;
             $_SESSION['EMPNAME'] = rawurldecode($fName);
             $_SESSION['EMPADD'] = rawurldecode($address);
@@ -61,7 +66,7 @@ class HomeController extends BaseController {
 
     public function writeSession($catm) {
         $catm = Catm::select('catm_id', 'catm_name_th', 'catm_name_en')->find($catm);
-        Session::put('catmId', $catm->catm_id);
+        //Session::put('catmId', $catm->catm_id);
         Session::put('catmNameEn', $catm->catm_name_en);
         Session::put('catmNameTh', $catm->catm_name_th);
         $_SESSION['catm_menu'] = $catm->catm_id;
@@ -124,7 +129,7 @@ class HomeController extends BaseController {
 
     public function villageGeneralInformation() {
         Session::put('thisPage', 'villageGeneralInformation');
-        $catm = new CatmClass(Session::get('catmId'));
+        $catm = new CatmClass($_SESSION['catm_menu']);
         $catmNameEn = $catm->getCatmNameEn();
         Session::put('catmNameEn', $catmNameEn);
         return View::make('villageGeneralInformation.' . $catmNameEn);

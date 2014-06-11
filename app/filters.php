@@ -75,13 +75,13 @@ Route::filter('csrf', function() {
 });
 //ตรวจสอบว่าได้เลือกหมู่บ้านก่อนหรือไม่
 Route::filter('catm', function() {
-    if (!Session::has('catmId')) {
+    if (!isset($_SESSION['catmId'])) {
         return Redirect::to('/');
     }
 });
 //ตรวจสอบว่าได้ผ่านการ login มาก่อนหรือไม่
 Route::filter('login', function() {
-    if (!Session::has('EMPID')) {
+    if (!isset($_SESSION['EMPID'])) {
         return Redirect::to('main');
     }
 });
