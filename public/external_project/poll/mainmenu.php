@@ -1,7 +1,6 @@
 <?php
 //session_start();
-require __DIR__ . '/../../../bootstrap/autoload.php';
-$app = require_once __DIR__ . '/../../../bootstrap/start.php';
+require '..session_start.php';
 echo $_SESSION['EMPID'];
 header('Content-type: text/html; charset=utf-8');
 require_once("inc/MySQL/mySQLFunc.php");
