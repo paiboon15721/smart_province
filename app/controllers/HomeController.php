@@ -16,12 +16,6 @@ class HomeController extends BaseController {
         Session::forget('START');
         Session::forget('EXPIRE');
         Session::forget('catm_login');
-        unset($_SESSION['EMPID']);
-        unset($_SESSION['EMPNAME']);
-        unset($_SESSION['EMPADD']);
-        unset($_SESSION['START']);
-        unset($_SESSION['EXPIRE']);
-        unset($_SESSION['catm_login']);
         return Redirect::to('main');
     }
 
@@ -47,13 +41,6 @@ class HomeController extends BaseController {
             Session::put('START', time());
             Session::put('EXPIRE', time() + 1800);
             Session::put('catm_login', $emp->ccaattmm);
-
-            $_SESSION['EMPID'] = $empId;
-            $_SESSION['EMPNAME'] = rawurldecode($fName);
-            $_SESSION['EMPADD'] = rawurldecode($address);
-            $_SESSION['START'] = time();
-            $_SESSION['EXPIRE'] = $_SESSION['START'] + 1800;
-            $_SESSION['catm_login'] = $emp->ccaattmm;
             return true;
         } else {
             return false;
