@@ -1,9 +1,8 @@
 <?php
 header ('Content-type: text/html; charset=utf-8');
-session_start();
+require_once("../session_start.php");
 error_reporting( ~(E_NOTICE));
 require_once("inc/function.php");
-
 //echo "catmmenu = ".$_SESSION['catm_menu'];
 //echo "<br>catm_description = ".$_SESSION['catm_description'];
 if((!isset($_SESSION['votePID'])) && (!isset($_SESSION['voteFLNAME'])) && (!isset($_SESSION['voteADDR']))){

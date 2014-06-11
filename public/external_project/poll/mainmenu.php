@@ -1,10 +1,11 @@
 <?php
-require '../session_start.php';
+//require '../session_start.php';
+require("../session_start.php");
 header('Content-type: text/html; charset=utf-8');
 require_once("inc/MySQL/mySQLFunc.php");
 require_once("inc/function.php");
-$_SESSION['EMPID'] = str_replace("-", "", $_SESSION['EMPID']);
-$_SESSION['EMPID'] = formatPID(iconv("TIS-620", "UTF-8", $_SESSION['EMPID']));
+//$_SESSION['EMPID'] = str_replace("-", "", $_SESSION['EMPID']);
+//$_SESSION['EMPID'] = formatPID(iconv("TIS-620", "UTF-8", $_SESSION['EMPID']));
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

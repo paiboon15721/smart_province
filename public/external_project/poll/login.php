@@ -39,7 +39,7 @@ body {
         
         <div id="template_content_outer">
             <div id="template_content_status">
-                    <div class="status_left"><!--ชื่อ - นามสกุล&nbsp;:&nbsp;นายทดสอบ&nbsp;&nbsp;ระบบงาน--></div>
+                    <div class="status_left"><!--ชื่อ - นามสกุล&nbsp;:&nbsp;นายทดสอบ&nbsp;&nbsp;ระบบงาน--> </div>
                     <div class="status_right"><?php echo DateThai(); ?></div>
 			</div>
             <!-- end of template_content_status -->
