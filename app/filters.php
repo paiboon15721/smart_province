@@ -75,7 +75,7 @@ Route::filter('csrf', function() {
 });
 //ตรวจสอบว่าได้เลือกหมู่บ้านก่อนหรือไม่
 Route::filter('catm', function() {
-    if (!isset($_SESSION['catmId'])) {
+    if (!isset($_SESSION['catm_menu'])) {
         return Redirect::to('/');
     }
 });
