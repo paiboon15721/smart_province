@@ -109,7 +109,7 @@ class PlanClass {
     private function getDataForDisplay() {
         return Travel::with('travelType')
                         ->select($this->fieldForDisplay)
-                        ->where('catm', '=', Session::get('catmId'))
+                        ->where('catm', '=', $_SESSION['catm_menu'])
                         ->get();
     }
 
@@ -132,7 +132,7 @@ class PlanClass {
 
     public function insertToDatabase() {
         $plan = new Plan;
-        $plan->catm = Session::get('catmId');
+        $plan->catm = $_SESSION['catm_menu'];
         $plan->plan_name = $this->planName;
         $plan->type = $this->planType;
         $plan->plan_date = DateClass::dateFormatBeforeInsert($this->planDate);

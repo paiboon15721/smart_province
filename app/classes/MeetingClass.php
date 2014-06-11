@@ -61,7 +61,7 @@ class MeetingClass {
     private function getDataForDisplay() {
         return Travel::with('travelType')
                         ->select($this->fieldForDisplay)
-                        ->where('catm', '=', Session::get('catmId'))
+                        ->where('catm', '=', $_SESSION['catm_menu'])
                         ->get();
     }
 
@@ -84,7 +84,7 @@ class MeetingClass {
 
     public function insertToDatabase() {
         $meeting = new Meeting;
-        $meeting->catm = Session::get('catmId');
+        $meeting->catm = $_SESSION['catm_menu'];
         $meeting->meeting_name = $this->meetingName;
         $meeting->meeting_date = DateClass::dateFormatBeforeInsert($this->meetingDate);
         if (input::hasFile('meetingImage')) {

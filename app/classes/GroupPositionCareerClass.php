@@ -56,7 +56,7 @@ class GroupPositionCareerClass {
     private function getDataForDisplay() {
         return Otop::with('otopType')
                         ->select($this->fieldForDisplay)
-                        ->where('catm', '=', Session::get('catmId'))
+                        ->where('catm', '=', $_SESSION['catm_menu'])
                         ->get();
     }
 
@@ -86,7 +86,7 @@ class GroupPositionCareerClass {
 
     public function insertToDatabase() {
         $groupPositionCareer = new GroupPositionCareer;
-        $groupPositionCareer->catm = Session::get('catmId');
+        $groupPositionCareer->catm = $_SESSION['catm_menu'];
         $groupPositionCareer->position_name = $this->positionName;
         $groupPositionCareer->position_member = $this->positionMember;
         $groupPositionCareer->position_budget = $this->positionBudget;

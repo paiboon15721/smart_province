@@ -87,7 +87,7 @@ class GroupMemberAndPositionClass {
                         })
                         ->where('tab_group_position.group_id', '=', $this->groupId)
                         ->where('tab_group_position.position_id', '=', $this->positionId)
-                        ->where('catm', '=', Session::get('catmId'))
+                        ->where('catm', '=', $_SESSION['catm_menu'])
                         ->groupBy('member_pid')
                         ->get();
     }
