@@ -13,7 +13,7 @@
     <td>{{$data->contract_tel}}</td>
     <td>{{$data->latitude}}</td>
     <td>{{$data->longtitude}}</td>
-    <td>{{$data->pic_no}}</td>
+    <td style="text-align:center;"><img src="{{asset('data/'. $data->pic_no)}}" style="height: 120px; width: 120px;" /></td>
 </tr>
 @endforeach
 @stop

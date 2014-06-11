@@ -6,7 +6,7 @@ class DatatableDatasourceClass {
         $aColumns = array('problem_running_id', 'catm', 'problem_id', 'problem_name', 'problem_desc', 'cause', 'howto', 'begin_date', 'end_date', 'status');
         $sIndexColumn = "catm";
         $sTable = "tab_problem INNER JOIN tab_problem_dic ON tab_problem.problem_id = tab_problem_dic.problem_dic_id";
-        $sWhere = "WHERE catm = " . Session::get('catmId');
+        $sWhere = "WHERE catm = " . $_SESSION['catm_menu'];
         $this->generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere);
     }
 
@@ -14,7 +14,7 @@ class DatatableDatasourceClass {
         $aColumns = array('member_pid', 'fname', 'lname', 'member_career', 'member_address', 'member_phone1', 'member_phone2');
         $sIndexColumn = "member_pid";
         $sTable = "tab_group_member";
-        $sWhere = "WHERE catm = " . Session::get('catmId');
+        $sWhere = "WHERE catm = " . $_SESSION['catm_menu'];
         $this->generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere);
     }
 
@@ -22,7 +22,7 @@ class DatatableDatasourceClass {
         $aColumns = array('otop_id', 'catm', 'otop_star', 'otop_name', 'otop_type_name', 'otop_detail', 'otop_group', 'contract_name', 'contract_tel', 'contract_addr');
         $sIndexColumn = "otop_id";
         $sTable = "tab_otop INNER JOIN tab_otop_type ON tab_otop.otop_type = tab_otop_type.otop_type_id";
-        $sWhere = "WHERE catm = " . Session::get('catmId');
+        $sWhere = "WHERE catm = " . $_SESSION['catm_menu'];
         $this->generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere);
     }
 
@@ -30,7 +30,7 @@ class DatatableDatasourceClass {
         $aColumns = array('travel_id', 'catm', 'travel_star', 'travel_name', 'travel_type_name', 'travel_detail', 'latitude', 'longtitude', 'contract_name', 'contract_addr', 'contract_tel');
         $sIndexColumn = "travel_id";
         $sTable = "tab_travel INNER JOIN tab_travel_type ON tab_travel.travel_type = tab_travel_type.travel_type";
-        $sWhere = "WHERE catm = " . Session::get('catmId');
+        $sWhere = "WHERE catm = " . $_SESSION['catm_menu'];
         $this->generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere);
     }
 
@@ -38,7 +38,7 @@ class DatatableDatasourceClass {
         $aColumns = array('act_id', 'catm', 'act_desc', 'act_start', 'act_stop', 'pic_no');
         $sIndexColumn = "act_id";
         $sTable = "tab_activity";
-        $sWhere = "WHERE catm = " . Session::get('catmId');
+        $sWhere = "WHERE catm = " . $_SESSION['catm_menu'];
         $this->generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere);
     }
 
@@ -46,7 +46,7 @@ class DatatableDatasourceClass {
         $aColumns = array('meeting_id', 'catm', 'meeting_name', 'meeting_date', 'pic_no');
         $sIndexColumn = "meeting_id";
         $sTable = "tab_meeting";
-        $sWhere = "WHERE catm = " . Session::get('catmId');
+        $sWhere = "WHERE catm = " . $_SESSION['catm_menu'];
         $this->generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere);
     }
 
@@ -54,7 +54,7 @@ class DatatableDatasourceClass {
         $aColumns = array('plan_id', 'catm', 'plan_name', 'type', 'plan_date', 'size', 'budget', 'head', 'budget_resource', 'start_year', 'end_year', 'status', 'pic_no');
         $sIndexColumn = "plan_id";
         $sTable = "tab_plan";
-        $sWhere = "WHERE catm = " . Session::get('catmId');
+        $sWhere = "WHERE catm = " . $_SESSION['catm_menu'];
         $this->generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere);
     }
 
@@ -62,7 +62,7 @@ class DatatableDatasourceClass {
         $aColumns = array('position_id', 'catm', 'position_name', 'position_member', 'position_budget');
         $sIndexColumn = "position_id";
         $sTable = "tab_group_position_career";
-        $sWhere = "WHERE catm = " . Session::get('catmId');
+        $sWhere = "WHERE catm = " . $_SESSION['catm_menu'];
         $this->generateDatatableJson($aColumns, $sIndexColumn, $sTable, $sWhere);
     }
 

@@ -128,7 +128,7 @@ class ProblemClass {
     private function getDataForDisplay() {
         return Problem::select($this->fieldForDisplay)
                         ->where('problem_id', '=', $this->problemId)
-                        ->where('catm', '=', Session::get('catmId'))
+                        ->where('catm', '=', $_SESSION['catm_menu'])
                         ->get();
     }
 
@@ -243,7 +243,7 @@ class ProblemClass {
 
     public function insertToDatabase() {
         $problem = new Problem;
-        $problem->catm = Session::get('catmId');
+        $problem->catm = $_SESSION['catm_menu'];
         $problem->problem_id = $this->problemId;
         $problem->problem_desc = $this->problemDesc;
         $problem->cause = $this->cause;

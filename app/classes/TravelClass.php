@@ -98,7 +98,7 @@ class TravelClass {
     private function getDataForDisplay() {
         return Travel::with('travelType')
                         ->select($this->fieldForDisplay)
-                        ->where('catm', '=', Session::get('catmId'))
+                        ->where('catm', '=', $_SESSION['catm_menu'])
                         ->get();
     }
 
@@ -121,7 +121,7 @@ class TravelClass {
 
     public function insertToDatabase() {
         $travel = new Travel;
-        $travel->catm = Session::get('catmId');
+        $travel->catm = $_SESSION['catm_menu'];
         $travel->travel_type = $this->travelType;
         $travel->travel_name = $this->travelName;
         $travel->travel_star = $this->travelStar;

@@ -37,7 +37,7 @@ class GroupMemberClass {
     public function insertToDatabase() {
         //เตรียมข้อมูลสำหรับบันทึกข้อมูลทั่วไป
         $groupMember = new GroupMember;
-        $groupMember->catm = Session::get('catmId');
+        $groupMember->catm = $_SESSION['catm_menu'];
         $groupMember->member_pid = $this->memberPid;
         $groupMember->title_code = $this->titleId;
         $groupMember->fname = $this->memberName;
@@ -456,7 +456,7 @@ class GroupMemberClass {
                             ->on('tab_member_position.position_id', '=', 'tab_group_position.position_id');
                         })
                         ->where('tab_group_position.group_id', '=', $this->groupId)
-                        ->where('catm', '=', Session::get('catmId'))
+                        ->where('catm', '=', $_SESSION['catm_menu'])
                         ->groupBy('member_pid')
                         ->get();
     }
