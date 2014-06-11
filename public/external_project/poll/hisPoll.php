@@ -37,8 +37,8 @@ body {
         
         <div id="template_content_outer">
             <div id="template_content_status">
-                    <div class="status_left">ชื่อ - นามสกุล&nbsp;:&nbsp;นายทดสอบ&nbsp;&nbsp;ระบบงาน</div>
-                    <div class="status_right">วันที่ปัจจุบัน</div>
+              <div class="status_left">ชื่อ - สกุล ผู้ปฏิบัติงาน &nbsp;:&nbsp;<?php echo $_SESSION['EMPNAME']; ?>&nbsp;(<?php echo $_SESSION['EMPID']; ?>)</div>
+              <div class="status_right">วันที่ปัจจุบัน</div>
 			</div>
             <!-- end of template_content_status -->
             
