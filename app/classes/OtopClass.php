@@ -88,7 +88,7 @@ class OtopClass {
     private function getDataForDisplay() {
         return Otop::with('otopType')
                         ->select($this->fieldForDisplay)
-                        ->where('catm', '=', Session::get('catmId'))
+                        ->where('catm', '=', $_SESSION['catm_menu'])
                         ->get();
     }
 
@@ -118,7 +118,7 @@ class OtopClass {
 
     public function insertToDatabase() {
         $otop = new Otop;
-        $otop->catm = Session::get('catmId');
+        $otop->catm = $_SESSION['catm_menu'];
         $otop->otop_type = $this->otopType;
         $otop->otop_name = $this->otopName;
         $otop->otop_group = $this->otopGroup;
