@@ -1,8 +1,8 @@
 <?php
 header ('Content-type: text/html; charset=utf-8');
-require("../session_start.php");
-require("inc/MySQL/mySQLFunc.php");
-require("inc/function.php");
+require("file:///D|/WORK_CDG/NY/laravel/smart_province/public/external_project/session_start.php");
+require("../inc/MySQL/mySQLFunc.php");
+require("../inc/function.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -12,11 +12,11 @@ require("inc/function.php");
 <title>ข้อมูลการลงประชามติ</title>
 <meta name="keywords" content="ข้อมูลการลงประชามติ" />
 <meta name="description" content="ข้อมูลการลงประชามติ" />
-<link href="css/template_style.css" rel="stylesheet" type="text/css" />
-<link href="css/m-buttons.css" rel="stylesheet" type="text/css" />
-<link href="css/table-style.css" rel="stylesheet" type="text/css" />
-<script language="javascript" src="inc/js/jquery.min.js"></script>
-<script src="inc/js/poll.js" type="text/javascript"></script>
+<link href="../css/template_style.css" rel="stylesheet" type="text/css" />
+<link href="../css/m-buttons.css" rel="stylesheet" type="text/css" />
+<link href="../css/table-style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../inc/js/jquery.min.js"></script>
+<script src="../inc/js/poll.js" type="text/javascript"></script>
 <style type="text/css">
 body {
 	background-color: #000000;
@@ -24,7 +24,7 @@ body {
 </style>
 </head>
 <body>
-<form id="frmPoll" name="frmPoll" method="post" action="poll.php">
+<form id="frmPoll" name="frmPoll" method="post" action="../poll.php">
 <input type="hidden" name="pollId" id="pollId" />
 <input type="hidden" name="val1" id="val1" />
 <input type="hidden" name="val2" id="val2" />
@@ -45,7 +45,7 @@ body {
             <div id="template_content_inner"> 
             	<div id="template_content">
                   <div class="cleaner_h30"></div>
-                  <img src="images/titleHistory.png" width="709" height="57"  alt=""/>
+                  <img src="../images/titleHistory.png" width="709" height="57"  alt=""/>
                   <div class="cleaner_h20"></div>
 				 <table width="95%" id="newspaper-b" summary="hisPoll">
                     <thead>
@@ -85,7 +85,7 @@ body {
                     <td width="10%" align="center"><?php echo $ans[2]; ?></td>
                     <td width="10%" align="center">
                         <a href="javascript:getDetail(<?php echo $pollID; ?>, <?php echo $ans[1]; ?>, <?php echo $ans[2]; ?>);">
-                        <img src="images/pie_chart.png" width="32" height="32" border="0" />
+                        <img src="../images/pie_chart.png" width="32" height="32" border="0" />
                         </a>
                     </td>
                   </tr>
@@ -113,7 +113,7 @@ body {
 		<div class="cleaner"></div>
     
 </div> <!-- end of template_body_wrapper -->
-<script language="javascript" src="inc/js/jsFunc.js"></script>
+<script language="javascript" src="../inc/js/jsFunc.js"></script>
 <script language="javascript" type="text/javascript">
 	function getDetail(id, val1, val2){
 		var sum = parseInt(val1, 10) + parseInt(val2, 10)

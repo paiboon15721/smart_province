@@ -2,8 +2,8 @@
 header ('Content-type: text/html; charset=utf-8');
 session_start();
 error_reporting( ~(E_NOTICE));
-require_once("inc/MySQL/mySQLFunc.php");
-require_once("inc/function.php");
+require_once("../inc/MySQL/mySQLFunc.php");
+require_once("../inc/function.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,12 +13,12 @@ require_once("inc/function.php");
 <title>ข้อมูลการลงประชามติ</title>
 <meta name="keywords" content="ข้อมูลการลงประชามติ" />
 <meta name="description" content="ข้อมูลการลงประชามติ" />
-<link href="css/template_style.css" rel="stylesheet" type="text/css" />
-<link href="css/m-buttons.css" rel="stylesheet" type="text/css" />
-<script language="javascript" src="inc/js/jquery.min.js"></script>
-<script src="inc/js/poll.js" type="text/javascript"></script>
-<script src="inc/js/highcharts.js"></script>
-<script src="inc/js/exporting.js"></script>
+<link href="../css/template_style.css" rel="stylesheet" type="text/css" />
+<link href="../css/m-buttons.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../inc/js/jquery.min.js"></script>
+<script src="../inc/js/poll.js" type="text/javascript"></script>
+<script src="../inc/js/highcharts.js"></script>
+<script src="../inc/js/exporting.js"></script>
 <style type="text/css">
 body {
 	background-color: #000000;
@@ -26,7 +26,7 @@ body {
 </style>
 </head>
 <body>
-<form id="frmPoll" name="frmPoll" method="post" action="poll.php">
+<form id="frmPoll" name="frmPoll" method="post" action="../poll.php">
 <div id="template_body_wrapper">
 	<div id="template_main_wrapper">
         <div id="template_header">          
@@ -43,7 +43,7 @@ body {
             <div id="template_content_inner"> 
             	<div id="template_content">
                   <div class="cleaner_h10"></div>
-                  <img src="images/titleResult.png" width="794" height="57"  alt=""/>
+                  <img src="../images/titleResult.png" width="794" height="57"  alt=""/>
                   <div class="cleaner_h10"></div>
                   <div class="pollTitle">หัวข้อ  <?php echo getVoteName($_POST['pollId']); ?></div>
                   <div class="pollTotal2">จำนวนผู้ลงประชามติทั้งหมด <?php echo $_POST['sum']; ?> คน&nbsp;</div>
@@ -68,7 +68,7 @@ body {
 		<div class="cleaner"></div>
     
 </div> <!-- end of template_body_wrapper -->
-<script language="javascript" src="inc/js/jsFunc.js"></script>
+<script language="javascript" src="../inc/js/jsFunc.js"></script>
 	
 <?php
 $strColor = array('#00a300', '#ff0097', '#2d89ef', '#ffc40d', '#9f00a7', '#603cba');

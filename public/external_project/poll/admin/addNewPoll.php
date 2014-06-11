@@ -1,9 +1,9 @@
 <?php
 header ('Content-type: text/html; charset=utf-8');
-require("../session_start.php");
+require("file:///D|/WORK_CDG/NY/laravel/smart_province/public/external_project/session_start.php");
 error_reporting( ~(E_NOTICE));
-require("inc/MySQL/mySQLFunc.php");
-require("inc/function.php");
+require("../inc/MySQL/mySQLFunc.php");
+require("../inc/function.php");
 
 if((isset($_GET['insertId'])) && ((int)($_GET['insertId'] > 0))){
 	mysql_query("SET NAMES 'utf8' COLLATE 'utf8_general_ci';");
@@ -21,12 +21,12 @@ if((isset($_GET['insertId'])) && ((int)($_GET['insertId'] > 0))){
 <title>ข้อมูลการลงประชามติ</title>
 <meta name="keywords" content="ข้อมูลการลงประชามติ" />
 <meta name="description" content="ข้อมูลการลงประชามติ" />
-<link href="css/template_style.css" rel="stylesheet" type="text/css" />
-<link href="css/m-buttons.css" rel="stylesheet" type="text/css" />
-<script language="javascript" src="inc/js/jquery.min.js"></script>
-<script src="inc/js/poll.js" type="text/javascript"></script>
-<script language="javascript" src="inc/js/jquery.maxlength.js"></script>
-<script type="text/javascript" src="inc/js/datepickrThai.js"></script>
+<link href="../css/template_style.css" rel="stylesheet" type="text/css" />
+<link href="../css/m-buttons.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../inc/js/jquery.min.js"></script>
+<script src="../inc/js/poll.js" type="text/javascript"></script>
+<script language="javascript" src="../inc/js/jquery.maxlength.js"></script>
+<script type="text/javascript" src="../inc/js/datepickrThai.js"></script>
 <style type="text/css">
 	#startDate, #endDate{
 		width: 75px;
@@ -132,7 +132,7 @@ if((isset($_GET['insertId'])) && ((int)($_GET['insertId'] > 0))){
 </style>
 </head>
 <body>
-<form id="frmInsert" name="frmInsert" method="post" action="poll.php">
+<form id="frmInsert" name="frmInsert" method="post" action="../poll.php">
 <input type="hidden" name="curDate" id="curDate" />
 <input type="hidden" name="empId" id="empId" value="<?php echo $_SESSION['EMPID']; ?>" />
 <div id="template_body_wrapper">
@@ -151,7 +151,7 @@ if((isset($_GET['insertId'])) && ((int)($_GET['insertId'] > 0))){
             <div id="template_content_inner_insert"> 
             	<div id="template_content">
                   <div class="cleaner_h10"></div>
-                  <img src="images/titleInsert.png" width="794" height="57"  alt=""/>
+                  <img src="../images/titleInsert.png" width="794" height="57"  alt=""/>
                   <div class="cleaner_h10"></div>
                   <table width="90%" border="0" cellpadding="0" cellspacing="0">
                     <tr>
@@ -255,7 +255,7 @@ if((isset($_GET['insertId'])) && ((int)($_GET['insertId'] > 0))){
 		<div class="cleaner"></div>
     
 </div> <!-- end of template_body_wrapper -->
-<script language="javascript" src="inc/js/jsFunc.js"></script>
+<script language="javascript" src="../inc/js/jsFunc.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
              //Set maxlength of all the textarea (call plugin)

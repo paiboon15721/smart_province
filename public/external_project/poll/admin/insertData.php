@@ -1,5 +1,5 @@
 <?php
-include "inc/MySQL/mySQLFunc.php";
+include "../inc/MySQL/mySQLFunc.php";
 $txtReferendum = mysql_real_escape_string($_POST['txtReferendum']);
 $startDate = mysql_real_escape_string($_POST['startDate']);
 $endDate = mysql_real_escape_string($_POST['endDate']);
