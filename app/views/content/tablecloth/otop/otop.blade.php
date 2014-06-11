@@ -11,7 +11,7 @@
     <td>{{$data->contract_addr}}</td>
     <td>{{$data->contract_tel}}</td>
     <td>{{$data->otop_star}}</td>
-    <td>{{$data->images}}</td>
+    <td>{{$data->images}}<img src="{{asset('data/'. $data->images)}}" style="height: 350px; width: 1200px;" /></td>
 </tr>
 @endforeach
 @stop
