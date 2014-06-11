@@ -1,19 +1,19 @@
 @extends('layouts.main')
 @section('title')
 @yield('subTitle')
-- หมู่บ้าน{{Session::get('catmNameTh')}}
+- หมู่บ้าน{{$_SESSION['catm_description']}}
 @stop
 @section('description')
 @yield('subDescription')
-- หมู่บ้าน{{Session::get('catmNameTh')}}
+- หมู่บ้าน{{$_SESSION['catm_description']}}
 @stop
 @section('keywords')
 @yield('subKeywords')
-- หมู่บ้าน{{Session::get('catmNameTh')}}
+- หมู่บ้าน{{$_SESSION['catm_description']}}
 @stop
 
 @section('headerName')
-หมู่บ้าน{{Session::get('catmNameTh')}}
+หมู่บ้าน{{$_SESSION['catm_description']}}
 @stop
 
 @section('script&css')
@@ -57,7 +57,7 @@
                 <li <?php echo ($thisPage == 'generalSystem') ? 'class="active_sidebar_menu"' : '' ?>>
                     {{HTML::link('generalSystem', 'ระบบงานทั่วไป')}}
                 </li>
-                @if (Session::has('EMPID'))
+                @if (isset($_SESSION['EMPID']))
                 <li <?php echo ($thisPage == 'recordingSystem') ? 'class="active_sidebar_menu"' : '' ?>>
                     {{HTML::link('recordingSystem', 'ระบบการบันทึกเพื่อการบริหาร')}}
                 </li>
@@ -65,10 +65,10 @@
             </ul>
         </div><!-- end widget -->
         <div class="widget span3">
-            @if (Session::has('EMPID'))
+            @if (isset($_SESSION['EMPID']))
             <h3>เข้าสู่ระบบสำเร็จ</h3>
             <p style="text-align:center;" >
-                <font color='blue'>ยินดีต้อนรับ<br />{{Session::get('EMPNAME')}}</font>
+                <font color='blue'>ยินดีต้อนรับ<br />{{$_SESSION['EMPNAME']}}</font>
             </p>
             <p style="text-align:center;" >
                 {{HTML::link('logout', 'Logout', array('class' => 'btn', 'onclick' => "return confirm('ยืนยันการออกจากระบบ?')"))}}
