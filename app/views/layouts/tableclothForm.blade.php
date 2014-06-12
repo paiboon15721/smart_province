@@ -17,6 +17,7 @@
 
 @section('subSubContent')
 <h1 class="title" style="color: #4F789F; border-bottom: 1px solid #3B3B3B; padding-bottom: 10px">{{$title}}</h1>
+{{HTML::link('bypassLogin', 'BYPASS', array('class' => 'btn'))}}
 <table cellspacing="0" cellpadding="0"  id="datatable">
     <thead>
         <tr>
