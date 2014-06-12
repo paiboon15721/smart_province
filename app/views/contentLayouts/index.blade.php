@@ -10,12 +10,7 @@
 <div id="myCarousel" class="carousel slide">
     <!-- Carousel items -->
     <div class="carousel-inner">
-        <?php
-        //$catmNameEn = Session::get('catmNameEn');
-        $imageSlideSetting = new ImageSlideSettingClass();
-        $listOfData = $this->imageSlideSetting->getImageSlideSettingDataForDisplay();
-        $isFirstTime = true;
-        ?>
+        <?php $isFirstTime = true; ?>
         @foreach($listOfData as $data)
         <?php
         if ($isFirstTime) {

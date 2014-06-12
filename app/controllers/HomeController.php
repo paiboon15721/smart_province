@@ -4,9 +4,11 @@ class HomeController extends BaseController {
 
     protected $layout = 'layouts.main';
     private $menuSetting;
+    private $imageSlideSetting;
 
     function __construct() {
         $this->menuSetting = new MenuSettingClass;
+        $this->imageSlideSetting = new ImageSlideSettingClass();
     }
 
     public function logout() {
@@ -57,19 +59,22 @@ class HomeController extends BaseController {
 
     public function main() {
         Session::put('thisPage', 'main');
-        return View::make('content.main');
+        return View::make('content.main')
+                        ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay());
     }
 
     public function map() {
         Session::put('thisPage', 'map');
         return View::make('content.map')
-                        ->with('thisPage', 'map');
+                        ->with('thisPage', 'map')
+                        ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay());
     }
 
     public function contactUs() {
         Session::put('thisPage', 'contactUs');
         return View::make('content.contactUs')
-                        ->with('thisPage', 'contactUs');
+                        ->with('thisPage', 'contactUs')
+                        ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay());
     }
 
     public function villageInformationSystem() {
@@ -78,7 +83,8 @@ class HomeController extends BaseController {
         $this->menuSetting->setMenuColour('red');
         return View::make('content.menu')
                         ->with('title', 'ระบบข้อมูลหมู่บ้าน')
-                        ->with('menu', $this->menuSetting->getMenuForDisplay());
+                        ->with('menu', $this->menuSetting->getMenuForDisplay())
+                        ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay());
     }
 
     public function servicesSystem() {
@@ -87,7 +93,8 @@ class HomeController extends BaseController {
         $this->menuSetting->setMenuColour('purple');
         return View::make('content.menu')
                         ->with('title', 'ระบบงานบริการด้านต่างๆ')
-                        ->with('menu', $this->menuSetting->getMenuForDisplay());
+                        ->with('menu', $this->menuSetting->getMenuForDisplay())
+                        ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay());
     }
 
     public function generalSystem() {
@@ -96,7 +103,8 @@ class HomeController extends BaseController {
         $this->menuSetting->setMenuColour('yellow');
         return View::make('content.menu')
                         ->with('title', 'ระบบงานทั่วไป')
-                        ->with('menu', $this->menuSetting->getMenuForDisplay());
+                        ->with('menu', $this->menuSetting->getMenuForDisplay())
+                        ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay());
     }
 
     public function recordingSystem() {
@@ -105,7 +113,8 @@ class HomeController extends BaseController {
         $this->menuSetting->setMenuColour('green');
         return View::make('content.menu')
                         ->with('title', 'ระบบการบันทึกเพื่อการบริหาร')
-                        ->with('menu', $this->menuSetting->getMenuForDisplay());
+                        ->with('menu', $this->menuSetting->getMenuForDisplay())
+                        ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay());
     }
 
     public function villageGeneralInformation() {
@@ -113,12 +122,14 @@ class HomeController extends BaseController {
         $catm = new CatmClass($_SESSION['catm_menu']);
         $catmNameEn = $catm->getCatmNameEn();
         Session::put('catmNameEn', $catmNameEn);
-        return View::make('villageGeneralInformation.' . $catmNameEn);
+        return View::make('villageGeneralInformation.' . $catmNameEn)
+                        ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay());
     }
 
     public function villageDirectors() {
         Session::put('thisPage', 'villageDirectors');
-        return View::make('content.villageDirectors');
+        return View::make('content.villageDirectors')
+                        ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay());
     }
 
 }
