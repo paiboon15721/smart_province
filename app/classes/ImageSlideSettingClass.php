@@ -5,12 +5,12 @@ class ImageSlideSettingClass {
     private $imageSlideId;
     private $imageSlideImage;
     private $rules = array(
-        'file' => 'required|image'
+        'imageSlideImage' => 'required|image'
     );
 
     public function validate() {
         $validationData = array(
-            'file' => $this->imageSlideImage
+            'imageSlideImage' => $this->imageSlideImage
         );
         return Validator::make($validationData, $this->rules);
     }
