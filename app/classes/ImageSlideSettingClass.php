@@ -5,7 +5,7 @@ class ImageSlideSettingClass {
     private $imageSlideId;
     private $imageSlideImage;
     private $rules = array(
-        'imageSlideImage' => 'required|image'
+        'imageSlideImage' => 'image'
     );
 
     public function validate() {
