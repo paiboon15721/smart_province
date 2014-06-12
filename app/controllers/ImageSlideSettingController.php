@@ -17,7 +17,7 @@ class ImageSlideSettingController extends BaseController {
     }
 
     public function insertPost() {
-        $this->imageSlideSetting->setImageSlideImage(Input::get('imageSlideImage'));
+        $this->imageSlideSetting->setImageSlideImage(Input::file('imageSlideImage'));
         $v = $this->imageSlideSetting->validate();
         if ($v->fails()) {
             return Redirect::to('imageSlideSettingTable/insert')
@@ -41,7 +41,7 @@ class ImageSlideSettingController extends BaseController {
 
     public function updatePost($imageSlideId) {
         $this->imageSlideSetting->setImageSlideId($imageSlideId);
-        $this->imageSlideSetting->setImageSlideImage(Input::get('imageSlideImage'));
+        $this->imageSlideSetting->setImageSlideImage(Input::file('imageSlideImage'));
         $v = $this->imageSlideSetting->validate();
         if ($v->fails()) {
             return Redirect::to('imageSlideSettingTable/update/' . $imageSlideId)
