@@ -29,7 +29,8 @@ class ImageSlideSettingClass {
     private static $IMAGE_SLIDE_SETTING_FIELD = array('image');
     private static $IMAGE_SLIDE_SETTING_HEADER = array(
         array('class' => 'center', 'width' => '10px', 'text' => 'ลำดับที่'),
-        array('class' => 'center', 'width' => '240px', 'text' => 'รูปภาพ')
+        array('class' => 'center', 'width' => '240px', 'text' => 'รูปภาพ'),
+        array('class' => 'center', 'width' => '20px', 'text' => 'แก้ไข/ลบ')
     );
 
     private function getDataForDisplay() {
