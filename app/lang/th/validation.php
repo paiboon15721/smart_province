@@ -34,7 +34,7 @@ return array(
     "digits_between" => "The :attribute must be between :min and :max digits.",
     "email" => "The :attribute format is invalid.",
     "exists" => "The selected :attribute is invalid.",
-    "image" => "The :attribute must be an image.",
+    "image" => "ไฟล์ :attribute ต้องเป็นประเภทรูปภาพเท่านั้น",
     "in" => "The selected :attribute is invalid.",
     "integer" => "The :attribute must be an integer.",
     "ip" => "The :attribute must be a valid IP address.",
@@ -113,6 +113,7 @@ return array(
         "planDate" => "วันที่",
         "planBudget" => "งบประมาณ",
         "planStartYear" => "ปีที่เริ่ม",
-        "planEndYear" => "ปีที่สิ้นสุด"
+        "planEndYear" => "ปีที่สิ้นสุด",
+        "imageSlideImage" => "ภาพอัตลักษณ์"
     ),
 );
