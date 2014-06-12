@@ -53,6 +53,7 @@
             {{ $errors->first('memberName', '<div class="error">:message</div>') }}
             {{ $errors->first('memberSurname', '<div class="error">:message</div>') }}
             {{ $errors->first('gender', '<div class="error">:message</div>') }}
+            {{ $errors->first('memberImage', '<div class="error">:message</div>') }}
             @if ($message = Session::get('error'))
             <div class="error">{{$message}}</div>
             @endif

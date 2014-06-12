@@ -13,6 +13,7 @@
             {{ $errors->first('otopName', '<div class="error">:message</div>') }}
             {{ $errors->first('contractName', '<div class="error">:message</div>') }}
             {{ $errors->first('contractTel', '<div class="error">:message</div>') }}
+            {{ $errors->first('otopImage', '<div class="error">:message</div>') }}
             @if (Session::has('updateSuccess'))
             <div class="information">{{$actionType}}{{$menuName}} เรียบร้อย</div>
             @endif

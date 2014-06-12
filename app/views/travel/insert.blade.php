@@ -11,6 +11,7 @@
         <div class="notification">
             {{ $errors->first('travelTypeId', '<div class="error">:message</div>') }}
             {{ $errors->first('travelName', '<div class="error">:message</div>') }}
+            {{ $errors->first('travelImage', '<div class="error">:message</div>') }}
             @if (Session::has('insertSuccess'))
             <div class="information">{{$actionType}}{{$menuName}}เรียบร้อย</div>
             @endif

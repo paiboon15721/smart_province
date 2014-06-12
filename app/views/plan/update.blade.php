@@ -14,6 +14,7 @@
             {{ $errors->first('planBudget', '<div class="error">:message</div>') }}
             {{ $errors->first('planStartYear', '<div class="error">:message</div>') }}
             {{ $errors->first('planEndYear', '<div class="error">:message</div>') }}
+            {{ $errors->first('planImage', '<div class="error">:message</div>') }}
             @if (Session::has('updateSuccess'))
             <div class="information">{{$actionType}}{{$menuName}} เรียบร้อย</div>
             @endif

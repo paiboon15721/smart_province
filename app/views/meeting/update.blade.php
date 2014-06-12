@@ -10,6 +10,7 @@
     <div class="subfieldsset">
         <div class="notification">
             {{ $errors->first('meetingName', '<div class="error">:message</div>') }}
+            {{ $errors->first('meetingImage', '<div class="error">:message</div>') }}
             @if (Session::has('updateSuccess'))
             <div class="information">{{$actionType}}{{$menuName}} เรียบร้อย</div>
             @endif
