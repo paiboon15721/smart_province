@@ -33,7 +33,7 @@
         <tr>
             <td style="text-align:center;">{{($seq++)}}</td>
             <td style="text-align:center;"><img src="{{asset('data/'. $data->image)}}" height="350" width="1200" /></td>
-            <td style="text-align:center;">{{HTML::link($url . '/update/' . $data->image_id, 'แก้ไข', array('class' => 'btn', 'style'=>'width:100px, height:100px'))}}<br /><br />{{HTML::link($url . '/delete/' . $data->image_id, 'ลบ', array('class' => 'btn', 'style'=>'width:100px, height:100px'))}}</td>
+            <td style="text-align:center;">{{HTML::link($url . '/update/' . $data->image_id, 'แก้ไข', array('class' => 'btn', 'style'=>'width:100px height:100px'))}}<br /><br />{{HTML::link($url . '/delete/' . $data->image_id, 'ลบ', array('class' => 'btn', 'style'=>'width:100px height:100px'))}}</td>
         </tr>
         @endforeach
     </tbody>
