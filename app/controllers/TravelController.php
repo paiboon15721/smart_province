@@ -36,7 +36,7 @@ class TravelController extends BaseController {
         $this->travel->setContractAddr(Input::get('contractAddr'));
         $this->travel->setLatitude(Input::get('latitude'));
         $this->travel->setLongtitude(Input::get('longtitude'));
-        $this->travel->setTravelImage(Input::get('travelImage'));
+        $this->travel->setTravelImage(Input::file('travelImage'));
         $v = $this->travel->validate();
         if ($v->fails()) {
             return Redirect::to('travelTable/insert')
@@ -70,7 +70,7 @@ class TravelController extends BaseController {
         $this->travel->setContractAddr(Input::get('contractAddr'));
         $this->travel->setLatitude(Input::get('latitude'));
         $this->travel->setLongtitude(Input::get('longtitude'));
-        $this->travel->setTravelImage(Input::get('travelImage'));
+        $this->travel->setTravelImage(Input::file('travelImage'));
         $v = $this->travel->validate();
         if ($v->fails()) {
             return Redirect::to('travelTable/update/' . $travelId)

@@ -35,7 +35,7 @@ class OtopController extends BaseController {
         $this->otop->setContractName(Input::get('contractName'));
         $this->otop->setContractTel(Input::get('contractTel'));
         $this->otop->setContractAddr(Input::get('contractAddr'));
-        $this->otop->setOtopImage(Input::get('otopImage'));
+        $this->otop->setOtopImage(Input::file('otopImage'));
         $v = $this->otop->validate();
         if ($v->fails()) {
             return Redirect::to('otopTable/insert')
@@ -68,7 +68,7 @@ class OtopController extends BaseController {
         $this->otop->setContractName(Input::get('contractName'));
         $this->otop->setContractTel(Input::get('contractTel'));
         $this->otop->setContractAddr(Input::get('contractAddr'));
-        $this->otop->setOtopImage(Input::get('otopImage'));
+        $this->otop->setOtopImage(Input::file('otopImage'));
         $v = $this->otop->validate();
         if ($v->fails()) {
             return Redirect::to('otopTable/update/' . $otopId)

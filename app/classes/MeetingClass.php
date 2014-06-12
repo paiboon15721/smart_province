@@ -7,12 +7,14 @@ class MeetingClass {
     private $meetingDate;
     private $meetingImage;
     private $rules = array(
-        'meetingName' => 'required'
+        'meetingName' => 'required',
+        'meetingImage' => 'required|image'
     );
 
     public function validate() {
         $validationData = array(
-            'meetingName' => $this->meetingName
+            'meetingName' => $this->meetingName,
+            'meetingImage' => $this->meetingImage
         );
         return Validator::make($validationData, $this->rules);
     }

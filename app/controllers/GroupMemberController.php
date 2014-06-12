@@ -37,7 +37,7 @@ class GroupMemberController extends BaseController {
         $this->groupMember->setMemberAddress(Input::get('memberAddress'));
         $this->groupMember->setMemberPhoneNumber1(Input::get('memberPhoneNumber1'));
         $this->groupMember->setMemberPhoneNumber2(Input::get('memberPhoneNumber2'));
-        $this->groupMember->setMemberImage(Input::get('memberImage'));
+        $this->groupMember->setMemberImage(Input::file('memberImage'));
         $this->groupMember->setAllInformation(Input::all());
         $v = $this->groupMember->validate();
         if ($v->fails()) {
@@ -97,7 +97,7 @@ class GroupMemberController extends BaseController {
         $this->groupMember->setMemberAddress(Input::get('memberAddress'));
         $this->groupMember->setMemberPhoneNumber1(Input::get('memberPhoneNumber1'));
         $this->groupMember->setMemberPhoneNumber2(Input::get('memberPhoneNumber2'));
-        $this->groupMember->setMemberImage(Input::get('memberImage'));
+        $this->groupMember->setMemberImage(Input::file('memberImage'));
         $this->groupMember->setAllInformation(Input::all());
         $v = $this->groupMember->validate();
         if ($v->fails()) {

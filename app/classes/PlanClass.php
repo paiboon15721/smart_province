@@ -19,7 +19,8 @@ class PlanClass {
         'planBudget' => 'Numeric',
         'planStartYear' => 'Numeric',
         'planEndYear' => 'Numeric',
-        'planDate' => 'regex:/[0-9]{2}\/[0-9]{2}\/[0-9]{4}/|dateValid'
+        'planDate' => 'regex:/[0-9]{2}\/[0-9]{2}\/[0-9]{4}/|dateValid',
+        'planImage' => 'required|image'
     );
 
     public function validate() {
@@ -28,7 +29,8 @@ class PlanClass {
             'planBudget' => $this->planBudget,
             'planStartYear' => $this->planStartYear,
             'planEndYear' => $this->planEndYear,
-            'planDate' => $this->planDate
+            'planDate' => $this->planDate,
+            'planImage' => $this->planImage
         );
         return Validator::make($validationData, $this->rules);
     }

@@ -34,7 +34,7 @@ class PlanController extends BaseController {
         $this->plan->setPlanStartYear(Input::get('planStartYear'));
         $this->plan->setPlanEndYear(Input::get('planEndYear'));
         $this->plan->setPlanStatus(Input::get('planStatus'));
-        $this->plan->setPlanImage(Input::get('planImage'));
+        $this->plan->setPlanImage(Input::file('planImage'));
         $v = $this->plan->validate();
         if ($v->fails()) {
             return Redirect::to('planTable/insert')
@@ -68,7 +68,7 @@ class PlanController extends BaseController {
         $this->plan->setPlanStartYear(Input::get('planStartYear'));
         $this->plan->setPlanEndYear(Input::get('planEndYear'));
         $this->plan->setPlanStatus(Input::get('planStatus'));
-        $this->plan->setPlanImage(Input::get('planImage'));
+        $this->plan->setPlanImage(Input::file('planImage'));
         $v = $this->plan->validate();
         if ($v->fails()) {
             return Redirect::to('planTable/update/' . $planId)

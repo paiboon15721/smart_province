@@ -15,13 +15,15 @@ class TravelClass {
     private $travelImage;
     private $rules = array(
         'travelTypeId' => 'required',
-        'travelName' => 'required'
+        'travelName' => 'required',
+        'travelImage' => 'required|image'
     );
 
     public function validate() {
         $validationData = array(
             'travelTypeId' => $this->travelType,
-            'travelName' => $this->travelName
+            'travelName' => $this->travelName,
+            'travelImage' => $this->travelImage
         );
         return Validator::make($validationData, $this->rules);
     }

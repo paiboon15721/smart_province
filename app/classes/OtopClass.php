@@ -16,7 +16,8 @@ class OtopClass {
         'otopTypeId' => 'required',
         'otopName' => 'required',
         'contractName' => 'required',
-        'contractTel' => 'required'
+        'contractTel' => 'required',
+        'otopImage' => 'required|image'
     );
 
     public function validate() {
@@ -24,7 +25,8 @@ class OtopClass {
             'otopTypeId' => $this->otopType,
             'otopName' => $this->otopName,
             'contractName' => $this->contractName,
-            'contractTel' => $this->contractTel
+            'contractTel' => $this->contractTel,
+            'otopImage' => $this->otopImage
         );
         return Validator::make($validationData, $this->rules);
     }

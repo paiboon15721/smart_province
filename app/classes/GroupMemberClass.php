@@ -21,7 +21,8 @@ class GroupMemberClass {
         'memberPid' => 'required|Numeric',
         'memberName' => 'required',
         'memberSurname' => 'required',
-        'gender' => 'required'
+        'gender' => 'required',
+        'memberImage' => 'required|image'
     );
 
     public function validate() {
@@ -29,7 +30,8 @@ class GroupMemberClass {
             'memberPid' => $this->memberPid,
             'memberName' => $this->memberName,
             'memberSurname' => $this->memberSurname,
-            'gender' => $this->gender
+            'gender' => $this->gender,
+            'memberImage' => $this->memberImage
         );
         return Validator::make($validationData, $this->rules);
     }

@@ -8,12 +8,14 @@ class ActivityClass {
     private $actStop;
     private $actImage;
     private $rules = array(
-        'actDesc' => 'required'
+        'actDesc' => 'required',
+        'actImage' => 'required|image'
     );
 
     public function validate() {
         $validationData = array(
-            'actDesc' => $this->actDesc
+            'actDesc' => $this->actDesc,
+            'actImage' => $this->actImage
         );
         return Validator::make($validationData, $this->rules);
     }

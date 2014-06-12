@@ -114,6 +114,12 @@ return array(
         "planBudget" => "งบประมาณ",
         "planStartYear" => "ปีที่เริ่ม",
         "planEndYear" => "ปีที่สิ้นสุด",
-        "imageSlideImage" => "ภาพอัตลักษณ์"
+        "imageSlideImage" => "ภาพอัตลักษณ์",
+        "travelImage" => "รูปภาพ",
+        "planImage" => "รูปภาพ",
+        "otopImage" => "รูปภาพ",
+        "meetingImage" => "รูปภาพ",
+        "memberImage" => "รูปภาพ",
+        "actImage" => "รูปภาพ",
     ),
 );

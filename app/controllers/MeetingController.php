@@ -26,7 +26,7 @@ class MeetingController extends BaseController {
     public function insertPost() {
         $this->meeting->setMeetingName(Input::get('meetingName'));
         $this->meeting->setMeetingDate(Input::get('meetingDate'));
-        $this->meeting->setMeetingImage(Input::get('meetingImage'));
+        $this->meeting->setMeetingImage(Input::file('meetingImage'));
         $v = $this->meeting->validate();
         if ($v->fails()) {
             return Redirect::to('meetingTable/insert')
@@ -52,7 +52,7 @@ class MeetingController extends BaseController {
         $this->meeting->setMeetingId($meetingId);
         $this->meeting->setMeetingName(Input::get('meetingName'));
         $this->meeting->setMeetingDate(Input::get('meetingDate'));
-        $this->meeting->setMeetingImage(Input::get('meetingImage'));
+        $this->meeting->setMeetingImage(Input::file('meetingImage'));
         $v = $this->meeting->validate();
         if ($v->fails()) {
             return Redirect::to('meetingTable/update/' . $meetingId)
