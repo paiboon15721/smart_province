@@ -2,18 +2,11 @@
 
 class ImageSlideSettingController extends BaseController {
 
-    protected $layout = 'layouts.tablecloth';
+    protected $layout = 'imageSlideSetting.index';
     private $imageSlideSetting;
 
     function __construct() {
         $this->imageSlideSetting = new ImageSlideSettingClass();
-    }
-
-    public function displayImageSlideSetting() {
-        return View::make('imageSlideSetting.index')
-                        ->with('title', $this->imageSlideSetting->getImageSlideSettingTitleForDisplay())
-                        ->with('headers', $this->imageSlideSetting->getImageSlideSettingHeaderForDisplay())
-                        ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay());
     }
 
     public function insertGet() {
@@ -69,8 +62,6 @@ class ImageSlideSettingController extends BaseController {
 
     public function displayTablecloth() {
         return View::make('imageSlideSetting.index')
-                        ->with('title', $this->imageSlideSetting->getImageSlideSettingTitleForDisplay())
-                        ->with('headers', $this->imageSlideSetting->getImageSlideSettingHeaderForDisplay())
                         ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay())
                         ->with('menuName', $this->imageSlideSetting->getMenuNameForDisplay())
                         ->with('url', 'imageSlideSettingTable');

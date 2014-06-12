@@ -101,6 +101,11 @@ Route::group(array('before' => 'catm'), function() {
     Route::group(array('before' => 'login'), function() {
         //image slide setting
         Route::get('imageSlideSettingTable', 'ImageSlideSettingController@displayTablecloth');
+        Route::get('imageSlideSettingTable/insert', 'ImageSlideSettingController@insertGet');
+        Route::post('imageSlideSettingTable/insert', 'ImageSlideSettingController@insertPost');
+        Route::get('imageSlideSettingTable/update/{id}', 'ImageSlideSettingController@updateGet');
+        Route::post('imageSlideSettingTable/update/{id}', 'ImageSlideSettingController@updatePost');
+        Route::get('imageSlideSettingTable/delete/{id}', 'ImageSlideSettingController@deleteGet');
 
         //menu setting
         Route::get('menuSetting/{id}', 'MenuSettingController@index');
