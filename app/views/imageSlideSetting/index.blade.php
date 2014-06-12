@@ -1,19 +1,17 @@
 @extends('layouts.tableclothForm')
 
 @section('subSubSubContent')
-<div id="welcome" class="post">
-    <h1 class="title" style="color: #4F789F; border-bottom: 1px solid #3B3B3B; padding-bottom: 10px">{{$title}}</h1>
-    <table cellspacing="0" cellpadding="0"  id="datatable">
-        <thead>
-            <tr>
-                @foreach($headers as $header)
-                <th class="{{$header['class']}}" width="{{$header['width']}}">{{$header['text']}}</th>
-                @endforeach
-            </tr>
-        </thead>
-        <tbody>
-            @yield('data')
-        </tbody>
-    </table>
-</div>
+<h1 class="title" style="color: #4F789F; border-bottom: 1px solid #3B3B3B; padding-bottom: 10px">{{$title}}</h1>
+<table cellspacing="0" cellpadding="0"  id="datatable">
+    <thead>
+        <tr>
+            @foreach($headers as $header)
+            <th class="{{$header['class']}}" width="{{$header['width']}}">{{$header['text']}}</th>
+            @endforeach
+        </tr>
+    </thead>
+    <tbody>
+        @yield('data')
+    </tbody>
+</table>
 @stop

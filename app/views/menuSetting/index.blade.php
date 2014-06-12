@@ -15,20 +15,18 @@
 @stop
 
 @section('subSubContent')
-<div id="welcome" class="post">
-    <div class="formarea">
-        <h2>การตั้งค่าเมนู</h2>
-        <div class="subfieldsset">
-            <div class="notification">
-                @if (Session::has('deleteSuccess'))
-                <div class="information">ลบเมนูเรียบร้อย</div>
-                @endif
-                @if (Session::has('deleteFailed'))
-                <div class="error">ไม่สามารถลบเมนูนี้ได้ เนื่องจากยังมีเมนูอื่นๆ ภายใต้เมนูนี้</div>
-                @endif
-            </div>
-            {{$renderMenuSetting}}
+<div class="formarea">
+    <h2>การตั้งค่าเมนู</h2>
+    <div class="subfieldsset">
+        <div class="notification">
+            @if (Session::has('deleteSuccess'))
+            <div class="information">ลบเมนูเรียบร้อย</div>
+            @endif
+            @if (Session::has('deleteFailed'))
+            <div class="error">ไม่สามารถลบเมนูนี้ได้ เนื่องจากยังมีเมนูอื่นๆ ภายใต้เมนูนี้</div>
+            @endif
         </div>
+        {{$renderMenuSetting}}
     </div>
 </div>
 @stop
