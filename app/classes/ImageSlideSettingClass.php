@@ -42,7 +42,7 @@ class ImageSlideSettingClass {
         $menuName = MenuSetting::select('menu_name_th')
                 ->where('menu_id', '=', self::$MENU_ID)
                 ->first();
-        return str_replace('ระบบ', '', $menuName['menu_name_th']);
+        return str_replace('ระบบจัดการ', '', $menuName['menu_name_th']);
     }
 
     public function getImageSlideSetting() {
