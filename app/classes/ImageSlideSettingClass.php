@@ -10,7 +10,7 @@ class ImageSlideSettingClass {
 
     public function validate() {
         $validationData = array(
-            'imageSlideImage' => $this->imageSlideImage
+            'file' => $this->imageSlideImage
         );
         return Validator::make($validationData, $this->rules);
     }
