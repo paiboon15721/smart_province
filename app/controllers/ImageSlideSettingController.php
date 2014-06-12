@@ -3,95 +3,77 @@
 class ImageSlideSettingController extends BaseController {
 
     protected $layout = 'layouts.tablecloth';
-    private $otop;
-    private $otopType;
+    private $imageSlideSetting;
 
     function __construct() {
-        $this->otop = new OtopClass();
-        $this->otopType = new OtopTypeClass();
+        $this->imageSlideSetting = new ImageSlideSettingClass();
     }
 
-    public function displayOtop() {
-        return View::make('content.tablecloth.otop.otop')
-                        ->with('title', $this->otop->getOtopTitleForDisplay())
-                        ->with('headers', $this->otop->getOtopHeaderForDisplay())
-                        ->with('listOfData', $this->otop->getOtopDataForDisplay());
+    public function displayImageSlideSetting() {
+        return View::make('imageSlideSetting.index')
+                        ->with('title', $this->imageSlideSetting->getImageSlideSettingTitleForDisplay())
+                        ->with('headers', $this->imageSlideSetting->getImageSlideSettingHeaderForDisplay())
+                        ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay());
     }
 
     public function insertGet() {
-        return View::make('otop.insert')
+        return View::make('imageSlideSetting.insert')
                         ->with('actionType', 'บันทึก')
-                        ->with('menuName', $this->otop->getMenuNameForDisplay())
-                        ->with('otopTypeList', $this->otopType->getOtopTypeList())
-                        ->with('backUrl', URL::to('otopTable'));
+                        ->with('menuName', $this->imageSlideSetting->getMenuNameForDisplay())
+                        ->with('backUrl', URL::to('imageSlideSettingTable'));
     }
 
     public function insertPost() {
-        $this->otop->setOtopType(Input::get('otopTypeId'));
-        $this->otop->setOtopName(Input::get('otopName'));
-        $this->otop->setOtopGroup(Input::get('otopGroup'));
-        $this->otop->setOtopStar(Input::get('otopStar'));
-        $this->otop->setOtopDetail(Input::get('otopDetail'));
-        $this->otop->setContractName(Input::get('contractName'));
-        $this->otop->setContractTel(Input::get('contractTel'));
-        $this->otop->setContractAddr(Input::get('contractAddr'));
-        $this->otop->setOtopImage(Input::get('otopImage'));
-        $v = $this->otop->validate();
+        $this->imageSlideSetting->setImageSlideImage(Input::get('imageSlideImage'));
+        $v = $this->imageSlideSetting->validate();
         if ($v->fails()) {
-            return Redirect::to('otopTable/insert')
+            return Redirect::to('imageSlideImageTable/insert')
                             ->withErrors($v)
                             ->withInput();
         }
-        $this->otop->insertToDatabase();
-        return Redirect::to('otopTable/insert')
+        $this->imageSlideSetting->insertToDatabase();
+        return Redirect::to('imageSlideSettingTable/insert')
                         ->with('insertSuccess', true);
     }
 
-    public function updateGet($otopId) {
-        $this->otop->setOtopId($otopId);
-        $otop = $this->otop->getOtop();
-        return View::make('otop.update')
+    public function updateGet($imageSlideId) {
+        $this->imageSlideSetting->setImageSlideId($imageSlideId);
+        $imageSlideSetting = $this->imageSlideSetting->getImageSlideSetting();
+        return View::make('imageSlideSetting.update')
                         ->with('actionType', 'แก้ไข')
-                        ->with('menuName', $this->otop->getMenuNameForDisplay())
-                        ->with('otopTypeList', $this->otopType->getOtopTypeList())
-                        ->with('otop', $otop)
-                        ->with('backUrl', URL::to('otopTable'));
+                        ->with('menuName', $this->imageSlideSetting->getMenuNameForDisplay())
+                        ->with('imageSlideSetting', $imageSlideSetting)
+                        ->with('backUrl', URL::to('imageSlideSettingTable'));
     }
 
-    public function updatePost($otopId) {
-        $this->otop->setOtopId($otopId);
-        $this->otop->setOtopType(Input::get('otopTypeId'));
-        $this->otop->setOtopName(Input::get('otopName'));
-        $this->otop->setOtopGroup(Input::get('otopGroup'));
-        $this->otop->setOtopStar(Input::get('otopStar'));
-        $this->otop->setOtopDetail(Input::get('otopDetail'));
-        $this->otop->setContractName(Input::get('contractName'));
-        $this->otop->setContractTel(Input::get('contractTel'));
-        $this->otop->setContractAddr(Input::get('contractAddr'));
-        $this->otop->setOtopImage(Input::get('otopImage'));
-        $v = $this->otop->validate();
+    public function updatePost($imageSlideId) {
+        $this->imageSlideSetting->setImageSlideId($imageSlideId);
+        $this->imageSlideSetting->setImageSlideImage(Input::get('imageSlideImage'));
+        $v = $this->imageSlideSetting->validate();
         if ($v->fails()) {
-            return Redirect::to('otopTable/update/' . $otopId)
+            return Redirect::to('imageSlideSettingTable/update/' . $imageSlideId)
                             ->withErrors($v)
                             ->withInput();
         }
-        $this->otop->updateToDatabase();
-        return Redirect::to('otopTable/update/' . $otopId)
+        $this->imageSlideSetting->updateToDatabase();
+        return Redirect::to('imageSlideSettingTable/update/' . $imageSlideId)
                         ->with('updateSuccess', true);
     }
 
-    public function deleteGet($otopId) {
-        $this->otop->setOtopId($otopId);
-        $this->otop->deleteToDatabase();
-        return Redirect::to('otopTable')
+    public function deleteGet($imageSlideId) {
+        $this->imageSlideSetting->setImageSlideId($imageSlideId);
+        $this->imageSlideSetting->deleteToDatabase();
+        return Redirect::to('imageSlideSettingTable')
                         ->with('deleteSuccess', true);
     }
 
     public function displayTablecloth() {
         return View::make('imageSlideSetting.index')
-                        ->with('datasourceUrl', URL::to('datasourceOtop'))
-                        ->with('menuName', $this->otop->getMenuNameForDisplay())
-                        ->with('url', 'otopTable');
+                        ->with('title', $this->imageSlideSetting->getImageSlideSettingTitleForDisplay())
+                        ->with('headers', $this->imageSlideSetting->getImageSlideSettingHeaderForDisplay())
+                        ->with('listOfData', $this->imageSlideSetting->getImageSlideSettingDataForDisplay())
+                        ->with('menuName', $this->imageSlideSetting->getMenuNameForDisplay())
+                        ->with('url', 'imageSlideSettingTable');
     }
 
 }

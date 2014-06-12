@@ -1,23 +1,18 @@
-@extends('layouts.datatable')
+@extends('layouts.tableclothForm')
 
 @section('subSubSubContent')
 <div id="welcome" class="post">
-    <table cellspacing="0" cellpadding="0" border="0"  id="datatable" class="display">
+    <h1 class="title" style="color: #4F789F; border-bottom: 1px solid #3B3B3B; padding-bottom: 10px">{{$title}}</h1>
+    <table cellspacing="0" cellpadding="0"  id="datatable">
         <thead>
             <tr>
-                <th width="50" field="otop_id">id</th>
-                <th width="150" field="catm">รหัสหมู่บ้าน</th>
-                <th width="20" field="otop_star">ดาว</th>
-                <th width="250" field="otop_name">ชื่อสินค้า</th>
-                <th width="180" field="otop_type_name">ประเภทสินค้า</th>
-                <th width="250" field="otop_detail">คำอธิบาย</th>
-                <th width="200" field="otop_group">กลุ่ม</th>
-                <th width="100" field="contract_name">ชื่อ</th>
-                <th width="200" field="contract_tel">เบอร์โทร</th>
-                <th width="300" field="contract_addr">ที่อยู่</th>
+                @foreach($headers as $header)
+                <th class="{{$header['class']}}" width="{{$header['width']}}">{{$header['text']}}</th>
+                @endforeach
             </tr>
         </thead>
         <tbody>
+            @yield('data')
         </tbody>
     </table>
 </div>
