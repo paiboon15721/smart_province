@@ -1,17 +1,11 @@
 @extends('layouts.tableclothForm')
 
-@section('subSubSubContent')
-<h1 class="title" style="color: #4F789F; border-bottom: 1px solid #3B3B3B; padding-bottom: 10px">{{$title}}</h1>
-<table cellspacing="0" cellpadding="0"  id="datatable">
-    <thead>
-        <tr>
-            @foreach($headers as $header)
-            <th class="{{$header['class']}}" width="{{$header['width']}}">{{$header['text']}}</th>
-            @endforeach
-        </tr>
-    </thead>
-    <tbody>
-        @yield('data')
-    </tbody>
-</table>
+@section('data')
+<?php $seq = 1; ?>
+@foreach($listOfData as $data)
+<tr>
+    <td>{{($seq++)}}</td>
+    <td style="text-align:center;"><img src="{{asset('data/'. $data->images)}}" style="height: 120px; width: 120px;" /></td>
+</tr>
+@endforeach
 @stop
