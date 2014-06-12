@@ -28,8 +28,8 @@ class ImageSlideSettingClass {
     private static $IMAGE_SLIDE_SETTING_TITLE = 'ระบบจัดการภาพอัตลักษณ์';
     private static $IMAGE_SLIDE_SETTING_FIELD = array('image');
     private static $IMAGE_SLIDE_SETTING_HEADER = array(
-        array('class' => 'center', 'width' => '100px', 'text' => 'ลำดับที่'),
-        array('class' => 'center', 'width' => '150px', 'text' => 'รูปภาพ')
+        array('class' => 'center', 'width' => '50px', 'text' => 'ลำดับที่'),
+        array('class' => 'center', 'width' => '200px', 'text' => 'รูปภาพ')
     );
 
     private function getDataForDisplay() {
