@@ -20,7 +20,7 @@ class ImageSlideSettingController extends BaseController {
         $this->imageSlideSetting->setImageSlideImage(Input::get('imageSlideImage'));
         $v = $this->imageSlideSetting->validate();
         if ($v->fails()) {
-            return Redirect::to('imageSlideImageTable/insert')
+            return Redirect::to('imageSlideSettingTable/insert')
                             ->withErrors($v)
                             ->withInput();
         }
