@@ -11,12 +11,22 @@
     <!-- Carousel items -->
     <div class="carousel-inner">
         <?php
-        $catmNameEn = Session::get('catmNameEn');
+        //$catmNameEn = Session::get('catmNameEn');
+        $imageSlideSetting = new ImageSlideSettingClass();
+        $listOfData = $this->imageSlideSetting->getImageSlideSettingDataForDisplay();
+        $isFirstTime = true;
         ?>
-        <div class="active item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/2.jpg')}}" style="height: 350px; width: 1200px;" /></div>
-        @for ($i=3; $i<5; $i++)
-        <div class="item"><img src="{{asset('images/'.$catmNameEn.'/prettyPhoto/fullscreen/'.$i.'.jpg')}}" style="height: 350px; width: 1200px;" /></div>
-        @endfor
+        @foreach($listOfData as $data)
+        <?php
+        if ($isFirstTime) {
+            $class = "active item";
+        } else {
+            $class = "item";
+        }
+        ?>
+        <div class="{{$class}}"><img src="{{asset('data/'. $data->image)}}" style="height: 350px; width: 1200px;" /></div>
+        <?php $isFirstTime = false; ?>
+        @endforeach
     </div>
     <!-- Carousel nav -->
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
